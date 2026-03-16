@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroCommons — Brand Identity</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600&display=swap');
+
+  :root {
+    --navy:    #152238;
+    --cream:   #F3F0E9;
+    --orange:  #E8702A;
+    --orange-light: #F2956A;
+    --orange-pale:  #FBE8DC;
+    --gray-100: #E8E5DE;
+    --gray-300: #BEBAB0;
+    --gray-500: #7A7770;
+    --gray-700: #3F3D39;
+    --white:   #FFFFFF;
+    --page-w:  860px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    width: var(--page-w);
+    margin: 0 auto;
+    padding: 0 0 80px;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--navy);
+    margin-bottom: 32px;
+    border-bottom: 0.5px solid var(--gray-300);
+    padding-bottom: 14px;
+  }
+
+  .section {
+    padding: 56px 0 0;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--navy);
+    width: 100%;
+    padding: 80px 72px 72px;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 40px;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    color: var(--orange);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .cover-doc-info {
+    text-align: right;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: rgba(243,240,233,0.35);
+    line-height: 2;
+  }
+
+  /* ── LOGO LOCKUP SVG helper ── */
+  .lockup-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .lockup-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 32px 36px;
+    gap: 0;
+  }
+
+  .cell-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+
+  .cell-light { background: var(--cream); }
+  .cell-dark  { background: var(--navy); }
+  .cell-white { background: var(--white); }
+  .cell-orange { background: var(--orange); }
+  .cell-light .cell-label, .cell-white .cell-label  { color: var(--gray-500); }
+  .cell-dark .cell-label  { color: rgba(243,240,233,0.35); }
+  .cell-orange .cell-label { color: rgba(255,255,255,0.6); }
+
+  /* ── COLOR PALETTE ── */
+  .swatch-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    margin-bottom: 24px;
+  }
+
+  .swatch {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px 14px;
+  }
+
+  .swatch-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .swatch-hex {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 32px 0;
+    border-bottom: 0.5px solid var(--gray-100);
+  }
+
+  .type-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    line-height: 2;
+    padding-top: 8px;
+  }
+
+  .type-meta strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+
+  /* ── CLEAR SPACE ── */
+  .clearspace-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background: var(--white);
+    margin-bottom: 24px;
+  }
+
+  /* ── DO / DON'T ── */
+  .dontdo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .rule-cell {
+    padding: 32px;
+    background: var(--white);
+  }
+
+  .rule-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+  }
+
+  .rule-header.do { color: #2E7D4F; border-color: #2E7D4F; }
+  .rule-header.dont { color: #A32D2D; border-color: #A32D2D; }
+
+  .rule-item {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.8;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .rule-item::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gray-300);
+    font-size: 11px;
+  }
+
+  /* ── APPLICATION MOCKUPS ── */
+  /* Business Card */
+  .card-pair {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+  .biz-card {
+    width: 340px;
+    height: 190px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .biz-card-front {
+    background: var(--navy);
+    width: 100%;
+    height: 100%;
+    padding: 28px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .biz-card-back {
+    background: var(--cream);
+    width: 100%;
+    height: 100%;
+    padding: 28px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-name {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+  }
+
+  .card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--orange);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .card-contact {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(243,240,233,0.45);
+    letter-spacing: 0.08em;
+    line-height: 1.9;
+  }
+
+  /* Letterhead */
+  .letterhead-mock {
+    background: var(--white);
+    border: 0.5px solid var(--gray-100);
+    padding: 0 0 40px;
+    margin-bottom: 40px;
+  }
+
+  .lh-header {
+    background: var(--navy);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lh-address {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(243,240,233,0.4);
+    letter-spacing: 0.1em;
+    text-align: right;
+    line-height: 1.9;
+  }
+
+  .lh-body {
+    padding: 48px 48px 0;
+  }
+
+  .lh-date {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+  }
+
+  .lh-subject {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .lh-re {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .lh-text {
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  .lh-footer-rule {
+    height: 3px;
+    background: var(--navy);
+    margin: 40px 48px 0;
+    position: relative;
+  }
+
+  .lh-footer-rule::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--orange);
+  }
+
+  /* Website nav mockup */
+  .nav-mock {
+    background: var(--white);
+    border: 0.5px solid var(--gray-100);
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .nav-bar {
+    background: var(--navy);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(243,240,233,0.5);
+  }
+
+  .nav-link.active {
+    color: var(--cream);
+  }
+
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--orange);
+    padding: 7px 16px;
+    border-radius: 3px;
+  }
+
+  .nav-hero {
+    background: var(--cream);
+    padding: 60px 40px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .hero-h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero-h1 strong {
+    font-weight: 600;
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.7;
+    max-width: 340px;
+    margin-bottom: 28px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--orange);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 3px;
+    margin-right: 12px;
+  }
+
+  .hero-btn-ghost {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.45;
+    padding: 10px 0;
+  }
+
+  /* Document cover mockup */
+  .doc-cover {
+    background: var(--navy);
+    padding: 56px 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .doc-cover-stripe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--orange);
+  }
+
+  .doc-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .doc-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  .doc-title strong {
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .doc-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: rgba(243,240,233,0.4);
+    margin-bottom: 40px;
+  }
+
+  .doc-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .doc-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    color: rgba(243,240,233,0.3);
+    line-height: 2.2;
+    text-transform: uppercase;
+  }
+
+  /* ── PRINT RULES ── */
+  @media print {
+    body { background: white; }
+    .page { width: 100%; padding: 0; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ═══════════════════════════════════════════
+       COVER
+  ════════════════════════════════════════════ -->
+  <div class="cover">
+    <div class="cover-eyebrow">Brand Identity Standards · 2025</div>
+    <div class="cover-grid">
+      <div>
+        <!-- Full logo lockup in cover -->
+        <svg viewBox="0 0 480 90" width="420">
+          <path d="M12,32 Q48,22 96,36" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M12,44 Q50,36 96,49" fill="none" stroke="#F3F0E9" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+          <path d="M14,54 Q52,47 96,60" fill="none" stroke="#F3F0E9" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="10" cy="32" r="3.4" fill="#E8702A"/>
+          <circle cx="10" cy="44" r="2.0" fill="#F3F0E9" opacity="0.55"/>
+          <circle cx="12" cy="54" r="1.2" fill="#F3F0E9" opacity="0.28"/>
+          <line x1="116" y1="16" x2="116" y2="74" stroke="#F3F0E9" stroke-width="0.5" opacity="0.2"/>
+          <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#F3F0E9" opacity="0.60">AERO</text>
+          <line x1="136" y1="47" x2="466" y2="47" stroke="#F3F0E9" stroke-width="0.5" opacity="0.18"/>
+          <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#F3F0E9">COMMONS</text>
+        </svg>
+      </div>
+      <div class="cover-doc-info">
+        <div>Version 1.0</div>
+        <div>Open Source</div>
+        <div>Experimental A/B</div>
+        <div>aerocommons.org</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       01 — LOGO
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">01</div>
+    <div class="section-title">The Logo</div>
+
+    <!-- Primary horizontal lockup -->
+    <div class="lockup-row">
+      <div class="lockup-cell cell-light">
+        <svg viewBox="0 0 480 90" width="100%" style="max-width:380px">
+          <path d="M12,32 Q48,22 96,36" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M12,44 Q50,36 96,49" fill="none" stroke="#152238" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+          <path d="M14,54 Q52,47 96,60" fill="none" stroke="#152238" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="10" cy="32" r="3.4" fill="#E8702A"/>
+          <circle cx="10" cy="44" r="2.0" fill="#152238" opacity="0.55"/>
+          <circle cx="12" cy="54" r="1.2" fill="#152238" opacity="0.28"/>
+          <line x1="116" y1="16" x2="116" y2="74" stroke="#152238" stroke-width="0.5" opacity="0.2"/>
+          <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#152238" opacity="0.60">AERO</text>
+          <line x1="136" y1="47" x2="466" y2="47" stroke="#152238" stroke-width="0.5" opacity="0.18"/>
+          <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#152238">COMMONS</text>
+        </svg>
+        <div class="cell-label">Primary — light</div>
+      </div>
+      <div class="lockup-cell cell-dark">
+        <svg viewBox="0 0 480 90" width="100%" style="max-width:380px">
+          <path d="M12,32 Q48,22 96,36" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M12,44 Q50,36 96,49" fill="none" stroke="#F3F0E9" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+          <path d="M14,54 Q52,47 96,60" fill="none" stroke="#F3F0E9" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="10" cy="32" r="3.4" fill="#E8702A"/>
+          <circle cx="10" cy="44" r="2.0" fill="#F3F0E9" opacity="0.55"/>
+          <circle cx="12" cy="54" r="1.2" fill="#F3F0E9" opacity="0.28"/>
+          <line x1="116" y1="16" x2="116" y2="74" stroke="#F3F0E9" stroke-width="0.5" opacity="0.2"/>
+          <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#F3F0E9" opacity="0.60">AERO</text>
+          <line x1="136" y1="47" x2="466" y2="47" stroke="#F3F0E9" stroke-width="0.5" opacity="0.18"/>
+          <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#F3F0E9">COMMONS</text>
+        </svg>
+        <div class="cell-label">Primary — dark</div>
+      </div>
+    </div>
+
+    <!-- White and orange backgrounds -->
+    <div class="lockup-row" style="margin-bottom:32px;">
+      <div class="lockup-cell cell-white" style="border: 0.5px solid #E8E5DE;">
+        <svg viewBox="0 0 480 90" width="100%" style="max-width:380px">
+          <path d="M12,32 Q48,22 96,36" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M12,44 Q50,36 96,49" fill="none" stroke="#152238" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+          <path d="M14,54 Q52,47 96,60" fill="none" stroke="#152238" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="10" cy="32" r="3.4" fill="#E8702A"/>
+          <circle cx="10" cy="44" r="2.0" fill="#152238" opacity="0.55"/>
+          <circle cx="12" cy="54" r="1.2" fill="#152238" opacity="0.28"/>
+          <line x1="116" y1="16" x2="116" y2="74" stroke="#152238" stroke-width="0.5" opacity="0.2"/>
+          <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#152238" opacity="0.60">AERO</text>
+          <line x1="136" y1="47" x2="466" y2="47" stroke="#152238" stroke-width="0.5" opacity="0.18"/>
+          <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#152238">COMMONS</text>
+        </svg>
+        <div class="cell-label" style="color:var(--gray-500)">On white</div>
+      </div>
+      <div class="lockup-cell cell-orange">
+        <svg viewBox="0 0 480 90" width="100%" style="max-width:380px">
+          <path d="M12,32 Q48,22 96,36" fill="none" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M12,44 Q50,36 96,49" fill="none" stroke="#FFFFFF" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+          <path d="M14,54 Q52,47 96,60" fill="none" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="10" cy="32" r="3.4" fill="#FFFFFF"/>
+          <circle cx="10" cy="44" r="2.0" fill="#FFFFFF" opacity="0.55"/>
+          <circle cx="12" cy="54" r="1.2" fill="#FFFFFF" opacity="0.28"/>
+          <line x1="116" y1="16" x2="116" y2="74" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+          <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#FFFFFF" opacity="0.70">AERO</text>
+          <line x1="136" y1="47" x2="466" y2="47" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+          <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#FFFFFF">COMMONS</text>
+        </svg>
+        <div class="cell-label">On accent</div>
+      </div>
+    </div>
+
+    <!-- Mark only + sizes -->
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:20px;">Mark only — scale variants</p>
+    <div style="display:flex;gap:32px;align-items:flex-end;padding:32px 40px;background:var(--white);border:0.5px solid var(--gray-100);margin-bottom:8px;flex-wrap:wrap;">
+
+      <!-- 96px mark -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <svg viewBox="0 0 110 56" width="96">
+          <path d="M6,18 Q55,10 104,22" fill="none" stroke="#E8702A" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M6,28 Q55,21 104,33" fill="none" stroke="#152238" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+          <path d="M8,36 Q55,30 104,42" fill="none" stroke="#152238" stroke-width="0.8" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="5" cy="18" r="3.0" fill="#E8702A"/>
+          <circle cx="5" cy="28" r="1.8" fill="#152238" opacity="0.55"/>
+          <circle cx="7" cy="36" r="1.0" fill="#152238" opacity="0.28"/>
+        </svg>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--gray-500)">96px</span>
+      </div>
+
+      <!-- 48px mark -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <svg viewBox="0 0 110 56" width="48">
+          <path d="M6,18 Q55,10 104,22" fill="none" stroke="#E8702A" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M6,28 Q55,21 104,33" fill="none" stroke="#152238" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+          <path d="M8,36 Q55,30 104,42" fill="none" stroke="#152238" stroke-width="0.8" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="5" cy="18" r="3.0" fill="#E8702A"/>
+          <circle cx="5" cy="28" r="1.8" fill="#152238" opacity="0.55"/>
+          <circle cx="7" cy="36" r="1.0" fill="#152238" opacity="0.28"/>
+        </svg>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--gray-500)">48px</span>
+      </div>
+
+      <!-- 32px favicon -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="background:var(--navy);padding:8px 10px;border-radius:6px;">
+          <svg viewBox="0 0 60 40" width="32">
+            <path d="M4,12 Q30,6 56,14" fill="none" stroke="#E8702A" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M4,20 Q30,15 56,23" fill="none" stroke="#F3F0E9" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+            <path d="M5,27 Q30,22 56,30" fill="none" stroke="#F3F0E9" stroke-width="0.7" stroke-linecap="round" opacity="0.28"/>
+            <circle cx="3.5" cy="12" r="2.4" fill="#E8702A"/>
+          </svg>
+        </div>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--gray-500)">Favicon</span>
+      </div>
+
+      <!-- 16px favicon -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="background:var(--navy);padding:6px 8px;border-radius:4px;">
+          <svg viewBox="0 0 60 40" width="16">
+            <path d="M4,12 Q30,6 56,14" fill="none" stroke="#E8702A" stroke-width="3.6" stroke-linecap="round"/>
+            <circle cx="3.5" cy="12" r="3.2" fill="#E8702A"/>
+          </svg>
+        </div>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--gray-500)">16px</span>
+      </div>
+
+    </div>
+    <p style="font-size:12px;color:var(--gray-500);margin-top:12px;line-height:1.6;">At 16px only the primary streamer line and origin dot are rendered. The secondary and tertiary lines are dropped. This is the minimum viable mark.</p>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       02 — COLOR
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">02</div>
+    <div class="section-title">Color</div>
+
+    <div class="swatch-row">
+      <div class="swatch" style="background:#152238;">
+        <div class="swatch-name" style="color:#F3F0E9;">Deep Navy</div>
+        <div class="swatch-hex" style="color:#F3F0E9;">#152238 · PMS 289 C</div>
+      </div>
+      <div class="swatch" style="background:#E8702A;">
+        <div class="swatch-name" style="color:#FBE8DC;">Signal Orange</div>
+        <div class="swatch-hex" style="color:#FBE8DC;">#E8702A · PMS 1595 C</div>
+      </div>
+      <div class="swatch" style="background:#F3F0E9;border:0.5px solid #E8E5DE;">
+        <div class="swatch-name" style="color:#7A7770;">Field Cream</div>
+        <div class="swatch-hex" style="color:#7A7770;">#F3F0E9</div>
+      </div>
+      <div class="swatch" style="background:#BEBAB0;">
+        <div class="swatch-name" style="color:#3F3D39;">Horizon Gray</div>
+        <div class="swatch-hex" style="color:#3F3D39;">#BEBAB0</div>
+      </div>
+      <div class="swatch" style="background:#3F3D39;">
+        <div class="swatch-name" style="color:#F3F0E9;">Carbon</div>
+        <div class="swatch-hex" style="color:#F3F0E9;">#3F3D39</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;">
+      <div style="padding:24px;background:var(--white);border:0.5px solid var(--gray-100);">
+        <p class="section-tag" style="margin-bottom:8px;">Primary palette</p>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.7;">Deep Navy and Signal Orange are the two load-bearing colors. Every document, product, or print application should be traceable to this pair. Field Cream is the preferred background for print and physical surfaces.</p>
+      </div>
+      <div style="padding:24px;background:var(--white);border:0.5px solid var(--gray-100);">
+        <p class="section-tag" style="margin-bottom:8px;">Accent usage rule</p>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.7;">Signal Orange should appear in small doses — the origin dot, a rule, a callout, a heading accent, a CTA button. It should never fill a large background area except in special-use applications. When in doubt, use less orange.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       03 — TYPOGRAPHY
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">03</div>
+    <div class="section-title">Typography</div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <strong>Display / Headlines</strong>
+        Barlow Condensed<br>
+        Weight 300–600<br>
+        Tracking +0.04–0.28em<br>
+        Use: covers, section heads,<br>callouts, nav
+      </div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:300;letter-spacing:0.04em;color:var(--navy);line-height:1;">Open Source</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:600;letter-spacing:0.04em;color:var(--navy);line-height:1;">Aerospace</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:400;letter-spacing:0.24em;color:var(--orange);text-transform:uppercase;margin-top:12px;">Experimental Amateur-Built · FAA Part 21</div>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <strong>Body / Interface</strong>
+        Barlow<br>
+        Weight 300–500<br>
+        Tracking normal–+0.04em<br>
+        Use: body copy, labels,<br>data, UI elements
+      </div>
+      <div>
+        <div style="font-family:'Barlow',sans-serif;font-size:20px;font-weight:300;color:var(--navy);line-height:1.4;margin-bottom:8px;">The MAOS is an FAA Experimental Amateur-Built aircraft designed and built by a single builder under the 51% rule.</div>
+        <div style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;color:var(--gray-500);line-height:1.7;">Series hybrid propulsion. Pod-and-boom fuselage. High-wing removable single-piece wing. Twin Honda 400cc motorcycle engines as ICE generators driving contra-rotating rim-drive electric motors.</div>
+      </div>
+    </div>
+
+    <div class="type-row" style="border-bottom:none;">
+      <div class="type-meta">
+        <strong>Technical / Data</strong>
+        Barlow Condensed<br>
+        Weight 400–500<br>
+        Tracking +0.12–0.22em<br>
+        Use: specs, document<br>numbers, callouts, tags
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding-top:8px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.22em;color:var(--orange);text-transform:uppercase;">DWG MAOS-GA-001 · Rev A · 2025-03-16</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.12em;color:var(--navy);">MAX OPERATING ALTITUDE — 20,000 FT MSL</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:300;letter-spacing:0.12em;color:var(--gray-500);">TKS Ice Protection · FADEC · Series Hybrid · Rim Drive</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       04 — CLEAR SPACE & MINIMUM SIZE
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">04</div>
+    <div class="section-title">Clear Space &amp; Minimum Size</div>
+
+    <div class="clearspace-wrap">
+      <svg viewBox="0 0 560 160" width="100%" style="max-width:560px;">
+        <!-- Clear space box (dashed) -->
+        <rect x="40" y="20" width="480" height="120" rx="2"
+          fill="none" stroke="#BEBAB0" stroke-width="0.6" stroke-dasharray="4 3"/>
+
+        <!-- The actual logo -->
+        <path d="M78,56 Q114,46 162,60" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+        <path d="M78,68 Q116,60 162,73" fill="none" stroke="#152238" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+        <path d="M80,78 Q118,71 162,84" fill="none" stroke="#152238" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+        <circle cx="76" cy="56" r="3.4" fill="#E8702A"/>
+        <circle cx="76" cy="68" r="2.0" fill="#152238" opacity="0.55"/>
+        <circle cx="78" cy="78" r="1.2" fill="#152238" opacity="0.28"/>
+        <line x1="182" y1="40" x2="182" y2="98" stroke="#152238" stroke-width="0.5" opacity="0.2"/>
+        <text x="200" y="60" font-family="'Barlow', sans-serif" font-size="14" font-weight="300" letter-spacing="12" fill="#152238" opacity="0.60">AERO</text>
+        <line x1="200" y1="70" x2="508" y2="70" stroke="#152238" stroke-width="0.4" opacity="0.18"/>
+        <text x="200" y="92" font-family="'Barlow', sans-serif" font-size="22" font-weight="500" letter-spacing="11" fill="#152238">COMMONS</text>
+
+        <!-- Dimension arrows - top -->
+        <line x1="40" y1="12" x2="520" y2="12" stroke="#BEBAB0" stroke-width="0.5"/>
+        <line x1="40" y1="9" x2="40" y2="15" stroke="#BEBAB0" stroke-width="0.5"/>
+        <line x1="520" y1="9" x2="520" y2="15" stroke="#BEBAB0" stroke-width="0.5"/>
+        <text x="280" y="9" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" letter-spacing="0.1em" fill="#BEBAB0">CLEAR SPACE = CAP HEIGHT ON ALL SIDES</text>
+
+      </svg>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:0;">
+      <div style="padding:24px;background:var(--white);border:0.5px solid var(--gray-100);">
+        <p class="section-tag" style="margin-bottom:8px;">Minimum size — print</p>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.7;">Horizontal lockup minimum: 60mm wide. Mark only: 10mm wide. Below these sizes, use the single-line mark only.</p>
+      </div>
+      <div style="padding:24px;background:var(--white);border:0.5px solid var(--gray-100);">
+        <p class="section-tag" style="margin-bottom:8px;">Minimum size — screen</p>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.7;">Horizontal lockup minimum: 200px wide. Mark only: 48px wide. At 32px and below, use the favicon variant (single line + dot only).</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       05 — USAGE RULES
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">05</div>
+    <div class="section-title">Usage Rules</div>
+
+    <div class="dontdo-grid">
+      <div class="rule-cell">
+        <div class="rule-header do">Do</div>
+        <div class="rule-item">Use the logo on approved backgrounds: Deep Navy, Field Cream, white, and Signal Orange.</div>
+        <div class="rule-item">Maintain the three-line hierarchy — bold primary, medium secondary, thin tertiary. Never flatten all three to the same weight.</div>
+        <div class="rule-item">Use Signal Orange exclusively for the lead streamer line and origin dot. Optionally extend to a single accent element per layout (rule, CTA, tag).</div>
+        <div class="rule-item">Use Barlow Condensed for all display and technical typography. Use Barlow for body copy.</div>
+        <div class="rule-item">Reproduce the logo from the master SVG file. Never recreate from a raster screenshot.</div>
+        <div class="rule-item">Maintain clear space equal to the cap height of COMMONS on all four sides.</div>
+      </div>
+      <div class="rule-cell">
+        <div class="rule-header dont">Don't</div>
+        <div class="rule-item">Don't rotate or skew the logo. The horizontal lockup is the primary form.</div>
+        <div class="rule-item">Don't apply drop shadows, glows, or gradients to the mark.</div>
+        <div class="rule-item">Don't place the logo on a busy photographic background without a containing field of brand color.</div>
+        <div class="rule-item">Don't recolor the origin dot. It must always be Signal Orange (#E8702A).</div>
+        <div class="rule-item">Don't separate AERO from COMMONS or use either word alone as the brand name in a logotype context.</div>
+        <div class="rule-item">Don't use the logo at sizes below the minimum — use the favicon mark variant instead.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       06 — APPLICATIONS
+  ════════════════════════════════════════════ -->
+  <div class="section" style="padding: 56px 72px 0;">
+    <div class="section-tag">06</div>
+    <div class="section-title">Applications</div>
+
+    <!-- Business Cards -->
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:20px;">Business card · 3.5 × 2 in</p>
+    <div class="card-pair">
+      <!-- Front -->
+      <div class="biz-card">
+        <div class="biz-card-front">
+          <svg viewBox="0 0 240 46" width="180">
+            <path d="M6,16 Q24,11 48,18" fill="none" stroke="#E8702A" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M6,22 Q25,18 48,24" fill="none" stroke="#F3F0E9" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+            <path d="M7,27 Q25,23 48,30" fill="none" stroke="#F3F0E9" stroke-width="0.6" stroke-linecap="round" opacity="0.28"/>
+            <circle cx="5" cy="16" r="2.2" fill="#E8702A"/>
+            <circle cx="5" cy="22" r="1.3" fill="#F3F0E9" opacity="0.55"/>
+            <line x1="58" y1="8" x2="58" y2="38" stroke="#F3F0E9" stroke-width="0.4" opacity="0.2"/>
+            <text x="68" y="18" font-family="'Barlow', sans-serif" font-size="8.5" font-weight="300" letter-spacing="8" fill="#F3F0E9" opacity="0.60">AERO</text>
+            <line x1="68" y1="24" x2="230" y2="24" stroke="#F3F0E9" stroke-width="0.3" opacity="0.18"/>
+            <text x="68" y="35" font-family="'Barlow', sans-serif" font-size="14" font-weight="500" letter-spacing="6.5" fill="#F3F0E9">COMMONS</text>
+          </svg>
+          <div>
+            <div class="card-name">Bill Founder</div>
+            <div class="card-title">Project Lead · MAOS</div>
+          </div>
+        </div>
+      </div>
+      <!-- Back -->
+      <div class="biz-card">
+        <div class="biz-card-back">
+          <div style="width:40px;height:2px;background:var(--orange);"></div>
+          <div>
+            <div class="card-contact" style="color:var(--gray-500);">
+              bill@aerocommons.org<br>
+              aerocommons.org<br>
+              Fort Worth, Texas
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Letterhead -->
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:20px;">Letterhead · US Letter</p>
+    <div class="letterhead-mock">
+      <div class="lh-header">
+        <svg viewBox="0 0 280 52" width="210">
+          <path d="M6,18 Q27,12 54,20" fill="none" stroke="#E8702A" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M6,26 Q27,20 54,29" fill="none" stroke="#F3F0E9" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+          <path d="M7,32 Q28,27 54,36" fill="none" stroke="#F3F0E9" stroke-width="0.7" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="5" cy="18" r="2.4" fill="#E8702A"/>
+          <circle cx="5" cy="26" r="1.4" fill="#F3F0E9" opacity="0.55"/>
+          <line x1="64" y1="8" x2="64" y2="44" stroke="#F3F0E9" stroke-width="0.4" opacity="0.2"/>
+          <text x="74" y="22" font-family="'Barlow', sans-serif" font-size="10" font-weight="300" letter-spacing="7" fill="#F3F0E9" opacity="0.60">AERO</text>
+          <line x1="74" y1="29" x2="268" y2="29" stroke="#F3F0E9" stroke-width="0.4" opacity="0.18"/>
+          <text x="74" y="42" font-family="'Barlow', sans-serif" font-size="17" font-weight="500" letter-spacing="7.5" fill="#F3F0E9">COMMONS</text>
+        </svg>
+        <div class="lh-address">
+          aerocommons.org<br>
+          Fort Worth, Texas
+        </div>
+      </div>
+      <div class="lh-body">
+        <div class="lh-date">March 16, 2025</div>
+        <div class="lh-re">Re:</div>
+        <div class="lh-subject">MAOS-PM-002 — Project Briefing</div>
+        <div style="height:16px;"></div>
+        <div class="lh-text">AeroCommons is an open-source experimental aircraft development collective. The MAOS (Mobile Aviation Operating System) is our first platform — a four-seat, series hybrid, IFR-equipped experimental aircraft targeting 20,000 ft MSL operations under FAA Experimental Amateur-Built rules.</div>
+        <div style="height:12px;"></div>
+        <div class="lh-text" style="color:var(--gray-300);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      </div>
+      <div class="lh-footer-rule"></div>
+    </div>
+
+    <!-- Website nav -->
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:20px;">Website — navigation &amp; hero</p>
+    <div class="nav-mock">
+      <div class="nav-bar">
+        <svg viewBox="0 0 260 52" width="195">
+          <path d="M6,18 Q26,12 54,20" fill="none" stroke="#E8702A" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M6,26 Q27,20 54,29" fill="none" stroke="#F3F0E9" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+          <path d="M7,32 Q28,27 54,36" fill="none" stroke="#F3F0E9" stroke-width="0.7" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="5" cy="18" r="2.4" fill="#E8702A"/>
+          <circle cx="5" cy="26" r="1.4" fill="#F3F0E9" opacity="0.55"/>
+          <line x1="64" y1="8" x2="64" y2="44" stroke="#F3F0E9" stroke-width="0.4" opacity="0.2"/>
+          <text x="74" y="22" font-family="'Barlow', sans-serif" font-size="10" font-weight="300" letter-spacing="7" fill="#F3F0E9" opacity="0.60">AERO</text>
+          <line x1="74" y1="28" x2="254" y2="28" stroke="#F3F0E9" stroke-width="0.4" opacity="0.18"/>
+          <text x="74" y="42" font-family="'Barlow', sans-serif" font-size="16" font-weight="500" letter-spacing="7" fill="#F3F0E9">COMMONS</text>
+        </svg>
+        <div class="nav-links">
+          <span class="nav-link active">The Project</span>
+          <span class="nav-link">MAOS</span>
+          <span class="nav-link">Documents</span>
+          <span class="nav-link">Community</span>
+        </div>
+        <div class="nav-cta">Join the Build</div>
+      </div>
+      <div class="nav-hero">
+        <div>
+          <div class="hero-eyebrow">Experimental Amateur-Built · FAA Part 21</div>
+          <div class="hero-h1">Open source<br><strong>aviation</strong><br>starts here.</div>
+          <div class="hero-sub">The MAOS is a four-seat, series hybrid, IFR-capable aircraft designed to be built by one person with basic tools and a two-car garage.</div>
+          <span class="hero-btn">View the Plans</span>
+          <span class="hero-btn-ghost">Learn More →</span>
+        </div>
+        <div style="background:var(--navy);border-radius:8px;padding:32px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 480 90" width="100%">
+            <path d="M12,32 Q48,22 96,36" fill="none" stroke="#E8702A" stroke-width="3.8" stroke-linecap="round"/>
+            <path d="M12,44 Q50,36 96,49" fill="none" stroke="#F3F0E9" stroke-width="2.0" stroke-linecap="round" opacity="0.55"/>
+            <path d="M14,54 Q52,47 96,60" fill="none" stroke="#F3F0E9" stroke-width="0.9" stroke-linecap="round" opacity="0.28"/>
+            <circle cx="10" cy="32" r="3.4" fill="#E8702A"/>
+            <circle cx="10" cy="44" r="2.0" fill="#F3F0E9" opacity="0.55"/>
+            <circle cx="12" cy="54" r="1.2" fill="#F3F0E9" opacity="0.28"/>
+            <line x1="116" y1="16" x2="116" y2="74" stroke="#F3F0E9" stroke-width="0.5" opacity="0.2"/>
+            <text x="136" y="36" font-family="'Barlow', sans-serif" font-size="17" font-weight="300" letter-spacing="16" fill="#F3F0E9" opacity="0.60">AERO</text>
+            <line x1="136" y1="47" x2="466" y2="47" stroke="#F3F0E9" stroke-width="0.5" opacity="0.18"/>
+            <text x="136" y="70" font-family="'Barlow', sans-serif" font-size="28" font-weight="500" letter-spacing="14" fill="#F3F0E9">COMMONS</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document cover -->
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:20px;">Technical document cover</p>
+    <div class="doc-cover">
+      <div class="doc-cover-stripe"></div>
+      <div class="doc-eyebrow">AeroCommons · MAOS Platform</div>
+      <div class="doc-title">Mobile Aviation<br><strong>Operating System</strong></div>
+      <div class="doc-subtitle">Engineering Design Package · Series Hybrid Propulsion</div>
+      <div class="doc-rule"></div>
+      <div class="doc-meta">
+        Document No. MAOS-PM-002<br>
+        Revision A · March 2025<br>
+        Classification: Open Source
+      </div>
+      <div style="position:absolute;bottom:40px;right:72px;">
+        <svg viewBox="0 0 110 56" width="72">
+          <path d="M6,18 Q55,10 104,22" fill="none" stroke="#E8702A" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M6,28 Q55,21 104,33" fill="none" stroke="#F3F0E9" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+          <path d="M8,36 Q55,30 104,42" fill="none" stroke="#F3F0E9" stroke-width="0.8" stroke-linecap="round" opacity="0.18"/>
+          <circle cx="5" cy="18" r="3.0" fill="#E8702A"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <div style="margin-top:72px;padding:32px 72px;border-top:0.5px solid var(--gray-300);display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.14em;color:var(--gray-500);">AEROCOMMONS · BRAND IDENTITY STANDARDS · V1.0</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--orange);">aerocommons.org</div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>

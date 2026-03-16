@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AeroCommons is an open-source experimental aircraft development collective. The MAOS is a four-seat, series-hybrid, IFR-capable aircraft designed to be built by one person.">
+<meta property="og:title" content="AeroCommons — Open Source Experimental Aviation">
+<meta property="og:description" content="The MAOS: a four-seat, series-hybrid experimental aircraft designed for homebuilders. Open source. AI-assisted design. Flat-pack manufacturing.">
+<meta property="og:type" content="website">
+<title>AeroCommons — Open Source Experimental Aviation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET & TOKENS ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:         #152238;
+  --navy-deep:    #0C1824;
+  --cream:        #F3F0E9;
+  --cream-dark:   #E8E4DB;
+  --orange:       #E8702A;
+  --orange-light: #F2956A;
+  --orange-pale:  #FBE8DC;
+  --gray-100:     #E4E1DA;
+  --gray-300:     #BEBAB0;
+  --gray-500:     #7A7770;
+  --gray-700:     #3F3D39;
+  --white:        #FFFFFF;
+  --section-pad:  120px 7vw;
+  --radius:       4px;
+  --transition:   0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 2px; }
+
+/* ── UTILITY ── */
+.condensed { font-family: 'Barlow Condensed', sans-serif; }
+.tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.rule-orange {
+  width: 40px;
+  height: 2px;
+  background: var(--orange);
+  margin-bottom: 24px;
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ══════════════════════════════════════════
+   NAV
+══════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(21, 34, 56, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid rgba(243,240,233,0.08);
+  padding: 0 7vw;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background var(--transition);
+}
+
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243,240,233,0.5);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.nav-link:hover { color: var(--cream); }
+
+.nav-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--orange);
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.25s;
+}
+.nav-cta:hover { background: var(--orange-light); }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--cream);
+  transition: all 0.3s;
+}
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  background: var(--navy-deep);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 7vw 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid texture */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(243,240,233,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243,240,233,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Orange accent line — left edge */
+#hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--orange);
+}
+
+.hero-inner {
+  max-width: 820px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--orange);
+}
+
+.hero-h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  line-height: 1.0;
+  margin-bottom: 8px;
+}
+
+.hero-h1 strong {
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+
+.hero-sub {
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 300;
+  color: rgba(243,240,233,0.55);
+  line-height: 1.75;
+  max-width: 540px;
+  margin-top: 28px;
+  margin-bottom: 48px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-primary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--orange);
+  color: var(--white);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+
+.btn-ghost {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243,240,233,0.45);
+  text-decoration: none;
+  padding: 13px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.25s;
+  border-bottom: 0.5px solid rgba(243,240,233,0.15);
+}
+.btn-ghost:hover { color: var(--cream); }
+
+/* Spec strip */
+.hero-specs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 0.5px solid rgba(243,240,233,0.07);
+  display: flex;
+  padding: 0 7vw;
+  z-index: 1;
+}
+
+.spec-item {
+  flex: 1;
+  padding: 24px 0;
+  border-right: 0.5px solid rgba(243,240,233,0.07);
+}
+.spec-item:last-child { border-right: none; }
+
+.spec-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.spec-value span {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--orange);
+  margin-left: 3px;
+}
+
+.spec-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243,240,233,0.3);
+  padding-left: 16px;
+}
+
+.spec-item + .spec-item .spec-value,
+.spec-item + .spec-item .spec-label {
+  padding-left: 24px;
+}
+
+/* ══════════════════════════════════════════
+   SHARED SECTION STYLES
+══════════════════════════════════════════ */
+section {
+  padding: var(--section-pad);
+}
+
+.section-header {
+  max-width: 640px;
+  margin-bottom: 64px;
+}
+
+.section-header .tag {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.section-header h2 strong {
+  font-weight: 600;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: var(--gray-500);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════════
+   INTRO / MISSION BAND
+══════════════════════════════════════════ */
+#mission {
+  background: var(--navy);
+  padding: 80px 7vw;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: rgba(243,240,233,0.07);
+}
+
+.mission-cell {
+  background: var(--navy);
+  padding: 48px 40px;
+}
+
+.mission-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.mission-cell h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.mission-cell p {
+  font-size: 14px;
+  color: rgba(243,240,233,0.45);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════════
+   THE AIRCRAFT
+══════════════════════════════════════════ */
+#aircraft {
+  background: var(--cream);
+}
+
+.aircraft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.aircraft-card {
+  background: var(--white);
+  padding: 40px;
+  border: 0.5px solid var(--gray-100);
+  transition: border-color 0.3s;
+}
+.aircraft-card:hover { border-color: var(--orange); }
+
+.aircraft-card-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.aircraft-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.aircraft-card p {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.75;
+}
+
+/* Wide card spans both cols */
+.aircraft-card.wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Specs table */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.spec-table tr {
+  border-bottom: 0.5px solid var(--gray-100);
+}
+
+.spec-table tr:last-child { border-bottom: none; }
+
+.spec-table td {
+  padding: 12px 0;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.spec-table td:first-child {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+  width: 44%;
+  padding-right: 16px;
+}
+
+.spec-table td:last-child {
+  color: var(--navy);
+  font-weight: 400;
+}
+
+/* ══════════════════════════════════════════
+   PROPULSION
+══════════════════════════════════════════ */
+#propulsion {
+  background: var(--navy-deep);
+  padding: var(--section-pad);
+}
+
+#propulsion .section-header h2 { color: var(--cream); }
+#propulsion .section-header p { color: rgba(243,240,233,0.45); }
+#propulsion .section-header .tag { color: var(--orange); }
+
+.prop-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(243,240,233,0.06);
+  margin-bottom: 48px;
+}
+
+.prop-step {
+  background: rgba(255,255,255,0.03);
+  padding: 32px 28px;
+  position: relative;
+}
+
+.prop-step-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  color: rgba(243,240,233,0.06);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.prop-step h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.prop-step p {
+  font-size: 13px;
+  color: rgba(243,240,233,0.4);
+  line-height: 1.7;
+}
+
+.prop-step-arrow {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prop-callout {
+  background: rgba(232,112,42,0.08);
+  border: 0.5px solid rgba(232,112,42,0.2);
+  padding: 28px 32px;
+  border-radius: var(--radius);
+}
+
+.prop-callout p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: rgba(243,240,233,0.6);
+  line-height: 1.7;
+}
+
+.prop-callout strong {
+  color: var(--orange);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════
+   GROUND OPS / TRAILER
+══════════════════════════════════════════ */
+#ground {
+  background: var(--cream);
+}
+
+.ground-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.ground-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ground-step {
+  display: flex;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 0.5px solid var(--gray-100);
+}
+
+.ground-step:first-child { padding-top: 0; }
+.ground-step:last-child { border-bottom: none; }
+
+.ground-step-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  min-width: 32px;
+  padding-top: 3px;
+}
+
+.ground-step h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.ground-step p {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+.ground-aside {
+  background: var(--navy);
+  padding: 48px 40px;
+  border-radius: var(--radius);
+  position: sticky;
+  top: 88px;
+}
+
+.ground-aside h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.ground-aside h3 strong {
+  font-weight: 600;
+  display: block;
+}
+
+.ground-stat {
+  padding: 20px 0;
+  border-bottom: 0.5px solid rgba(243,240,233,0.07);
+}
+.ground-stat:last-of-type { border-bottom: none; }
+
+.ground-stat-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ground-stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243,240,233,0.3);
+}
+
+/* ══════════════════════════════════════════
+   AI DEVELOPMENT
+══════════════════════════════════════════ */
+#ai {
+  background: var(--navy);
+  padding: var(--section-pad);
+}
+
+#ai .section-header h2 { color: var(--cream); }
+#ai .section-header p  { color: rgba(243,240,233,0.45); }
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: rgba(243,240,233,0.06);
+  margin-bottom: 56px;
+}
+
+.ai-card {
+  background: var(--navy);
+  padding: 36px 32px;
+  transition: background 0.3s;
+}
+.ai-card:hover { background: rgba(255,255,255,0.03); }
+
+.ai-card-icon {
+  width: 36px;
+  height: 2px;
+  background: var(--orange);
+  margin-bottom: 24px;
+}
+
+.ai-card h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.ai-card p {
+  font-size: 13px;
+  color: rgba(243,240,233,0.4);
+  line-height: 1.75;
+}
+
+.ai-board {
+  background: rgba(243,240,233,0.03);
+  border: 0.5px solid rgba(243,240,233,0.08);
+  padding: 40px;
+  border-radius: var(--radius);
+}
+
+.ai-board-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 24px;
+}
+
+.agent-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.agent-pill {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 2px;
+  background: rgba(243,240,233,0.05);
+  border: 0.5px solid rgba(243,240,233,0.1);
+  color: rgba(243,240,233,0.5);
+  transition: all 0.25s;
+}
+
+.agent-pill:hover {
+  background: rgba(232,112,42,0.1);
+  border-color: rgba(232,112,42,0.3);
+  color: var(--orange);
+}
+
+.agent-pill.chairman {
+  background: rgba(232,112,42,0.12);
+  border-color: rgba(232,112,42,0.3);
+  color: var(--orange);
+}
+
+.ai-board-desc {
+  font-size: 13px;
+  color: rgba(243,240,233,0.35);
+  line-height: 1.75;
+  margin-top: 24px;
+  max-width: 640px;
+}
+
+/* ══════════════════════════════════════════
+   MANUFACTURING
+══════════════════════════════════════════ */
+#manufacturing {
+  background: var(--cream-dark);
+  padding: var(--section-pad);
+}
+
+.mfg-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 72px;
+  align-items: end;
+}
+
+.mfg-intro p {
+  font-size: 16px;
+  color: var(--gray-500);
+  line-height: 1.8;
+}
+
+.mfg-intro p + p { margin-top: 16px; }
+
+.mfg-pull {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  line-height: 1.4;
+  border-left: 3px solid var(--orange);
+  padding-left: 24px;
+}
+
+.mfg-tools {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.tool-card {
+  background: var(--white);
+  padding: 32px 28px;
+  border: 0.5px solid var(--gray-100);
+  transition: border-color 0.3s;
+}
+.tool-card:hover { border-color: var(--orange); }
+
+.tool-card-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.tool-card h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.tool-card p {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+.mfg-principle {
+  margin-top: 56px;
+  background: var(--navy);
+  padding: 56px 7vw;
+  margin-left: -7vw;
+  margin-right: -7vw;
+  margin-bottom: -120px;
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.principle-text h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.principle-text h3 strong {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.principle-text p {
+  font-size: 14px;
+  color: rgba(243,240,233,0.45);
+  line-height: 1.75;
+}
+
+.principle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.principle-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 0.5px solid rgba(243,240,233,0.06);
+}
+
+.principle-item:last-child { border-bottom: none; }
+
+.principle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.principle-item p {
+  font-size: 13px;
+  color: rgba(243,240,233,0.45);
+  line-height: 1.7;
+}
+
+.principle-item p strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════
+   OPEN SOURCE
+══════════════════════════════════════════ */
+#open {
+  background: var(--cream);
+  padding: var(--section-pad);
+  padding-top: 160px;
+}
+
+.open-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.open-text h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.open-text h2 strong { font-weight: 700; }
+
+.open-text p {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.open-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.btn-navy {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--navy);
+  color: var(--cream);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-navy:hover { background: var(--navy-deep); transform: translateY(-1px); }
+
+.open-card {
+  background: var(--navy);
+  padding: 48px 40px;
+  border-radius: var(--radius);
+}
+
+.open-card-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 24px;
+}
+
+.open-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.repo-url {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(232,112,42,0.7);
+  margin-bottom: 28px;
+}
+
+.open-card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.open-card-list li {
+  font-size: 13px;
+  color: rgba(243,240,233,0.4);
+  padding: 14px 0;
+  border-bottom: 0.5px solid rgba(243,240,233,0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.open-card-list li:last-child { border-bottom: none; }
+
+.open-card-list li::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════ */
+#contact {
+  background: var(--navy-deep);
+  padding: 100px 7vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(243,240,233,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243,240,233,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.contact-inner { position: relative; z-index: 1; }
+
+.contact-inner .tag { margin-bottom: 24px; display: block; }
+
+.contact-inner h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.contact-inner h2 strong {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.contact-inner > p {
+  font-size: 16px;
+  color: rgba(243,240,233,0.4);
+  line-height: 1.75;
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(243,240,233,0.2);
+  padding-bottom: 8px;
+  transition: color 0.25s, border-color 0.25s;
+  margin-bottom: 40px;
+}
+
+.contact-email:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  background: var(--navy-deep);
+  border-top: 0.5px solid rgba(243,240,233,0.06);
+  padding: 32px 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-left {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: rgba(243,240,233,0.25);
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(243,240,233,0.3);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.footer-link:hover { color: var(--orange); }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  :root { --section-pad: 80px 6vw; }
+
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(12,24,36,0.98);
+    padding: 24px 7vw 32px;
+    gap: 20px;
+    border-bottom: 0.5px solid rgba(243,240,233,0.07);
+  }
+  .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+
+  .mission-grid { grid-template-columns: 1fr; }
+  .aircraft-grid { grid-template-columns: 1fr; }
+  .aircraft-card.wide { grid-template-columns: 1fr; gap: 24px; }
+  .prop-flow { grid-template-columns: 1fr 1fr; }
+  .ground-cols { grid-template-columns: 1fr; gap: 48px; }
+  .ground-aside { position: static; }
+  .ai-grid { grid-template-columns: 1fr; }
+  .mfg-intro { grid-template-columns: 1fr; gap: 40px; }
+  .mfg-tools { grid-template-columns: 1fr 1fr; }
+  .open-grid { grid-template-columns: 1fr; gap: 48px; }
+  .principle-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-specs { position: static; margin-top: 60px; flex-wrap: wrap; }
+  .spec-item { min-width: 140px; border-right: none; border-bottom: 0.5px solid rgba(243,240,233,0.07); }
+  #hero { padding-bottom: 40px; }
+}
+
+@media (max-width: 600px) {
+  .mfg-tools { grid-template-columns: 1fr; }
+  .prop-flow { grid-template-columns: 1fr; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo" aria-label="AeroCommons home">
+    <svg viewBox="0 0 260 52" width="180" aria-hidden="true">
+      <path d="M6,18 Q26,12 54,20" fill="none" stroke="#E8702A" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M6,26 Q27,20 54,29" fill="none" stroke="#F3F0E9" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+      <path d="M7,32 Q28,27 54,36" fill="none" stroke="#F3F0E9" stroke-width="0.7" stroke-linecap="round" opacity="0.28"/>
+      <circle cx="5" cy="18" r="2.4" fill="#E8702A"/>
+      <circle cx="5" cy="26" r="1.4" fill="#F3F0E9" opacity="0.55"/>
+      <line x1="64" y1="8" x2="64" y2="44" stroke="#F3F0E9" stroke-width="0.4" opacity="0.2"/>
+      <text x="74" y="22" font-family="'Barlow', sans-serif" font-size="10" font-weight="300" letter-spacing="7" fill="#F3F0E9" opacity="0.60">AERO</text>
+      <line x1="74" y1="28" x2="254" y2="28" stroke="#F3F0E9" stroke-width="0.4" opacity="0.18"/>
+      <text x="74" y="42" font-family="'Barlow', sans-serif" font-size="16" font-weight="500" letter-spacing="7" fill="#F3F0E9">COMMONS</text>
+    </svg>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a href="#aircraft" class="nav-link">The Aircraft</a>
+    <a href="#ground" class="nav-link">Ground Ops</a>
+    <a href="#ai" class="nav-link">AI Development</a>
+    <a href="#manufacturing" class="nav-link">Manufacturing</a>
+    <a href="#open" class="nav-link">Open Source</a>
+  </div>
+
+  <a href="https://github.com/billmallard/aerocommons" class="nav-cta" target="_blank" rel="noopener">View on GitHub</a>
+
+  <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">FAA Experimental Amateur-Built · Open Source</div>
+
+    <h1 class="hero-h1 reveal reveal-delay-1">
+      The aircraft you<br>
+      <strong>build yourself.</strong>
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      The MAOS is a four-seat, series-hybrid, IFR-capable experimental aircraft engineered for the EAA homebuilder community. Designed in the open. Built from flat stock. Flown at altitude.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#aircraft" class="btn-primary">
+        Explore the Design
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://github.com/billmallard/aerocommons" class="btn-ghost" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        github.com/billmallard/aerocommons
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-specs reveal reveal-delay-4">
+    <div class="spec-item">
+      <div class="spec-value">4<span>seat</span></div>
+      <div class="spec-label">Configuration</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-value">20,000<span>ft</span></div>
+      <div class="spec-label">Target ceiling</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-value">Series<span>hybrid</span></div>
+      <div class="spec-label">Propulsion</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-value">IFR<span>equipped</span></div>
+      <div class="spec-label">Avionics</div>
+    </div>
+    <div class="spec-item">
+      <div class="spec-value">FAA<span>E-AB</span></div>
+      <div class="spec-label">Regulatory basis</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MISSION BAND
+══════════════════════════════════════════ -->
+<section id="mission" aria-label="Project pillars">
+  <div class="mission-grid">
+    <div class="mission-cell reveal">
+      <div class="mission-number">01</div>
+      <h3>Inherently Safe Configuration</h3>
+      <p>High-wing pod-and-boom architecture with conservative wing loading and positive static margin verified by AVL analysis at both CG extremes. Departure resistance is designed in, not trained in.</p>
+    </div>
+    <div class="mission-cell reveal reveal-delay-1">
+      <div class="mission-number">02</div>
+      <h3>One Builder, Two-Car Garage</h3>
+      <p>Every structural component is designed to be fabricated with tools that actually exist in a competent amateur's shop. No CNC mill. No autoclave. No professional machine shop required at any build step.</p>
+    </div>
+    <div class="mission-cell reveal reveal-delay-2">
+      <div class="mission-number">03</div>
+      <h3>Open from Day One</h3>
+      <p>All design files, analysis outputs, decision records, and build documentation are published openly. The knowledge that goes into this aircraft belongs to the homebuilder community permanently.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     THE AIRCRAFT
+══════════════════════════════════════════ -->
+<section id="aircraft">
+  <div class="section-header reveal">
+    <span class="tag">The Platform</span>
+    <h2>Designed for the <strong>mission that matters.</strong></h2>
+    <p>The MAOS targets the capability gap between a well-equipped LSA and a certified piston twin — a capable, IFR-equipped four-seat platform that a single builder can complete, transport, and deploy from a standard general aviation airport.</p>
+  </div>
+
+  <div class="aircraft-grid">
+
+    <div class="aircraft-card reveal">
+      <div class="aircraft-card-tag">Airframe</div>
+      <h3>Pod-and-Boom Fuselage</h3>
+      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted above a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew/passenger accommodation. The pod-and-boom separation means no pneumatic systems cross the wing-to-pod boundary.</p>
+    </div>
+
+    <div class="aircraft-card reveal reveal-delay-1">
+      <div class="aircraft-card-tag">Wing</div>
+      <h3>High Wing, Removable Single-Piece</h3>
+      <p>V-strut braced high wing with twin Honda 400cc motorcycle-derived ICE generators mounted at mid-span. The wing is a single removable piece — removal and stow is accomplished by a two-person crew using the integrated trailer crane system, without a hangar or ground power equipment.</p>
+    </div>
+
+    <div class="aircraft-card reveal reveal-delay-2">
+      <div class="aircraft-card-tag">Environmental Control</div>
+      <h3>Full Climate Control + Pressurization Path</h3>
+      <p>Dual-compressor ECS: a closed-circuit EV scroll compressor vapor-cycle system for climate control, and an open-circuit compressor for pressurization. The v1.0 airframe carries all structural provisions, bulkhead fittings, and wiring for pressurization — v1.1 installation requires no structural modification.</p>
+    </div>
+
+    <div class="aircraft-card wide reveal reveal-delay-3">
+      <div>
+        <div class="aircraft-card-tag">Target Specifications</div>
+        <h3>Platform Parameters</h3>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.75;margin-top:8px;">All values are design targets under active development. Performance figures subject to revision as analysis matures.</p>
+      </div>
+      <table class="spec-table">
+        <tr><td>Crew + Passengers</td><td>1 + 3 (four total)</td></tr>
+        <tr><td>Target Ceiling</td><td>17,500 – 20,000 ft MSL</td></tr>
+        <tr><td>Propulsion</td><td>Series hybrid — dual ICE generators + contra-rotating rim-drive electric motors</td></tr>
+        <tr><td>Ice Protection</td><td>TKS fluid system</td></tr>
+        <tr><td>Landing Gear</td><td>Fixed faired tricycle</td></tr>
+        <tr><td>Tail Configuration</td><td>Conventional aft-tail</td></tr>
+        <tr><td>Regulatory Basis</td><td>FAA Experimental Amateur-Built (51% rule)</td></tr>
+        <tr><td>Transport</td><td>Road-legal enclosed gooseneck trailer with integrated crane</td></tr>
+        <tr><td>Avionics</td><td>IFR-equipped, EFIS-based glass panel</td></tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PROPULSION
+══════════════════════════════════════════ -->
+<section id="propulsion">
+  <div class="section-header reveal">
+    <span class="tag">Propulsion Architecture</span>
+    <h2>Series hybrid<br><strong>done right.</strong></h2>
+    <p>The series hybrid approach decouples the engines from the drivetrain entirely. ICE generators run at their efficiency peak regardless of flight phase. Electric motors provide instant torque and clean power management. The architecture provides meaningful redundancy at every stage.</p>
+  </div>
+
+  <div class="prop-flow">
+    <div class="prop-step reveal">
+      <div class="prop-step-num">01</div>
+      <h4>Dual ICE Generators</h4>
+      <p>Two Honda 400cc motorcycle-derived engines, each ~50 hp, mounted at mid-span in the wing. They run as pure generators — no mechanical coupling to the propulsor. Either engine can sustain cruise independently.</p>
+    </div>
+    <div class="prop-step reveal reveal-delay-1">
+      <div class="prop-step-num">02</div>
+      <h4>High-Voltage Bus</h4>
+      <p>Generator output feeds a common HV DC bus alongside the flight battery pack. The bus arbitrates power between generation, storage, and consumption continuously, managed by the custom ESP32-S3 FADEC.</p>
+    </div>
+    <div class="prop-step reveal reveal-delay-2">
+      <div class="prop-step-num">03</div>
+      <h4>Rim-Drive Electric Motors</h4>
+      <p>Contra-rotating axial-flux or rim-drive motors on the tail boom eliminate the gearbox entirely. Motor candidates include the Donut Motor rimless rim-drive and Beyond Motors AXM2 axial flux units.</p>
+    </div>
+    <div class="prop-step reveal reveal-delay-3">
+      <div class="prop-step-num">04</div>
+      <h4>Custom FADEC</h4>
+      <p>ESP32-S3 based controller with dedicated sensing and power driver boards — builder-fabricated from published schematics, PCB fabrication outsourced. All firmware open-source.</p>
+    </div>
+  </div>
+
+  <div class="prop-callout reveal reveal-delay-2">
+    <p>The series hybrid architecture means <strong>no single failure produces a total power loss.</strong> Both generators must fail, the battery must be depleted, and both motors must fail before the aircraft has no propulsive power — three independent failure modes instead of one. This failure matrix is central to the MAOS safety case.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     GROUND OPS
+══════════════════════════════════════════ -->
+<section id="ground">
+  <div class="section-header reveal">
+    <span class="tag">Ground Operations</span>
+    <h2>Fly it anywhere.<br><strong>Tow it home.</strong></h2>
+    <p>The MAOS is designed to operate from remote airstrips without hangar support. The purpose-built trailer is not a storage solution — it is the ground support system. Transport, deployment, and recovery are engineered operations, not afterthoughts.</p>
+  </div>
+
+  <div class="ground-cols">
+    <div class="ground-steps">
+
+      <div class="ground-step reveal">
+        <div class="ground-step-num">01</div>
+        <div>
+          <h4>Road Transport</h4>
+          <p>Aircraft stows in an enclosed aluminum gooseneck car hauler (~8.5' × 28'–32') meeting Texas road-legal envelope requirements. Wing removed, fuselage supported on custom cradles. No permit loads, no escort vehicles.</p>
+        </div>
+      </div>
+
+      <div class="ground-step reveal reveal-delay-1">
+        <div class="ground-step-num">02</div>
+        <div>
+          <h4>Crane System</h4>
+          <p>A longitudinal overhead beam with traveling hoist — derived from burial vault delivery truck architecture — runs the full length of the trailer interior. The crane handles wing removal, aircraft positioning, and battery access without external ground equipment.</p>
+        </div>
+      </div>
+
+      <div class="ground-step reveal reveal-delay-2">
+        <div class="ground-step-num">03</div>
+        <div>
+          <h4>Wing Attach</h4>
+          <p>Two-person crew installs the single-piece wing using the trailer crane. Wing-to-fuselage interface carries only structural and electrical loads — no pneumatic crossings, no hydraulic couplings. Assembly time targets under 60 minutes.</p>
+        </div>
+      </div>
+
+      <div class="ground-step reveal reveal-delay-3">
+        <div class="ground-step-num">04</div>
+        <div>
+          <h4>Preflight & Power</h4>
+          <p>Shore power connection via standardized ground support connector charges the flight battery pack while the aircraft is on the trailer. The aircraft arrives at the flight line with full battery state and a completed weight-and-balance check.</p>
+        </div>
+      </div>
+
+      <div class="ground-step reveal reveal-delay-4">
+        <div class="ground-step-num">05</div>
+        <div>
+          <h4>Recovery</h4>
+          <p>Field landing and recovery is the design case — not the exception. The trailer can be positioned at any location accessible by a pickup truck. Wing removal is performed in the open field using only trailer-carried equipment.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ground-aside reveal reveal-delay-2">
+      <div class="rule-orange"></div>
+      <h3>The trailer is not<br><strong>a transporter.</strong><br>It is a mobile flight operations base.</h3>
+
+      <div class="ground-stat">
+        <div class="ground-stat-value">8.5 × 30 ft</div>
+        <div class="ground-stat-label">Trailer envelope (road legal, TX)</div>
+      </div>
+      <div class="ground-stat">
+        <div class="ground-stat-value">2-person</div>
+        <div class="ground-stat-label">Minimum crew for deployment</div>
+      </div>
+      <div class="ground-stat">
+        <div class="ground-stat-value">&lt; 60 min</div>
+        <div class="ground-stat-label">Trailer to flight-ready target</div>
+      </div>
+      <div class="ground-stat">
+        <div class="ground-stat-value">Zero</div>
+        <div class="ground-stat-label">External ground support equipment required</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     AI DEVELOPMENT
+══════════════════════════════════════════ -->
+<section id="ai">
+  <div class="section-header reveal">
+    <span class="tag">Development Methodology</span>
+    <h2>AI-assisted design<br><strong>from the ground up.</strong></h2>
+    <p>The MAOS development process treats AI not as a search engine but as a structured design team. A multi-agent board system assigns specialized roles to independent AI agents, surfaces inter-disciplinary conflicts early, and produces formal decision records at every gate.</p>
+  </div>
+
+  <div class="ai-grid">
+    <div class="ai-card reveal">
+      <div class="ai-card-icon"></div>
+      <h4>Structured Agent Roles</h4>
+      <p>Six specialist agents cover Aerodynamics, Structures, Propulsion, Systems, Manufacturing, and Safety. Each maintains its own design constraints and flags conflicts with other agents before they become build problems.</p>
+    </div>
+    <div class="ai-card reveal reveal-delay-1">
+      <div class="ai-card-icon"></div>
+      <h4>Formal Decision Gates</h4>
+      <p>Every open design decision is tracked as an explicit gate with the current recommendation documented. Design state is versioned. Nothing is resolved informally — every decision has a record, a rationale, and an owner.</p>
+    </div>
+    <div class="ai-card reveal reveal-delay-2">
+      <div class="ai-card-icon"></div>
+      <h4>Living Documentation</h4>
+      <p>Session outputs produce numbered, revisioned formal documents. Weight budgets, failure matrices, ECS architectures, and trailer plans are maintained as living documents — not engineering sketches. The repo is the single source of truth.</p>
+    </div>
+    <div class="ai-card reveal reveal-delay-3">
+      <div class="ai-card-icon"></div>
+      <h4>Analysis Integration</h4>
+      <p>AVL stability analysis, propulsion failure matrix modeling, and ECS thermal calculations are performed iteratively alongside design decisions — not as a final-stage validation. Problems surface at the design phase, not the build phase.</p>
+    </div>
+    <div class="ai-card reveal reveal-delay-4">
+      <div class="ai-card-icon"></div>
+      <h4>Conflict-Driven Design</h4>
+      <p>Inter-agent conflicts are anticipated and structured into board meeting agendas. When the Structures agent and the Manufacturing agent disagree, that tension is surfaced explicitly — the resolution is a design decision, not an implicit compromise.</p>
+    </div>
+    <div class="ai-card reveal reveal-delay-5">
+      <div class="ai-card-icon"></div>
+      <h4>Open Methodology</h4>
+      <p>The agent system, SKILL files, board agendas, and decision records are published alongside the design files. Any builder can fork the methodology alongside the design. The process is as open as the product.</p>
+    </div>
+  </div>
+
+  <div class="ai-board reveal reveal-delay-2">
+    <div class="ai-board-title">Design Board Agents</div>
+    <div class="agent-row">
+      <div class="agent-pill chairman">Chairman</div>
+      <div class="agent-pill">Aerodynamics</div>
+      <div class="agent-pill">Structures</div>
+      <div class="agent-pill">Propulsion</div>
+      <div class="agent-pill">Systems</div>
+      <div class="agent-pill">Manufacturing</div>
+      <div class="agent-pill">Safety</div>
+    </div>
+    <p class="ai-board-desc">The Chairman agent orchestrates board sessions, assigns agenda items to specialist agents, collects conflicting recommendations, and produces a structured resolution record. All agent interactions are logged as part of the project's permanent design history.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MANUFACTURING
+══════════════════════════════════════════ -->
+<section id="manufacturing">
+  <div class="mfg-intro">
+    <div>
+      <div class="section-header reveal" style="margin-bottom:0;">
+        <span class="tag">Manufacturing Philosophy</span>
+        <h2>Flat stock.<br><strong>Real tools.</strong><br>One builder.</h2>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p>The MAOS design philosophy treats manufacturing accessibility as a primary constraint — not an optimization. If a structural component cannot be produced by a competent amateur with tools available through normal commercial channels, the design has failed before the first part is cut.</p>
+      <p style="margin-top:16px;">Primary structure is designed around aluminum sheet and extrusions, foam-core fiberglass composite, and flat-cut plywood formers. Parts are designed to ship flat from online services like SendCutSend and OSH Cut, then assemble on-site with basic hand tools.</p>
+    </div>
+  </div>
+
+  <div class="mfg-tools">
+    <div class="tool-card reveal">
+      <div class="tool-card-num">Cut</div>
+      <h4>Laser & Waterjet</h4>
+      <p>Aluminum sheet, steel gussets, and plywood formers ordered as DXF files from SendCutSend or OSH Cut. Parts arrive flat, deburred, and ready to assemble. Unique part count is minimized at the design stage.</p>
+    </div>
+    <div class="tool-card reveal reveal-delay-1">
+      <div class="tool-card-num">Form</div>
+      <h4>Foam-Core Composites</h4>
+      <p>Hot-wire cut foam cores over shaped formers — the Rutan-proven path to efficient airfoil shapes without a CNC mill. Fiberglass or carbon cloth over shaped foam. No autoclave. Vacuum bagging where needed.</p>
+    </div>
+    <div class="tool-card reveal reveal-delay-2">
+      <div class="tool-card-num">Print</div>
+      <h4>3D Printed Tooling</h4>
+      <p>FDM printing for non-structural components, drilling jigs, assembly fixtures, and fit-check parts. Resin printing for precision tooling and mold plugs. Printed parts are never primary structure.</p>
+    </div>
+    <div class="tool-card reveal reveal-delay-3">
+      <div class="tool-card-num">Source</div>
+      <h4>COTS Hardware</h4>
+      <p>Structural hardware from McMaster-Carr and Aircraft Spruce. Certified fasteners where required by design. Electrical and non-structural components from standard commercial sources. No single-source dependencies in primary structure.</p>
+    </div>
+  </div>
+
+  <div class="mfg-principle">
+    <div class="principle-grid">
+      <div class="principle-text reveal">
+        <div class="rule-orange"></div>
+        <h3>The 51% rule<br>is the <strong>design rule.</strong></h3>
+        <p>FAA Experimental Amateur-Built certification requires the builder to fabricate more than 51% of the aircraft by value. The MAOS is designed so that the 51% is the interesting, capable, and achievable part — not a compliance technicality.</p>
+      </div>
+      <div class="principle-list reveal reveal-delay-2">
+        <div class="principle-item">
+          <div class="principle-dot"></div>
+          <p><strong>All files in open formats.</strong> STEP, STL, DXF, and SVG — no vendor lock-in. FreeCAD and OpenVSP as primary CAD tools.</p>
+        </div>
+        <div class="principle-item">
+          <div class="principle-dot"></div>
+          <p><strong>Minimum unique part count.</strong> Every part that can be shared between assemblies is designed to be shared. Fewer jigs, fewer setups, fewer single-use operations.</p>
+        </div>
+        <div class="principle-item">
+          <div class="principle-dot"></div>
+          <p><strong>Field-repairable.</strong> Any structural repair that could be required by a hard landing or hail damage is achievable with materials stocked in the trailer and basic hand tools.</p>
+        </div>
+        <div class="principle-item">
+          <div class="principle-dot"></div>
+          <p><strong>Weight is tracked from day one.</strong> Every component carries a weight budget. No component is added without justifying its mass against its function.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     OPEN SOURCE
+══════════════════════════════════════════ -->
+<section id="open">
+  <div class="open-grid">
+    <div class="open-text reveal">
+      <div class="rule-orange"></div>
+      <span class="tag" style="display:block;margin-bottom:16px;">The Commons</span>
+      <h2>Everything<br>we learn<br><strong>is yours.</strong></h2>
+      <p>AeroCommons publishes every design file, every analysis output, every agent session, every decision record, and every build document in the public repository. Not after the project is complete. From the first session.</p>
+      <p>The goal is not just to build one aircraft. It is to build the methodology, the toolchain, and the knowledge base that makes the next aircraft easier for the next builder.</p>
+
+      <div class="open-actions">
+        <a href="https://github.com/billmallard/aerocommons" class="btn-navy" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View Repository
+        </a>
+        <a href="#contact" class="btn-primary">Get Involved</a>
+      </div>
+    </div>
+
+    <div class="open-card reveal reveal-delay-2">
+      <div class="open-card-tag">What's in the repo</div>
+      <h3>billmallard / aerocommons</h3>
+      <div class="repo-url">github.com/billmallard/aerocommons</div>
+      <ul class="open-card-list">
+        <li>Formal design drawings (DWG MAOS-GA-001, PM-002)</li>
+        <li>Trailer and ground support development plan (MAOS-TRL-DEV-001)</li>
+        <li>Environmental control system architecture (MAOS-ECS-DEV-001)</li>
+        <li>Agent SKILL.md files and board session transcripts</li>
+        <li>AVL stability analysis outputs and weight budgets</li>
+        <li>Open decision gate register with current recommendations</li>
+        <li>CAD files in open formats (STEP, DXF, STL)</li>
+        <li>Brand identity standards and assets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <span class="tag">Get Involved</span>
+    <h2>This aircraft gets<br><strong>built by a community.</strong></h2>
+    <p>The MAOS is a serious engineering project. We're looking for builders, pilots, engineers, and makers who want to work on something real. If you have relevant skills or just want to follow along, reach out.</p>
+    <a href="mailto:contact@aerocommons.org" class="contact-email">
+      contact@aerocommons.org
+    </a>
+    <br>
+    <a href="https://github.com/billmallard/aerocommons" class="btn-primary" target="_blank" rel="noopener" style="margin-top:8px;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      Star the repo on GitHub
+    </a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-left">
+    &copy; 2025 AeroCommons · Open Source · FAA Experimental Amateur-Built
+  </div>
+  <div class="footer-links">
+    <a href="https://github.com/billmallard/aerocommons" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:contact@aerocommons.org" class="footer-link">Contact</a>
+  </div>
+</footer>
+
+
+<script>
+// ── REVEAL ON SCROLL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Trigger hero reveals immediately
+document.querySelectorAll('#hero .reveal').forEach((el, i) => {
+  setTimeout(() => el.classList.add('visible'), 100 + i * 120);
+});
+
+// ── NAV HAMBURGER ──
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+hamburger.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') navLinks.classList.toggle('open');
+});
+
+// Close mobile nav on link click
+navLinks.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// ── SMOOTH ACTIVE NAV ──
+const sections = document.querySelectorAll('section[id]');
+const navLinkEls = document.querySelectorAll('.nav-link');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinkEls.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + id
+          ? 'rgba(243,240,233,0.9)'
+          : 'rgba(243,240,233,0.5)';
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => navObserver.observe(s));
+</script>
+
+</body>
+</html>
