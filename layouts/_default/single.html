@@ -27,7 +27,7 @@
         All Articles
       </a>
 
-      <div class="article-prose reveal">
+      <div class="article-prose">
         {{ .Content }}
       </div>
     </article>
@@ -35,7 +35,7 @@
     <!-- ── SIDEBAR ── -->
     <aside class="article-sidebar">
 
-      <div class="sidebar-meta reveal">
+      <div class="sidebar-meta">
         <div class="sidebar-meta-row">
           <div class="sidebar-meta-label">Published</div>
           <div class="sidebar-meta-value">{{ .Date.Format "January 02, 2006" }}</div>
@@ -59,7 +59,7 @@
       </div>
 
       {{ with .Params.tags }}
-      <div class="sidebar-tags reveal reveal-delay-1">
+      <div class="sidebar-tags">
         <div class="sidebar-tags-title">Tags</div>
         <div class="tag-pills">
           {{ range . }}
