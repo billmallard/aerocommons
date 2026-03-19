@@ -24,7 +24,7 @@ body {
   font-family: 'Barlow', sans-serif;
   background: var(--cream);
   color: var(--navy);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -820,7 +820,7 @@ footer {
 .article-content { min-width: 0; }
 
 /* Typography for article body */
-.article-prose { font-size: 16px; color: var(--gray-700); line-height: 1.8; }
+.article-prose { font-size: 18px; color: var(--gray-700); line-height: 1.8; }
 
 .article-prose h2 {
   font-family: 'Barlow Condensed', sans-serif;
