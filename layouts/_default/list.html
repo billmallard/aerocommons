@@ -25,10 +25,12 @@
 
       <div class="article-card-meta">
         <span class="article-date">{{ .Date.Format "Jan 02, 2006" }}</span>
-        {{ range first 2 .Params.tags }}
+        {{ with .Params.tags }}
+        {{ range first 2 . }}
         {{ $tagClass := "article-tag" }}
         {{ if eq . "board-meeting" }}{{ $tagClass = "article-tag board-meeting" }}{{ end }}
         <span class="{{ $tagClass }}">{{ . }}</span>
+        {{ end }}
         {{ end }}
       </div>
 
