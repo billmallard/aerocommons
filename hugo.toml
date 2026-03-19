@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "AeroCommons"
 
 [params]
+  gaID = "G-F3VK4VR7MP"
   description = "Open-source experimental aircraft development. The MAOS is a four-seat, series-hybrid, IFR-capable aircraft designed for homebuilders."
   github = "https://github.com/billmallard/aerocommons"
   email = "contact@aerocommons.org"
