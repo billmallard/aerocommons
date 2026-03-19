@@ -1,0 +1,32 @@
+baseURL = "https://aerocommons.org/"
+languageCode = "en-us"
+title = "AeroCommons"
+theme = ""
+
+[params]
+  description = "Open-source experimental aircraft development. The MAOS is a four-seat, series-hybrid, IFR-capable aircraft designed for homebuilders."
+  github = "https://github.com/billmallard/aerocommons"
+  email = "contact@aerocommons.org"
+  tagline = "Open Source Experimental Aviation"
+
+[taxonomies]
+  tag = "tags"
+  author = "authors"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    style = "monokai"
+    noClasses = true
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
