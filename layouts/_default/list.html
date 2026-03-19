@@ -34,11 +34,10 @@
 
       <h2>{{ .Title }}</h2>
 
-      <p>
-        {{ with .Params.summary }}{{ . }}
-        {{ else if .Description }}{{ .Description }}
-        {{ else }}{{ .Summary }}{{ end }}
-      </p>
+      {{ $excerpt := .Summary }}
+      {{ with .Description }}{{ $excerpt = . }}{{ end }}
+      {{ with .Params.summary }}{{ $excerpt = . }}{{ end }}
+      <p>{{ $excerpt }}</p>
 
       <div class="article-read-more">
         Read more
