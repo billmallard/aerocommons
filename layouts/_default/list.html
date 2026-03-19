@@ -17,13 +17,18 @@
 
   {{ if .Pages }}
   <div class="articles-grid">
-    {{ range .Pages.ByDate.Reverse }}
-    <a href="{{ .Permalink }}" class="article-card{{ if (in .Params.tags "board-meeting") }} session{{ end }} reveal">
+ {{ range .Pages.ByDate.Reverse }}
+    {{ $isBoard := in .Params.tags "board-meeting" }}
+    {{ $cardClass := "article-card reveal" }}
+    {{ if $isBoard }}{{ $cardClass = "article-card session reveal" }}{{ end }}
+    <a href="{{ .Permalink }}" class="{{ $cardClass }}">
 
       <div class="article-card-meta">
         <span class="article-date">{{ .Date.Format "Jan 02, 2006" }}</span>
         {{ range first 2 .Params.tags }}
-        <span class="article-tag{{ if (eq . "board-meeting") }} board-meeting{{ end }}">{{ . }}</span>
+        {{ $tagClass := "article-tag" }}
+        {{ if eq . "board-meeting" }}{{ $tagClass = "article-tag board-meeting" }}{{ end }}
+        <span class="{{ $tagClass }}">{{ . }}</span>
         {{ end }}
       </div>
 
