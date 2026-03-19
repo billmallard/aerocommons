@@ -36,7 +36,7 @@ body {
 /* ── UTILITY ── */
 .tag-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -87,7 +87,7 @@ nav {
 
 .nav-link {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -99,7 +99,7 @@ nav {
 
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -134,7 +134,7 @@ nav {
 ══════════════════════════════════════════ */
 .btn-primary {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ nav {
 
 .btn-ghost {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -169,7 +169,7 @@ nav {
 
 .btn-navy {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -222,7 +222,7 @@ nav {
 
 .hero-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.28em;
   color: var(--orange);
@@ -251,7 +251,7 @@ nav {
 .hero-h1 strong { font-weight: 700; color: var(--white); display: block; }
 
 .hero-sub {
-  font-size: clamp(15px, 1.8vw, 18px);
+  font-size: clamp(16px, 1.8vw, 18px);
   font-weight: 300;
   color: rgba(243,240,233,0.55);
   line-height: 1.75;
@@ -287,11 +287,11 @@ nav {
   line-height: 1;
   margin-bottom: 4px;
 }
-.spec-value span { font-size: 13px; font-weight: 300; color: var(--orange); margin-left: 3px; }
+.spec-value span { font-size: 16px; font-weight: 300; color: var(--orange); margin-left: 3px; }
 
 .spec-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -335,7 +335,7 @@ section { padding: var(--section-pad); }
 .mission-cell { background: var(--navy); padding: 48px 40px; }
 .mission-number {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 400; letter-spacing: 0.2em;
+  font-size: 16px; font-weight: 400; letter-spacing: 0.2em;
   color: var(--orange); margin-bottom: 20px;
 }
 .mission-cell h3 {
@@ -343,7 +343,7 @@ section { padding: var(--section-pad); }
   font-size: 22px; font-weight: 500; letter-spacing: 0.04em;
   color: var(--cream); margin-bottom: 12px; line-height: 1.2;
 }
-.mission-cell p { font-size: 14px; color: rgba(243,240,233,0.45); line-height: 1.75; }
+.mission-cell p { font-size: 16px; color: rgba(243,240,233,0.45); line-height: 1.75; }
 
 /* ══════════════════════════════════════════
    AIRCRAFT CARDS
@@ -361,7 +361,7 @@ section { padding: var(--section-pad); }
 .aircraft-card:hover { border-color: var(--orange); }
 .aircraft-card-tag {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+  font-size: 16px; font-weight: 500; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
 }
 .aircraft-card h3 {
@@ -369,7 +369,7 @@ section { padding: var(--section-pad); }
   font-size: 22px; font-weight: 500; letter-spacing: 0.04em;
   color: var(--navy); margin-bottom: 12px; line-height: 1.2;
 }
-.aircraft-card p { font-size: 14px; color: var(--gray-500); line-height: 1.75; }
+.aircraft-card p { font-size: 16px; color: var(--gray-500); line-height: 1.75; }
 
 .aircraft-card.wide {
   grid-column: 1 / -1;
@@ -382,10 +382,10 @@ section { padding: var(--section-pad); }
 .spec-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
 .spec-table tr { border-bottom: 0.5px solid var(--gray-100); }
 .spec-table tr:last-child { border-bottom: none; }
-.spec-table td { padding: 12px 0; font-size: 13px; vertical-align: top; }
+.spec-table td { padding: 12px 0; font-size: 16px; vertical-align: top; }
 .spec-table td:first-child {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 500; letter-spacing: 0.16em;
+  font-size: 16px; font-weight: 500; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--gray-300);
   width: 44%; padding-right: 16px;
 }
@@ -413,7 +413,7 @@ section { padding: var(--section-pad); }
   font-size: 16px; font-weight: 500; letter-spacing: 0.06em;
   color: var(--cream); margin-bottom: 8px;
 }
-.prop-step p { font-size: 13px; color: rgba(243,240,233,0.4); line-height: 1.7; }
+.prop-step p { font-size: 16px; color: rgba(243,240,233,0.4); line-height: 1.7; }
 
 .prop-callout {
   background: rgba(232,112,42,0.08);
@@ -422,7 +422,7 @@ section { padding: var(--section-pad); }
 }
 .prop-callout p {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px; font-weight: 300; letter-spacing: 0.04em;
+  font-size: 16px; font-weight: 300; letter-spacing: 0.04em;
   color: rgba(243,240,233,0.6); line-height: 1.7;
 }
 .prop-callout strong { color: var(--orange); font-weight: 500; }
@@ -447,7 +447,7 @@ section { padding: var(--section-pad); }
   font-size: 16px; font-weight: 500; letter-spacing: 0.04em;
   color: var(--navy); margin-bottom: 6px;
 }
-.ground-step p { font-size: 13px; color: var(--gray-500); line-height: 1.7; }
+.ground-step p { font-size: 16px; color: var(--gray-500); line-height: 1.7; }
 
 .ground-aside {
   background: var(--navy); padding: 48px 40px;
@@ -468,7 +468,7 @@ section { padding: var(--section-pad); }
 }
 .ground-stat-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; letter-spacing: 0.2em;
+  font-size: 16px; letter-spacing: 0.2em;
   text-transform: uppercase; color: rgba(243,240,233,0.3);
 }
 
@@ -491,7 +491,7 @@ section { padding: var(--section-pad); }
   font-size: 18px; font-weight: 500; letter-spacing: 0.04em;
   color: var(--cream); margin-bottom: 10px;
 }
-.ai-card p { font-size: 13px; color: rgba(243,240,233,0.4); line-height: 1.75; }
+.ai-card p { font-size: 16px; color: rgba(243,240,233,0.4); line-height: 1.75; }
 
 .ai-board {
   background: rgba(243,240,233,0.03);
@@ -500,13 +500,13 @@ section { padding: var(--section-pad); }
 }
 .ai-board-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 500; letter-spacing: 0.22em;
+  font-size: 16px; font-weight: 500; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--orange); margin-bottom: 24px;
 }
 .agent-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .agent-pill {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 16px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
   padding: 6px 14px; border-radius: 2px;
   background: rgba(243,240,233,0.05); border: 0.5px solid rgba(243,240,233,0.1);
   color: rgba(243,240,233,0.5); transition: all 0.25s;
@@ -518,7 +518,7 @@ section { padding: var(--section-pad); }
   background: rgba(232,112,42,0.12); border-color: rgba(232,112,42,0.3); color: var(--orange);
 }
 .ai-board-desc {
-  font-size: 13px; color: rgba(243,240,233,0.35);
+  font-size: 16px; color: rgba(243,240,233,0.35);
   line-height: 1.75; margin-top: 24px; max-width: 640px;
 }
 
@@ -545,7 +545,7 @@ section { padding: var(--section-pad); }
 .tool-card:hover { border-color: var(--orange); }
 .tool-card-num {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; letter-spacing: 0.2em; color: var(--orange);
+  font-size: 16px; letter-spacing: 0.2em; color: var(--orange);
   text-transform: uppercase; margin-bottom: 20px;
 }
 .tool-card h4 {
@@ -553,7 +553,7 @@ section { padding: var(--section-pad); }
   font-size: 17px; font-weight: 500; letter-spacing: 0.04em;
   color: var(--navy); margin-bottom: 8px;
 }
-.tool-card p { font-size: 13px; color: var(--gray-500); line-height: 1.7; }
+.tool-card p { font-size: 16px; color: var(--gray-500); line-height: 1.7; }
 
 .mfg-principle {
   margin-top: 56px; background: var(--navy); padding: 56px 7vw;
@@ -566,7 +566,7 @@ section { padding: var(--section-pad); }
   letter-spacing: 0.04em; margin-bottom: 16px; line-height: 1.2;
 }
 .principle-text h3 strong { font-weight: 600; color: var(--white); }
-.principle-text p { font-size: 14px; color: rgba(243,240,233,0.45); line-height: 1.75; }
+.principle-text p { font-size: 16px; color: rgba(243,240,233,0.45); line-height: 1.75; }
 .principle-list { display: flex; flex-direction: column; }
 .principle-item {
   display: flex; gap: 20px; align-items: flex-start;
@@ -577,7 +577,7 @@ section { padding: var(--section-pad); }
   width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
   margin-top: 7px; flex-shrink: 0;
 }
-.principle-item p { font-size: 13px; color: rgba(243,240,233,0.45); line-height: 1.7; }
+.principle-item p { font-size: 16px; color: rgba(243,240,233,0.45); line-height: 1.7; }
 .principle-item p strong { color: var(--cream); font-weight: 500; }
 
 /* ══════════════════════════════════════════
@@ -591,13 +591,13 @@ section { padding: var(--section-pad); }
   color: var(--navy); line-height: 1.1; margin-bottom: 20px;
 }
 .open-text h2 strong { font-weight: 700; }
-.open-text p { font-size: 15px; color: var(--gray-500); line-height: 1.8; margin-bottom: 16px; }
+.open-text p { font-size: 16px; color: var(--gray-500); line-height: 1.8; margin-bottom: 16px; }
 .open-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
 
 .open-card { background: var(--navy); padding: 48px 40px; border-radius: var(--radius); }
 .open-card-tag {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+  font-size: 16px; font-weight: 500; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--orange); margin-bottom: 24px;
 }
 .open-card h3 {
@@ -607,11 +607,11 @@ section { padding: var(--section-pad); }
 }
 .repo-url {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px; letter-spacing: 0.1em; color: rgba(232,112,42,0.7); margin-bottom: 28px;
+  font-size: 16px; letter-spacing: 0.1em; color: rgba(232,112,42,0.7); margin-bottom: 28px;
 }
 .open-card-list { list-style: none; display: flex; flex-direction: column; }
 .open-card-list li {
-  font-size: 13px; color: rgba(243,240,233,0.4);
+  font-size: 16px; color: rgba(243,240,233,0.4);
   padding: 14px 0; border-bottom: 0.5px solid rgba(243,240,233,0.06);
   display: flex; align-items: flex-start; gap: 12px; line-height: 1.6;
 }
@@ -670,13 +670,13 @@ footer {
 }
 .footer-left {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; letter-spacing: 0.16em;
+  font-size: 16px; letter-spacing: 0.16em;
   color: rgba(243,240,233,0.25); text-transform: uppercase;
 }
 .footer-links { display: flex; gap: 28px; }
 .footer-link {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase;
   color: rgba(243,240,233,0.3); text-decoration: none; transition: color 0.25s;
 }
 .footer-link:hover { color: var(--orange); }
