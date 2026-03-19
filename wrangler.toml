@@ -1,7 +1,1 @@
-[build]
-  command   = "hugo --minify"
-  publish   = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.128.0"
-  HUGO_ENV     = "production"
+pages_build_output_dir = "public"
