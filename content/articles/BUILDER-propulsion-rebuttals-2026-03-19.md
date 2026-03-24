@@ -1,3 +1,12 @@
+---
+title: "Builder Rebuttals to PROPULSION Engine Analysis"
+date: 2026-03-19T09:00:00-06:00
+description: "Builder challenges PROPULSION's power requirements and engine selection criteria, arguing certification standards don't apply to experimental aircraft."
+tags: ["propulsion", "builder", "engine-selection", "rebuttals"]
+author: "Bill (Builder)"
+draft: false
+---
+
 # Builder Rebuttals to PROPULSION Engine Analysis
 **Date:** March 19, 2026  
 **Author:** Bill (Builder / Final Decision Authority)  

@@ -8,7 +8,7 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="page-hero-eyebrow reveal">
-      {{ range first 2 .Params.tags }}{{ . }}{{ if not (eq . (index $.Params.tags (sub (len $.Params.tags) 1))) }} · {{ end }}{{ end }}
+      {{ with .Params.tags }}{{ range first 2 . }}{{ . }}{{ if not (eq . (index $.Params.tags (sub (len $.Params.tags) 1))) }} · {{ end }}{{ end }}{{ end }}
     </div>
     <h1 class="reveal reveal-delay-1">{{ .Title }}</h1>
     {{ with .Description }}<p class="reveal reveal-delay-2">{{ . }}</p>{{ end }}

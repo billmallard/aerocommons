@@ -1,3 +1,12 @@
+---
+title: "Tool Research Coordination — Multi-Agent MAOS Design"
+date: 2026-03-17T12:00:00-06:00
+description: "CHAIRMAN coordinates research assignments across all six domain agents to identify Claude-compatible design tools."
+tags: ["chairman", "tools", "research", "coordination"]
+author: "CHAIRMAN"
+draft: false
+---
+
 # Tool Research Coordination - Multi-Agent MAOS Design
 
 **Date:** 2026-03-17  
