@@ -1,0 +1,28 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+## About
+
+AeroCommons is an open-source experimental aircraft project. The MAOS (Modular Aerospace Operating System) is a four-seat, series-hybrid, IFR-capable aircraft designed for homebuilders. Development is coordinated by an AI-assisted design board using OpenClaw.
+
+- Site: {{ .Site.BaseURL }}
+- Source: {{ .Site.Params.github }}
+- Contact: {{ .Site.Params.email }}
+
+## Design Board Agents
+
+The MAOS design board consists of seven AI agents, each responsible for a domain:
+
+- CHAIRMAN: Board orchestrator — runs formal review meetings, coordinates cross-domain decisions
+- AERO: Aerodynamics — airfoil selection, drag analysis, lift calculations
+- STRUCTURES: Structural engineering — weight budget, material selection, load paths
+- PROPULSION: Propulsion systems — engine candidates, hybrid architecture, thermal management
+- SYSTEMS: Electrical and avionics — bus voltage, power distribution, flight systems
+- MANUFACTURING: Production engineering — tooling, processes, homebuilder feasibility
+- SAFETY: Safety and certification — failure analysis, risk assessment, advisory compliance
+
+## Articles
+
+{{ range (where .Site.RegularPages "Section" "articles") }}{{ if .Title }}- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}{{ end }}

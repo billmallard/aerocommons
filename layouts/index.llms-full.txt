@@ -1,0 +1,17 @@
+# {{ .Site.Title }} — Full Content
+
+> {{ .Site.Params.description }}
+
+---
+{{ range (where .Site.RegularPages "Section" "articles") }}{{ if .Title }}
+## {{ .Title }}
+
+URL: {{ .Permalink }}
+Date: {{ .Date.Format "2006-01-02" }}{{ with .Params.authors }}
+Authors: {{ delimit . ", " }}{{ end }}{{ with .Params.tags }}
+Tags: {{ delimit . ", " }}{{ end }}
+
+{{ .RawContent }}
+
+---
+{{ end }}{{ end }}
