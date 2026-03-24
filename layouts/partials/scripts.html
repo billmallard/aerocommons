@@ -22,38 +22,46 @@ document.querySelectorAll('#hero .reveal, .page-hero .reveal').forEach((el, i) =
   const desc = document.querySelector('.ai-board-desc');
   if (!pills.length || !desc) return;
 
-  const defaultDesc = desc.textContent;
-  let activePill = document.querySelector('.agent-pill.chairman');
+  let lockedPill = document.querySelector('.agent-pill.chairman');
 
-  pills.forEach(pill => {
-    pill.addEventListener('mouseenter', () => {
-      desc.style.opacity = '0';
-      setTimeout(() => {
-        desc.textContent = pill.dataset.desc;
-        desc.style.opacity = '1';
-      }, 150);
-      pills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
+  function showDesc(pill) {
+    desc.style.opacity = '0';
+    setTimeout(function() {
+      desc.textContent = pill.dataset.desc;
+      desc.style.opacity = '1';
+    }, 150);
+  }
+
+  function setVisual(pill) {
+    pills.forEach(function(p) {
+      p.classList.remove('active');
+      p.classList.remove('chairman');
+    });
+    pill.classList.add('active');
+  }
+
+  pills.forEach(function(pill) {
+    pill.addEventListener('mouseenter', function() {
+      setVisual(pill);
+      showDesc(pill);
     });
 
-    pill.addEventListener('click', () => {
-      activePill = pill;
-      pills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
+    pill.addEventListener('click', function(e) {
+      e.preventDefault();
+      lockedPill = pill;
+      setVisual(pill);
       desc.textContent = pill.dataset.desc;
+      desc.style.opacity = '1';
     });
   });
 
-  const board = document.querySelector('.ai-board');
+  var board = document.querySelector('.ai-board');
   if (board) {
-    board.addEventListener('mouseleave', () => {
-      pills.forEach(p => p.classList.remove('active'));
-      if (activePill) activePill.classList.add('active');
-      desc.style.opacity = '0';
-      setTimeout(() => {
-        desc.textContent = activePill ? activePill.dataset.desc : defaultDesc;
-        desc.style.opacity = '1';
-      }, 150);
+    board.addEventListener('mouseleave', function() {
+      if (lockedPill) {
+        setVisual(lockedPill);
+        showDesc(lockedPill);
+      }
     });
   }
 })();
