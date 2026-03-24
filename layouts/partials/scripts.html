@@ -16,6 +16,48 @@ document.querySelectorAll('#hero .reveal, .page-hero .reveal').forEach((el, i) =
   setTimeout(() => el.classList.add('visible'), 80 + i * 100);
 });
 
+// ── AGENT PILL INTERACTIVITY ──
+(function() {
+  const pills = document.querySelectorAll('.agent-pill[data-desc]');
+  const desc = document.querySelector('.ai-board-desc');
+  if (!pills.length || !desc) return;
+
+  const defaultDesc = desc.textContent;
+  let activePill = document.querySelector('.agent-pill.chairman');
+
+  pills.forEach(pill => {
+    pill.addEventListener('mouseenter', () => {
+      desc.style.opacity = '0';
+      setTimeout(() => {
+        desc.textContent = pill.dataset.desc;
+        desc.style.opacity = '1';
+      }, 150);
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+
+    pill.addEventListener('click', () => {
+      activePill = pill;
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      desc.textContent = pill.dataset.desc;
+    });
+  });
+
+  const board = document.querySelector('.ai-board');
+  if (board) {
+    board.addEventListener('mouseleave', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      if (activePill) activePill.classList.add('active');
+      desc.style.opacity = '0';
+      setTimeout(() => {
+        desc.textContent = activePill ? activePill.dataset.desc : defaultDesc;
+        desc.style.opacity = '1';
+      }, 150);
+    });
+  }
+})();
+
 // ── NAV HAMBURGER ──
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');

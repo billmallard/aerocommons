@@ -72,7 +72,7 @@
     <div class="aircraft-card reveal">
       <div class="aircraft-card-tag">Airframe</div>
       <h3>Pod-and-Boom Fuselage</h3>
-      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted above a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew accommodation. No pneumatic systems cross the wing-to-pod boundary.</p>
+      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted below a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew accommodation. No pneumatic systems cross the wing-to-pod boundary.</p>
     </div>
     <div class="aircraft-card reveal reveal-delay-1">
       <div class="aircraft-card-tag">Wing</div>
@@ -167,13 +167,13 @@
   <div class="ai-board reveal reveal-delay-2">
     <div class="ai-board-title">Design Board Agents</div>
     <div class="agent-row">
-      <div class="agent-pill chairman">Chairman</div>
-      <div class="agent-pill">Aerodynamics</div>
-      <div class="agent-pill">Structures</div>
-      <div class="agent-pill">Propulsion</div>
-      <div class="agent-pill">Systems</div>
-      <div class="agent-pill">Manufacturing</div>
-      <div class="agent-pill">Safety</div>
+      <div class="agent-pill chairman" data-desc="The Chairman agent orchestrates board sessions, assigns agenda items to specialist agents, collects conflicting recommendations, and produces a structured resolution record. All agent interactions are logged as part of the project's permanent design history.">Chairman</div>
+      <div class="agent-pill" data-desc="The Aerodynamics agent owns wing geometry, airfoil selection, drag budgets, stability margins, and performance prediction. It defends wing loading limits and static margin requirements using XFLR5, AVL, and VSPAERO analysis.">Aerodynamics</div>
+      <div class="agent-pill" data-desc="The Structures agent owns the master weight budget and all structural sizing. It challenges every gram added to the aircraft, tracks empty weight against the 1,200 lb useful load target, and evaluates every joint and load path for simplicity.">Structures</div>
+      <div class="agent-pill" data-desc="The Propulsion agent owns the series hybrid powerplant — ICE generators, electric motors, thermal management, and the high-voltage bus. It tracks power budgets at single-generator-failed conditions and evaluates engine and motor candidates.">Propulsion</div>
+      <div class="agent-pill" data-desc="The Systems agent owns avionics, electrical architecture, environmental control, ice protection, and all wiring. It manages the bus voltage decision, ECS design for both v1.0 and the pressurized v1.1 upgrade path, and FADEC integration.">Systems</div>
+      <div class="agent-pill" data-desc="The Manufacturing agent evaluates every design decision against the garage-builder constraint. It enforces the two-car garage test: if a solo builder can't fabricate it with hand tools, a drill press, and a vacuum pump, the design fails.">Manufacturing</div>
+      <div class="agent-pill" data-desc="The Safety agent performs failure mode analysis across all subsystems, tracks crashworthiness, and validates that no single-point failure produces a catastrophic outcome. It owns the FMEA matrix and FAA EAB compliance.">Safety</div>
     </div>
     <p class="ai-board-desc">The Chairman agent orchestrates board sessions, assigns agenda items to specialist agents, collects conflicting recommendations, and produces a structured resolution record. All agent interactions are logged as part of the project's permanent design history.</p>
   </div>
