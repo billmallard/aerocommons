@@ -7,7 +7,7 @@ FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install base dependencies
+# Install base dependencies + Xvfb for headless display
 RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
@@ -26,7 +26,11 @@ RUN apt-get update && apt-get install -y \
     libfontconfig1-dev \
     gfortran \
     unzip \
+    xvfb \
     && rm -rf /var/lib/apt/lists/*
+
+# Virtual framebuffer display for headless OpenVSP
+ENV DISPLAY=:99
 
 # Install OpenVSP 3.48.2 from official .deb package
 WORKDIR /opt
@@ -52,9 +56,9 @@ RUN chmod 777 /workspace
 RUN mkdir -p /workspace/analysis
 
 # Verify installations
-RUN which vsp && vsp -h || echo "OpenVSP installed (VSP GUI available)" \
-    && which vspaero && vspaero -h || echo "VSPAero installed" \
+RUN which vspscript && echo "OpenVSP vspscript installed" || echo "OpenVSP install failed" \
+    && which vspaero && echo "VSPAero installed" || echo "VSPAero install failed" \
     && which avl && echo "AVL installed" || echo "AVL install failed"
 
-# Default command: print tool versions
-CMD ["bash", "-c", "echo 'MAOS Aero Tools Ready'; echo 'OpenVSP:'; vsp -v 2>&1 || echo 'vsp not found'; echo 'AVL:'; avl --version 2>&1 || echo 'avl not found'; bash"]
+# Start Xvfb, then drop to shell
+CMD ["bash", "-c", "Xvfb :99 -screen 0 1024x768x24 &>/dev/null & sleep 1; echo 'MAOS Aero Tools Ready'; echo 'OpenVSP:'; vspscript -help 2>&1 | head -5 || echo 'vspscript not found'; echo 'AVL:'; echo 'quit' | avl 2>&1 | head -10; exec bash"]
