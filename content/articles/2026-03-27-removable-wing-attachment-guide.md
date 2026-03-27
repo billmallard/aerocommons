@@ -1,412 +1,326 @@
 ---
-title: "The Removable Wing Problem: Secure Attachments for Trailer‑Transportable Homebuilts"
+title: "The Removable Wing Problem: Non‑Penetrating Attachments for Pressurized Homebuilts"
 date: 2026-03-27
 author: "Bill Mallard"
-description: "How to design a removable one‑piece wing attachment that balances structural integrity with practical trailer transport. A technical guide for experimental aircraft builders considering trailer‑transportable designs."
-tags: ["wing attachment", "removable wing", "trailer transport", "structural design", "experimental", "homebuilt", "glider", "MAOS"]
+description: "How to design a removable one‑piece wing attachment for pressurized aircraft without penetrating the pressure vessel. Over‑engineered safety factors and external saddle concepts for MAOS pod‑and‑boom architecture."
+tags: ["wing attachment", "removable wing", "pressure vessel", "structural design", "experimental", "homebuilt", "glider", "MAOS", "pressurization"]
 ---
 
-Designing a removable wing for a homebuilt aircraft presents a fundamental engineering dilemma: **How do you make a structural joint strong enough for flight but easy enough to disassemble for trailer transport?**
+Designing a removable wing for a **pressurized** homebuilt aircraft introduces three critical constraints:
 
-This article examines the removable‑wing problem through the lens of the MAOS project (a 4‑seat pod‑and‑boom experimental), but the principles apply to any builder considering a trailer‑transportable aircraft. We'll look at existing aviation solutions, analyze structural trade‑offs, and provide specific hardware recommendations.
+1. **No pressure vessel penetration** — the wing attachment must not compromise the pressurized shell
+2. **Over‑engineered safety** — 8–12g ultimate factors for this single‑point‑of‑failure joint
+3. **Intentional removability** — designed for frequent trailer transport, not just maintenance
 
----
-
-## The Engineering Dilemma
-
-**Flight loads:** A wing attachment must withstand:
-- Ultimate shear: 5.7 g (3.8 g normal × 1.5 safety factor)
-- Bending moments: Wing lift, weight, inertia
-- Torsion: Control surface and aerodynamic twisting
-- Fatigue: Thousands of flight cycles
-
-**Trailer requirements:** The same joint must:
-- Disassemble with basic tools in 5–15 minutes
-- Re‑assemble with precise alignment (≤0.010″ tolerance)
-- Provide unambiguous verification of correct installation
-- Withstand wear over hundreds of assembly cycles
-
-**Conflict:** Permanent joints excel at load transfer; quick‑disconnect joints introduce points of weakness. The solution lies in borrowing proven concepts from gliders, light‑sport aircraft, and military stores‑release systems.
+This article examines the removable‑wing problem through the lens of the MAOS project (a 4‑seat pressurized pod‑and‑boom experimental), with specific solutions for pressurized aircraft architectures.
 
 ---
 
-## Figure 1: Aviation Solutions Comparison
+## The Pressurized Aircraft Constraint
 
-*SVG Description: A bar chart comparing removal time vs. number of people required for different aircraft types.*
+For pressurized aircraft, the pressure vessel integrity is paramount. Every penetration represents:
+- A potential leak path (seal degradation over cycles)
+- A stress concentration (fatigue initiation site)
+- A maintenance burden (seal inspection/replacement)
 
-```svg
-<!-- Bar chart showing:
-Gliders: 5–10 min (3–4 people)
-LSA/Experimental: 5–60 min (2–3 people)
-Certified: 60–120 min (3–4 people) -->
-```
+**MAOS requirement:** Wing attachment must be **entirely external** to the 48″ diameter cylindrical pressure vessel operating at 5 PSI differential.
+
+**Consequence:** No spar‑through‑pod solutions. Loads must transfer through the external skin or dedicated external hardpoints.
 
 ---
 
-## What Gliders Teach Us
+## Safety Philosophy: Over‑Engineer Critical Joints
 
-Modern gliders have perfected the removable wing because they must be trailered to contests and soaring sites.
+The wing‑to‑fuselage attachment is a **single‑point‑of‑failure** joint. If it fails, the aircraft becomes uncontrollable.
 
-### Schleicher ASK 21: The Gold Standard
+### Standard vs. MAOS Safety Factors
 
-**Attachment system:**
+| Factor | FAA Normal Category | MAOS Target | Rationale |
+|--------|-------------------|-------------|-----------|
+| **Limit load** | +3.8 g / –1.5 g | +3.8 g / –1.5 g | Standard maneuvering envelope |
+| **Ultimate factor** | 1.5× limit | **2.1–3.2× limit** | Critical joint over‑engineering |
+| **Ultimate load** | +5.7 g / –2.25 g | **+8–12 g** / –3.2–4.8 g | Weather penetration, wake turbulence, uncommanded maneuvers |
+
+**Why 8–12g?**  
+- Weather penetration can produce brief 5–6g loads
+- Wake turbulence from heavy aircraft
+- Uncommanded control inputs or pilot error
+- This joint should **never** be the limiting factor
+
+**Load calculation for MAOS (MTOW ≈ 2,430 lb):**
+- 8g ultimate: ~9,720 lb vertical shear per side
+- 12g ultimate: ~14,580 lb per side
+- Hardware sized for **12g** if weight permits, **8g** minimum
+
+---
+
+## What Intentionally Removable Designs Teach Us
+
+Only study aircraft **designed for frequent removal** — not those where removal is possible but impractical.
+
+### Gliders: The Gold Standard
+
+Gliders **must** be trailered, so their wing attachments are optimized for frequent disassembly.
+
+**Schleicher ASK 21:**
 - Tongue‑and‑fork spar extensions
-- Two cylindrical main pins (front) + two rear wing‑attachment pins
-- Safety hook on main pins; T‑grip on rear pins with visible lock above pin
-- Quick‑release Hotellier ball‑and‑socket joints for flight controls
+- Two cylindrical main pins (front) + two rear pins
+- Safety hook on main pins; T‑grip on rear pins with **visible lock above pin**
+- Quick‑release Hotellier ball‑and‑socket control joints
+- **Key insight:** "Safety lock visible above pin" — unambiguous visual verification
 
-**Pre‑flight check:** "Safety lock visible above pin" — a simple, unambiguous visual indicator.
+**Schempp‑Hirth Discus:**
+- Single‑pin attachment per wing
+- Automatic control hook‑ups
+- **Assembly time:** <5 minutes
 
-**Assembly time:** 5–10 minutes with 3–4 people.
+**Glider philosophy:** If you can't **see** it's locked, it's not safe enough.
 
-### Schempp‑Hirth Discus: Simplicity
+### Light‑Sport Aircraft Designed for Trailering
 
-**Single‑pin attachment** per wing with automatic control hook‑ups. Light wings, automatic connections, and a single visible pin make this remarkably simple.
+**Van’s RV‑12:**
+- WD‑1217 quick‑disconnect fuselage pins
+- One pin per side secures both spars
+- Pin stoppers and springs for retention
+- **Assembly time:** <5 minutes with 2 people
 
-**Key insight:** Gliders prioritize **visible verification** over complex mechanisms. If you can't see it's locked, it's not safe enough.
+**Sonex Onex:**
+- Single handle retracts two spar pins simultaneously
+- Spring‑loaded lock for flight security
+- **Assembly time:** 30 seconds per wing (folding)
 
----
+**Zenith CH 701/750:**
+- Bolted attachment (main + aft spars)
+- Safety wires/cotter pins
+- **Assembly time:** 30–60 minutes — robust but slow
 
-## Light‑Sport & Experimental Approaches
-
-### Van’s RV‑12: Quick‑Disconnect Pins
-
-**WD‑1217 fuselage pins** — one pin per side secures both spars. Pins slide out; wing spar slots into fuselage bushings. Pin stoppers and springs provide retention.
-
-**Assembly time:** <5 minutes with 2 people.
-
-**Limitation:** Pins are straight (not tapered), requiring precise manufacturing tolerances.
-
-### Sonex Onex: Single‑Handle System
-
-**Single handle** retracts two spar pins simultaneously. Spring‑loaded lock for flight security.
-
-**Assembly time:** 30 seconds per wing for folding.
-
-**Trade‑off:** Complex mechanism but incredibly fast operation.
-
-### Zenith CH 701/750: Bolted Simplicity
-
-**Bolted attachment** at main and aft spars (no quick‑disconnect). Safety wires/cotter pins.
-
-**Assembly time:** 30–60 minutes with 3 people — slow but robust.
-
-**Takeaway:** There's a spectrum from "fast but complex" to "slow but simple."
+**Spectrum:** "Fast but complex" (Onex) to "slow but simple" (Zenith).
 
 ---
 
-## Figure 2: Pylon vs. Direct Attachment
+## Non‑Penetrating Attachment Concepts
 
-*SVG Description: Two structural diagrams comparing wing attachment approaches.*
+### External Saddle/Clamp System
 
-```svg
-<!-- Left: Pylon Interface
-Wing → Pylon (short column) → Pod
-Shows extra joint and longer load path
+A structural saddle wraps around the pod exterior, transferring loads through the skin to internal frames without penetrating the pressure boundary.
 
-Right: Direct Attachment  
-Wing → Reinforced pod hardpoints
-Shows shorter, more direct load path -->
-```
+**Components:**
+- **Upper saddle:** Clamps to wing spar carry‑through
+- **Lower saddle:** Wraps around pod exterior
+- **Shear ties:** Connect saddle to pod frames through skin
+- **Tension straps:** React bending moments
 
----
+**Load paths:**
+- **Shear:** Through skin into frames via shear ties
+- **Bending:** Tension/compression straps around pod circumference
+- **Torsion:** Multiple attachment points around perimeter
 
-## Structural Concepts: Pylon vs. Direct Attachment
+**Advantages:**
+- Zero pressure boundary penetration
+- Maintains pressure vessel integrity
+- Distributed load transfer reduces local stresses
+- Easier sealing (no moving seals)
 
-### Pylon Interface (Extra Structure)
+### External Structural Bridge
 
-A structural pylon between pod and wing:
-- **Pros:** Clean load separation, standardized mating surface, simplifies fairings
-- **Cons:** +8–12 lb weight, extra joint, more complexity
-- **Verdict:** Rarely justified — adds weight without clear benefit
+A bridge structure sits atop the pod, attached at door/window frames or other non‑pressurized hardpoints.
 
-### Direct Attachment (Recommended)
+**Approach:**
+- Bridge attaches at door frames (already reinforced for openings)
+- Wing mounts to bridge top surface
+- Loads transfer through existing structural elements
+- No new pressure penetrations
 
-Wing spars attach directly to reinforced pod hardpoints:
-- **Pros:** Fewer parts, lighter (+2–4 lb), shorter load paths
-- **Cons:** Precision alignment critical, complicates pressurization sealing
-- **Verdict:** Preferred for most designs, including MAOS
+**Consideration:** Door frame strength must be verified for wing loads.
 
-**MAOS approach:** Single‑spar carry‑through with 6.0″ OD, 0.25″ wall 6061‑T6 tube passing through pod, reinforced at frames FS48 and FS60.
+### Hybrid: External Pylon
 
----
+Short structural pylon attached to pod at multiple hardpoints, with wing mounting at pylon top.
 
-## Spar Carry‑Through Options
-
-### 1. Single‑Spar Carry‑Through
-Continuous main spar passes through fuselage/pod. Wing‑root lugs accept pins/bolts.
-- **Weight:** Lightest option
-- **Complexity:** Simple, fewer joints
-- **Sealing:** Large cutout requires flexible boot
-
-### 2. Multiple‑Spar Attachment  
-Separate left/right spars attach to central wing box.
-- **Weight:** Moderate (+)
-- **Complexity:** More joints, alignment challenges
-- **Sealing:** Smaller penetrations
-
-### 3. Hybrid (Glider Style)
-Single spar with detachable outboard sections (tongue‑and‑fork).
-- **Weight:** Moderate
-- **Complexity:** High precision machining required
-- **Sealing:** Compact interface
-
-**Recommendation:** **Single‑spar carry‑through** for homebuilders — proven, simple, light.
+**Trade‑off:** Adds weight but provides clean load separation.
 
 ---
 
-## Figure 3: Single‑Spar Carry‑Through
+## Hardware for Over‑Engineered Loads
 
-*SVG Description: Cross‑section showing spar tube passing through pod with reinforced frames and sealing boot.*
+### Taper Pins at 12g Ultimate
 
-```svg
-<!-- Cross‑section view:
-Left Wing → 6″ OD spar tube → Pod with frames at FS48/FS60 → Right Wing
-Show: Reinforced frames, wing‑root lugs, tapered pins, silicone‑impregnated sealing boot -->
-```
+**AN386 threaded taper pins** sized for ~14,580 lb shear (12g ultimate):
 
----
+| Pin Size | Large End Diameter | Ultimate Shear Strength | Status |
+|----------|-------------------|-------------------------|--------|
+| AN386‑4‑16 | 1/2″ | ~22,000 lb | **Minimum** |
+| AN386‑5‑20 | 5/8″ | ~35,000 lb | **Recommended** |
+| AN386‑6‑24 | 3/4″ | ~50,000 lb | **Conservative** |
 
-## Hardware Specifications
+**Selection:** AN386‑5‑20 (5/8″ large end) provides 2.4× margin at 12g ultimate.
 
-### Taper Pins: The Aviation Standard
+### High‑Strength Backup Bolts
 
-**AN386 threaded taper pins:**
-- **Taper:** Brown & Sharp #3 (0.500″ per foot)
-- **Function:** Self‑locking, precise fit, distributes shear load
-- **Installation:** Requires taper reamer, anti‑seize compound
-- **Security:** Cotter pin through threaded end
+**NAS6600 series** high‑strength bolts as secondary load path:
 
-**Example:** AN386‑3‑14 (1/4‑28 thread, 1‑7/8″ length)
+- **Material:** 8740 alloy steel, 180 ksi ultimate
+- **Size:** 7/16″‑20 or 1/2″‑20 depending on load share
+- **Installation:** Torque + tension (load indicating washers)
+- **Safety:** Double‑redundant locking (self‑locking nut + safety wire)
 
-### High‑Strength Bolts: Backup Load Path
+### Additional Redundancy
 
-**NAS6204 close‑tolerance bolts:**
-- **Material:** 8740 alloy steel, cadmium plated
-- **Strength:** 125 ksi ultimate tensile
-- **Installation:** Torque to 250 in‑lb with self‑locking nut (MS21042)
-- **Safety:** Safety‑wire in approved pattern
+**Three‑pin system:** Instead of two primary pins:
+- Two pins sized for 8g ultimate each
+- Third pin as backup/tie‑down
+- Any two pins can carry 12g ultimate
 
-### Quick‑Release Alternatives
-
-**MS17987C ball‑lock pins:**  
-- **Use:** Non‑primary structural attachments (access panels)
-- **Strength:** ~15,000 lb shear
-- **Security:** Ball detent, pull‑ring release
+**Rationale:** Hardware failure tolerance without single‑point failure.
 
 ---
 
-## Load Calculations
+## Pressure Vessel Interface
 
-**For MAOS (MTOW ≈ 2,430 lb):**
-- Ultimate vertical shear at wing root: ~6,925 lb per side (5.7 g ultimate)
-- With two pins sharing shear: ~3,460 lb per pin
-- Pin diameter selection: ≥3/8″ based on shear strength
+### Load Transfer Through Skin
 
-**Safety factor check:**  
-Normal category: +3.8 g/–1.5 g  
-Ultimate: 1.5 × limit = +5.7 g/–2.25 g
+**Shear panel concept:** External saddle transfers shear through pod skin into frames.
 
-**Fatigue consideration:** Removable joints prone to fretting. Mitigate with:
-- Hard coatings (cadmium, anodizing)
-- Anti‑fretting paste (Loctite 8060)
-- Wire‑thread inserts in tapped holes
-- Regular torque checks
+**Requirements:**
+- Skin thickness: 0.040″–0.063″ 6061‑T6 minimum
+- Frame spacing: 12″ maximum
+- Doublers: 0.063″ 2024‑T3 under saddle attachment points
+- Fasteners: Hi‑Lok or Cherry rivets in double shear
 
----
+**Fatigue consideration:** Cyclic loading at skin‑to‑frame joints requires:
+- Interference‑fit fasteners
+- Sealant/faying surface treatment
+- Regular eddy‑current inspection
 
-## Figure 4: Verification Systems
+### Sealing Approach
 
-*SVG Description: Flowchart showing three‑tier verification approach.*
+**No dynamic seals required** — all joints are static:
 
-```svg
-<!-- Three columns:
-1. Mechanical: Visual flags, inspection windows
-2. Electrical: Microswitches, continuity checks, annunciator lights  
-3. Procedural: Checklist, torque‑strip marks, witness holes -->
-```
+- Saddle‑to‑skin: Pro‑Seal PR‑1422 polysulfide sealant
+- Fastener holes: Wet installation with sealant
+- Perimeter: Continuous fillet seal
+
+**Advantage over spar‑through‑pod:** No flexible boot, no relative motion, simpler inspection.
 
 ---
 
-## Pilot Verification: Three‑Tier System
+## Verification Systems
 
-You must know — absolutely — that the wing is properly attached.
+### Three‑Tier Verification Philosophy
 
-### Tier 1: Mechanical Indicators
+**Tier 1: Mechanical (Primary)**
+- **Visual flags:** Bright orange sleeves extend ¼″ when pin fully seated
+- **Inspection windows:** Clear polycarbonate over pin heads
+- **Safety‑wire patterns:** Specific routing; broken/missing wire immediately visible
 
-**Visual flags:** Bright orange anodized sleeves extend ¼″ when pin fully seated. Spring‑loaded sleeve captures ring; if pin isn't home, ring remains recessed.
+**Tier 2: Electrical (Secondary)**
+- **Microswitches:** Sealed limit switches in wing root → "WING LOCK" annunciator
+- **Continuity circuits:** Through pins themselves
+- **Load‑path sensors:** Strain gauges verify load sharing
 
-**Inspection windows:** Clear polycarbonate covers over pin heads — see without removing fairings.
+**Tier 3: Procedural (Tertiary)**
+- **Checklist item:** Explicit "pin visibility" verification
+- **Torque‑strip markings:** Paint stripe across bolt/structure interface
+- **Witness holes:** Lock wire or colored plug through pin/fitting
 
-**Safety‑wire loops:** Specific routing pattern; missing/broken wire immediately visible.
-
-### Tier 2: Electrical Sensors
-
-**Microswitches:** Sealed limit switches mounted in wing root close when pin fully inserted. Wired to cockpit "WING LOCK" annunciator.
-
-**Continuity check:** Circuit through pin itself — if pin present and making contact, continuity light illuminates.
-
-**Strain‑gauge load verification:** Measures whether pin is carrying load (requires calibration).
-
-### Tier 3: Procedural Verification
-
-**Pre‑flight checklist:** Explicit "pin visibility" check item.
-
-**Torque‑strip markings:** Paint stripe across bolt head and adjacent structure; rotation visible.
-
-**Witness holes:** Small hole through pin and fitting; lock wire or colored plug must be visible.
-
-**Recommended MAOS system:** Visual flags + microswitch annunciators + checklist.
+**MAOS implementation:** All three tiers mandatory for pressurized aircraft.
 
 ---
 
 ## Weight Penalty Analysis
 
-| Component | Quantity | Unit Weight | Total |
-|-----------|----------|-------------|-------|
-| Taper pins (AN386‑3‑14) | 4 | 0.12 lb | 0.48 lb |
-| Backup bolts (NAS6204‑3‑8) | 2 | 0.18 lb | 0.36 lb |
-| Local reinforcement | 2 frames | 3.0 lb | 6.0 lb |
-| Wing‑root lugs (2024‑T3) | 4 | 0.75 lb | 3.0 lb |
-| Sealing boot | 1 set | 0.5 lb | 0.5 lb |
-| Microswitches & wiring | 4 | 0.05 lb | 0.20 lb |
-| Visual‑flag assemblies | 4 | 0.03 lb | 0.12 lb |
-| **Total** | | | **10.9 lb** |
+| Component | Original (5.7g) | Revised (12g + External) | Delta |
+|-----------|----------------|--------------------------|-------|
+| Taper pins | 4 × AN386‑3‑14 (0.48 lb) | 4 × AN386‑5‑20 (1.2 lb) | +0.72 lb |
+| Backup bolts | 2 × NAS6204‑3‑8 (0.36 lb) | 3 × NAS6600‑7‑16 (1.1 lb) | +0.74 lb |
+| Local reinforcement | 6.0 lb (internal) | 8.5 lb (external saddle) | +2.5 lb |
+| Wing‑root lugs | 3.0 lb | 4.5 lb (larger for 12g) | +1.5 lb |
+| Saddle structure | N/A | 6.0 lb | +6.0 lb |
+| Sealing system | 0.5 lb (boot) | 0.8 lb (static seals) | +0.3 lb |
+| Verification hardware | 0.32 lb | 0.32 lb (unchanged) | 0 lb |
+| **Total** | **10.9 lb** | **22.4 lb** | **+11.5 lb** |
 
-**Weight vs. permanent mount:** ~8–10 lb penalty for removability.
+**Weight penalty:** **+11.5 lb** for:
+- 12g ultimate vs 5.7g (+100% load capacity)
+- External saddle vs internal spar (+6.0 lb)
+- Additional redundancy (+1.5 lb)
 
-**Acceptable?** Yes — enables trailer transport (wing ≈200 lb, 36 ft span) while staying within structural budget.
+**Acceptable?** For pressurized aircraft with trailer transport requirement: **yes**. Pressure vessel integrity and over‑engineered safety justify the penalty.
 
 ---
 
 ## Trailer Transport Practicalities
 
-### Wing Dimensions
+### Wing‑Specific Trailer Design
+
+**Wing dimensions:**
 - **Span:** ~36 ft (requires wide‑load permit in Texas)
-- **Chord:** ~4.5 ft (root), ~2.5 ft (tip)
-- **Height on trailer:** ~5 ft (well under 14 ft Texas limit)
-- **Weight:** ~200 lb (manageable with 2‑3 people)
+- **Root chord:** ~4.5 ft
+- **Tip chord:** ~2.5 ft
+- **Weight:** ~220 lb (including external saddle)
 
-### Lifting Requirements
-- **Crane/hoist:** 500 lb capacity minimum
-- **Lifting points:** Designed into wing structure (spar hardpoints)
-- **Balance:** Marked on wing skin for proper handling
+**Trailer requirements:**
+- **Length:** 40 ft (including tongue)
+- **Width:** 8.5 ft (standard) with over‑width permit for >8.5 ft
+- **Height:** <14 ft (Texas limit) — wing stores at ~5 ft height
+- **Capacity:** 1,000 lb minimum (wing + cradle + tools)
 
-### Storage & Protection
-- **Custom cradle:** Foam‑lined supports at spar and tip
-- **Weather protection:** Canvas cover or enclosed trailer
-- **Security:** Tie‑downs to prevent movement in transit
-
----
-
-## Lessons from Certified Aircraft
-
-### Piper Cub Wing Removal
-- Two bolts (front & rear spar) + strut bolts
-- Cotter pins, washers, nuts
-- **Time:** 1–2 hours with 3 people
-- **Lesson:** Simple but slow — acceptable for annual maintenance, not for frequent transport
-
-### Cessna 150 Procedure
-- Two main spar bolts + strut bolts
-- Drain fuel, disconnect cables, jack tail
-- **Time:** 1–2 hours per wing with 2–4 people
-- **Lesson:** Fuel system complicates removal — consider dry wings or quick‑disconnects
+**Cradle design:**
+- Foam‑lined supports at spar (2) and tip (1)
+- Adjustable for different wing incidences
+- Tie‑down points integrated
+- Weather cover attachment points
 
 ---
 
-## Military Inspiration: Stores Release
+## Builder's Implementation Checklist
 
-**Weapons pylons (F‑16, etc.):**
-- Lugs with shear pins, MAU‑12 ejection rack
-- Multiple shear pins as weak links
-- Fusible/jettisonable elements for emergency release
+### Design Phase
+- [ ] Confirm no pressure vessel penetration in final design
+- [ ] Size all hardware for 12g ultimate (8g minimum)
+- [ ] Design external saddle with distributed load transfer
+- [ ] Plan three‑tier verification system
+- [ ] Calculate weight penalty and update budget
 
-**Relevance:** Not directly applicable to wing attachment but demonstrates highly reliable quick‑release under extreme loads.
+### Fabrication Phase
+- [ ] Machine saddle components from 2024‑T3 or 6061‑T6
+- [ ] Install shear ties to pod frames through skin
+- [ ] Apply Pro‑Seal to all static joints
+- [ ] Install visual flag and microswitch systems
+- [ ] Test verification systems before wing installation
 
----
-
-## MAOS‑Specific Recommendations
-
-### Design Approach
-1. **Single‑spar carry‑through** with 6″ OD tube
-2. **Forged 2024‑T3 lugs** clamped to spar tube
-3. **Two AN386 taper pins** per wing (primary)
-4. **One NAS6204 bolt** per wing (secondary/backup)
-5. **Three‑tier verification:** Visual flags, microswitch annunciators, checklist
-
-### Build Considerations
-- **Tolerance stacking:** Critical — use dowel pins for initial alignment, then ream for taper pins
-- **Sealing:** Silicone‑impregnated fabric boot clamped to pod shell and wing‑root fairing
-- **Inspection:** Regular torque checks, anti‑fretting paste application
-
-### Safety Philosophy
-- **Dual load‑path:** Pins (primary) + bolt (secondary)
-- **Independent verification:** Mechanical + electrical + procedural
-- **Failure analysis:** Single‑pin failure → bolt carries load; both fail → structural redundancy in spar
-
----
-
-## Common Pitfalls to Avoid
-
-### 1. Under‑Sized Pins
-Using hardware‑store clevis pins instead of aviation‑rated taper pins. **Result:** Shear failure at limit load.
-
-### 2. Poor Alignment
-Assuming "close enough" for straight pins. **Result:** Uneven load distribution, premature wear.
-
-### 3. Inadequate Verification
-Relying only on "feel" or visual inspection without positive indicators. **Result:** Undetected incomplete engagement.
-
-### 4. Ignoring Wear
-Not planning for inspection/maintenance of removable joints. **Result:** Loosening over time, increased play.
-
-### 5. Weight Optimism
-Underestimating reinforcement weight for removable attachments. **Result:** Empty weight over budget.
-
----
-
-## The Builder's Checklist
-
-### Before Designing
-- [ ] Define required removal frequency (contest vs annual)
-- [ ] Calculate ultimate shear loads for your aircraft
-- [ ] Study similar aircraft (gliders, LSA) for proven approaches
-- [ ] Decide on verification philosophy (mechanical/electrical/procedural)
-
-### During Design
-- [ ] Select aviation‑standard hardware (AN/NAS/MS)
-- [ ] Design positive alignment features (dowel pins, guide cones)
-- [ ] Incorporate visual verification (flags, windows, markings)
-- [ ] Plan for wear inspection and maintenance
-
-### Before First Flight
-- [ ] Proof‑load test attachment to 1.5× limit load
+### Testing Phase
+- [ ] Proof‑load test to 1.5× limit load (5.7 g) with strain gauges
+- [ ] Leak check pressure vessel after saddle installation
 - [ ] Verify all verification systems function
 - [ ] Document assembly/disassembly procedure
 - [ ] Train second person on proper procedure
 
 ---
 
-## Conclusion: Removable ≠ Compromised
+## Why This Matters for Pressurized Aircraft
 
-A removable wing attachment doesn't have to be a structural compromise. By borrowing proven concepts from gliders, implementing aviation‑standard hardware, and building in redundant verification, you can achieve:
+The removable wing problem takes on new dimensions when the fuselage is a pressure vessel:
 
-- **Structural integrity:** Meets or exceeds permanent‑mount strength
-- **Practical removability:** 5–15 minute assembly with basic tools
-- **Unambiguous safety:** Multiple independent verification methods
-- **Manageable weight:** 8–12 lb penalty for trailer‑transport capability
+1. **Pressure integrity trumps all** — no compromises on sealing
+2. **Over‑engineering is justified** — critical joint in safety‑critical system
+3. **External solutions exist** — proven by spacecraft and pressure vessel design
+4. **Verification is non‑negotiable** — multiple independent methods required
 
-The key is recognizing that **removability is a first‑class design requirement**, not an afterthought. Design it in from the beginning, test it thoroughly, and verify it redundantly.
+For MAOS, this means:
+- **External saddle** wrapping pod exterior
+- **AN386‑5‑20 taper pins** (5/8″) for 12g ultimate
+- **Three‑tier verification** (mechanical + electrical + procedural)
+- **+11.5 lb weight penalty** — acceptable for safety and pressure integrity
 
-For MAOS, this means a single‑spar carry‑through with taper pins, visual flags, and electrical annunciation — a 10.9 lb investment that enables trailer transport without compromising flight safety.
+The result: A wing that comes off for trailer transport without ever touching the pressure boundary, with safety margins that inspire confidence rather than anxiety.
 
 ---
 
-*This article synthesizes technical research conducted for the MAOS Design Review Board. All information is for experimental amateur‑built aircraft only and must be validated by a qualified aerospace engineer before application.*
+*This revised article addresses critical feedback on safety factors, pressure vessel integrity, and design intent. All information is for experimental amateur‑built aircraft only and must be validated by a qualified aerospace engineer before application.*
 
 **Related Articles:**
 - [Pressurized Homebuilt Aircraft: A Technical Guide](/articles/2026-03-27-homebuilt-pressurization-guide/)
 - [Fly‑By‑Wire for Homebuilt Aircraft: Why Pod‑and‑Boom Changes the Game](/articles/2026-03-26-fly-by-wire-pod-and-boom-advantages/)
 
-**Tags:** #wing-attachment #removable-wing #trailer-transport #structural-design #experimental #homebuilt #glider #MAOS #engineering
+**Tags:** #wing-attachment #removable-wing #pressure-vessel #structural-design #experimental #homebuilt #glider #MAOS #pressurization #safety-factors
