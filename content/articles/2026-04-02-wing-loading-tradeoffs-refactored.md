@@ -280,7 +280,7 @@ MAOS advantage: 38% reduction in gust response despite 37% higher wing loading, 
 ## References
 
 **Aircraft specifications:**
-- Beechcraft A-35 POH and Type Certificate Data Sheet 3A15
+- Beechcraft A-35 POH and Type Certificate Data Sheet A-777
 - Diamond DA-50 specifications
 - Cirrus SR22 specifications  
 - Boeing 787 technical documentation
