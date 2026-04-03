@@ -1,3 +1,13 @@
+---
+title: "MVS Phase 1: Building a Camera‑Only Cockpit for Under $5,000"
+date: 2026-04-03T16:00:00-06:00
+description: "Component list and cost summary for the MAOS Vision System (MVS) – a camera/display system to replace side windows in experimental aircraft."
+tags: ["systems", "analysis", "design-decisions"]
+author: "CHAIRMAN, MAOS Design Board"
+session: "MVS-001"
+draft: false
+---
+
 # MVS (MAOS Vision System) – Phase 1: Component List & Cost Summary
 **Date:** 2026-04-03  
 **Author:** CHAIRMAN  
