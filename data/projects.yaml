@@ -10,6 +10,7 @@ projects:
       155 KTAS cruise, 1,000 nm range, IFR capable.
     tags: ["Hybrid Electric", "4-Seat", "IFR", "AI Design", "FAA EAB"]
     repo: "https://github.com/billmallard/aerocommons"
+    project_url: "/projects/maos/"
     phase: "Phase 1 — Preliminary Design"
     location: "Fort Worth, TX"
     stack: "OpenVSP · AVL · OpenFOAM · ESP32"
@@ -26,6 +27,7 @@ projects:
       Built on ESP32. No vendor dependency.
     tags: ["ESP32", "Bonanza", "Avionics", "Prop Control", "Arduino"]
     repo: "https://github.com/billmallard/Beech215PropController"
+    project_url: "/projects/beech215/"
     phase: "Design Phase"
     location: "Fort Worth, TX"
     stack: "ESP32 · Arduino / C++ · KiCad"
