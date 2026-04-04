@@ -1016,6 +1016,48 @@ footer {
    NEW v2 COMPONENTS
 ══════════════════════════════════════════ */
 
+/* Project Subnav (for project-specific pages) */
+.project-subnav {
+  background: var(--navy-mid);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0 2rem;
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+}
+.project-subnav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 44px;
+}
+.project-subnav a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.project-subnav a:hover {
+  color: rgba(255,255,255,0.9);
+}
+.project-subnav-badge {
+  background: var(--orange);
+  color: #ffffff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
 /* Announcement Banner */
 .announcement-banner {
   background: rgba(232, 112, 42, 0.10);

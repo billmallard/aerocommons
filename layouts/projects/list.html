@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{{ partial "head.html" . }}{{ partial "ga.html" . }}</head>
+<body>
+
+{{ partial "nav.html" . }}
+
+<!-- ══ PROJECT SUBNAV ══ -->
+<div class="project-subnav">
+  <div class="project-subnav-inner">
+    <a href="/projects/maos/">
+      <span class="project-subnav-badge">MAOS</span>
+    </a>
+    <a href="#aircraft">The Aircraft</a>
+    <a href="#ground">Ground Ops</a>
+    <a href="#ai">AI Development</a>
+    <a href="#manufacturing">Manufacturing</a>
+  </div>
+</div>
+
+<!-- ══ MAOS HERO ══ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">FAA Experimental Amateur-Built · Open Source</div>
+    <h1 class="hero-h1 reveal reveal-delay-1">
+      The aircraft you<br>
+      <strong>build yourself.</strong>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      The MAOS is a four-seat, series-hybrid, IFR-capable experimental aircraft engineered for the EAA homebuilder community. Designed in the open by Agentic AI guided by humans. Built from flat stock. Flown at altitude.
+    </p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#aircraft" class="btn-primary">
+        Explore the Design
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="{{ .Site.Params.github }}" class="btn-ghost" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        github.com/billmallard/aerocommons
+      </a>
+    </div>
+  </div>
+  <div class="hero-specs reveal reveal-delay-4">
+    <div class="spec-item"><div class="spec-value">4<span>seat</span></div><div class="spec-label">Configuration</div></div>
+    <div class="spec-item"><div class="spec-value">20,000<span>ft</span></div><div class="spec-label">Target ceiling</div></div>
+    <div class="spec-item"><div class="spec-value">Series<span>hybrid</span></div><div class="spec-label">Propulsion</div></div>
+    <div class="spec-item"><div class="spec-value">IFR<span>equipped</span></div><div class="spec-label">Avionics</div></div>
+    <div class="spec-item"><div class="spec-value">FAA<span>E-AB</span></div><div class="spec-label">Regulatory basis</div></div>
+  </div>
+</section>
+
+<!-- ══ MISSION ══ -->
+<section id="mission" aria-label="Project pillars">
+  <div class="mission-grid">
+    <div class="mission-cell reveal">
+      <div class="mission-number">01</div>
+      <h3>Inherently Safe Configuration</h3>
+      <p>High-wing pod-and-boom architecture with conservative wing loading and positive static margin verified by AVL analysis at both CG extremes. Departure resistance is designed in, not trained in.</p>
+    </div>
+    <div class="mission-cell reveal reveal-delay-1">
+      <div class="mission-number">02</div>
+      <h3>One Builder, Two-Car Garage</h3>
+      <p>Every structural component is designed to be fabricated with tools available in a competent amateur's shop. No CNC mill. No autoclave. No professional machine shop required at any build step.</p>
+    </div>
+    <div class="mission-cell reveal reveal-delay-2">
+      <div class="mission-number">03</div>
+      <h3>Open from Day One</h3>
+      <p>All design files, analysis outputs, decision records, and build documentation are published openly. The knowledge that goes into this aircraft belongs to the homebuilder community permanently.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AIRCRAFT ══ -->
+<section id="aircraft">
+  <div class="section-header reveal">
+    <span class="tag-label">The Platform</span>
+    <h2>Designed for the <strong>mission that matters.</strong></h2>
+    <p>The MAOS targets the capability gap between a well-equipped LSA and a certified piston twin — a capable, IFR-equipped four-seat platform that a single builder can complete, transport, and deploy from a standard general aviation airport.</p>
+  </div>
+  <div class="aircraft-grid">
+    <div class="aircraft-card reveal">
+      <div class="aircraft-card-tag">Airframe</div>
+      <h3>Pod-and-Boom Fuselage</h3>
+      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted below a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew accommodation. No pneumatic systems cross the wing-to-pod boundary.</p>
+    </div>
+    <div class="aircraft-card reveal reveal-delay-1">
+      <div class="aircraft-card-tag">Wing</div>
+      <h3>High Wing, Removable Single-Piece</h3>
+      <p>V-strut braced high wing with twin Honda 400cc motorcycle-derived ICE generators mounted at mid-span. The wing is a single removable piece — removal and stow is accomplished by a two-person crew using the integrated trailer crane system.</p>
+    </div>
+    <div class="aircraft-card reveal reveal-delay-2">
+      <div class="aircraft-card-tag">Environmental Control</div>
+      <h3>Full Climate Control + Pressurization Path</h3>
+      <p>Dual-compressor ECS: a closed-circuit EV scroll compressor vapor-cycle system for climate control, and an open-circuit compressor for pressurization. All structural provisions for pressurization are built into v1.0 — upgrade to v1.1 requires no structural modification.</p>
+    </div>
+    <div class="aircraft-card wide reveal reveal-delay-3">
+      <div>
+        <div class="aircraft-card-tag">Target Specifications</div>
+        <h3>Platform Parameters</h3>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.75;margin-top:8px;">All values are design targets under active development. Performance figures subject to revision as analysis matures.</p>
+      </div>
+      <table class="spec-table">
+        <tr><td>Crew + Passengers</td><td>1 + 3 (four total)</td></tr>
+        <tr><td>Target Ceiling</td><td>17,500 – 20,000 ft MSL</td></tr>
+        <tr><td>Propulsion</td><td>Series hybrid — dual ICE generators + contra-rotating rim-drive electric motors</td></tr>
+        <tr><td>Ice Protection</td><td>Expected, To be determined...</td></tr>
+        <tr><td>Landing Gear</td><td>Fixed faired tricycle</td></tr>
+        <tr><td>Tail Configuration</td><td>Conventional aft-tail</td></tr>
+        <tr><td>Regulatory Basis</td><td>FAA Experimental Amateur-Built (51% rule)</td></tr>
+        <tr><td>Transport</td><td>Road-legal enclosed gooseneck trailer with integrated crane</td></tr>
+        <tr><td>Avionics</td><td>IFR-equipped, EFIS-based glass panel</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROPULSION ══ -->
+<section id="propulsion">
+  <div class="section-header reveal">
+    <span class="tag-label">Propulsion Architecture</span>
+    <h2>Series hybrid<br><strong>done right.</strong></h2>
+    <p>The series hybrid approach decouples the engines from the drivetrain entirely. ICE generators run at their efficiency peak regardless of flight phase. Electric motors provide instant torque and clean power management. The architecture provides meaningful redundancy at every stage.</p>
+  </div>
+  <div class="prop-flow">
+    <div class="prop-step reveal"><div class="prop-step-num">01</div><h4>Dual ICE Generators</h4><p>Two Honda 400cc motorcycle-derived engines, each ~50 hp, mounted at mid-span in the wing. They run as pure generators — no mechanical coupling to the propulsor. Either engine can sustain cruise independently.</p></div>
+    <div class="prop-step reveal reveal-delay-1"><div class="prop-step-num">02</div><h4>High-Voltage Bus</h4><p>Generator output feeds a common HV DC bus alongside the flight battery pack. The bus arbitrates power between generation, storage, and consumption continuously, managed by the custom ESP32-S3 FADEC.</p></div>
+    <div class="prop-step reveal reveal-delay-2"><div class="prop-step-num">03</div><h4>Rim-Drive Electric Motors</h4><p>Contra-rotating axial-flux or rim-drive motors on the tail boom eliminate the gearbox entirely. Motor candidates include the Donut Motor rimless rim-drive and Beyond Motors AXM2 axial flux units.</p></div>
+    <div class="prop-step reveal reveal-delay-3"><div class="prop-step-num">04</div><h4>Custom FADEC</h4><p>ESP32-S3 based controller with dedicated sensing and power driver boards — builder-fabricated from published schematics, PCB fabrication outsourced. All firmware open-source.</p></div>
+  </div>
+  <div class="prop-callout reveal reveal-delay-2">
+    <p>The series hybrid architecture means <strong>no single failure produces a total power loss.</strong> Both generators must fail, the battery must be depleted, and both motors must fail before the aircraft has no propulsive power — three independent failure modes instead of one.</p>
+  </div>
+</section>
+
+<!-- ══ GROUND OPS ══ -->
+<section id="ground">
+  <div class="section-header reveal">
+    <span class="tag-label">Ground Operations</span>
+    <h2>Fly it anywhere.<br><strong>Tow it home.</strong></h2>
+    <p>The MAOS is designed to operate from remote airstrips without hangar support. The purpose-built trailer is the ground support system. Transport, deployment, and recovery are engineered operations, not afterthoughts.</p>
+  </div>
+  <div class="ground-cols">
+    <div class="ground-steps">
+      <div class="ground-step reveal"><div class="ground-step-num">01</div><div><h4>Road Transport</h4><p>Aircraft stows in an enclosed aluminum gooseneck car hauler (~8.5' × 28'–32') meeting Texas road-legal envelope requirements. No permit loads, no escort vehicles.</p></div></div>
+      <div class="ground-step reveal reveal-delay-1"><div class="ground-step-num">02</div><div><h4>Crane System</h4><p>A longitudinal overhead beam with traveling hoist — derived from burial vault delivery truck architecture — runs the full length of the trailer interior. Handles wing removal and aircraft positioning without external ground equipment.</p></div></div>
+      <div class="ground-step reveal reveal-delay-2"><div class="ground-step-num">03</div><div><h4>Wing Attach</h4><p>One-person crew installs the single-piece wing using the trailer crane. Wing-to-fuselage interface carries only structural and electrical loads — no pneumatic crossings. Assembly time targets under 60 minutes.</p></div></div>
+      <div class="ground-step reveal reveal-delay-3"><div class="ground-step-num">04</div><div><h4>Preflight &amp; Power</h4><p>Shore power connection charges the flight battery pack while the aircraft is on the trailer. The aircraft arrives at the flight line with full battery state and a completed weight-and-balance check.</p></div></div>
+      <div class="ground-step reveal reveal-delay-4"><div class="ground-step-num">05</div><div><h4>Recovery</h4><p>Field landing and recovery is the design case — not the exception. The trailer can be positioned at any location accessible by a pickup truck. Wing removal is performed in the open field using only trailer-carried equipment.</p></div></div>
+    </div>
+    <div class="ground-aside reveal reveal-delay-2">
+      <div class="rule-orange"></div>
+      <h3>The trailer is not<br><strong>a transporter.</strong><br>It is a mobile flight operations base.</h3>
+      <div class="ground-stat"><div class="ground-stat-value">8.5 × 30 ft</div><div class="ground-stat-label">Trailer envelope (road legal, TX)</div></div>
+      <div class="ground-stat"><div class="ground-stat-value">1-person</div><div class="ground-stat-label">Minimum crew for deployment</div></div>
+      <div class="ground-stat"><div class="ground-stat-value">&lt; 60 min</div><div class="ground-stat-label">Trailer to flight-ready target</div></div>
+      <div class="ground-stat"><div class="ground-stat-value">Zero</div><div class="ground-stat-label">External ground support equipment required</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AI ══ -->
+<section id="ai">
+  <div class="section-header reveal">
+    <span class="tag-label">Development Methodology</span>
+    <h2>AI-assisted design<br><strong>from the ground up.</strong></h2>
+    <p>The MAOS development process treats AI not as a search engine but as a structured design team. A multi-agent board system assigns specialized roles to independent AI agents, surfaces inter-disciplinary conflicts early, and produces formal decision records at every gate.</p>
+  </div>
+  <div class="ai-grid">
+    <div class="ai-card reveal"><div class="ai-card-icon"></div><h4>Structured Agent Roles</h4><p>Six specialist agents cover Aerodynamics, Structures, Propulsion, Systems, Manufacturing, and Safety. Each maintains its own design constraints and flags conflicts with other agents before they become build problems.</p></div>
+    <div class="ai-card reveal reveal-delay-1"><div class="ai-card-icon"></div><h4>Formal Decision Gates</h4><p>Every open design question is tracked as an explicit gate with the current recommendation documented. Design state is versioned. Nothing is resolved informally — every decision has a record, a rationale, and an owner.</p></div>
+    <div class="ai-card reveal reveal-delay-2"><div class="ai-card-icon"></div><h4>Living Documentation</h4><p>Session outputs produce numbered, revisioned formal documents. Weight budgets, failure matrices, ECS architectures, and trailer plans are maintained as living documents — not engineering sketches. The repo is the single source of truth.</p></div>
+    <div class="ai-card reveal reveal-delay-3"><div class="ai-card-icon"></div><h4>Analysis Integration</h4><p>AVL stability analysis, propulsion failure matrix modeling, and ECS thermal calculations are performed iteratively alongside design decisions — not as final-stage validation. Problems surface at the design phase, not the build phase.</p></div>
+    <div class="ai-card reveal reveal-delay-4"><div class="ai-card-icon"></div><h4>Conflict-Driven Design</h4><p>Inter-agent conflicts are anticipated and structured into board meeting agendas. When the Structures agent and the Manufacturing agent disagree, that tension is surfaced explicitly — the resolution is a design decision, not an implicit compromise.</p></div>
+    <div class="ai-card reveal reveal-delay-5"><div class="ai-card-icon"></div><h4>Open Methodology</h4><p>The agent system, SKILL files, board agendas, and decision records are published alongside the design files. Any builder can fork the methodology alongside the design. The process is as open as the product.</p></div>
+  </div>
+  <div class="ai-board reveal reveal-delay-2">
+    <div class="ai-board-title">Design Board Agents</div>
+    <div class="agent-row">
+      <div class="agent-pill chairman" data-desc="The Chairman agent orchestrates board sessions, assigns agenda items to specialist agents, collects conflicting recommendations, and produces a structured resolution record. All agent interactions are logged as part of the project's permanent design history.">Chairman</div>
+      <div class="agent-pill" data-desc="The Aerodynamics agent owns wing geometry, airfoil selection, drag budgets, stability margins, and performance prediction. It defends wing loading limits and static margin requirements using XFLR5, AVL, and VSPAERO analysis.">Aerodynamics</div>
+      <div class="agent-pill" data-desc="The Structures agent owns the master weight budget and all structural sizing. It challenges every gram added to the aircraft, tracks empty weight against the 1,200 lb useful load target, and evaluates every joint and load path for simplicity.">Structures</div>
+      <div class="agent-pill" data-desc="The Propulsion agent owns the series hybrid powerplant — ICE generators, electric motors, thermal management, and the high-voltage bus. It tracks power budgets at single-generator-failed conditions and evaluates engine and motor candidates.">Propulsion</div>
+      <div class="agent-pill" data-desc="The Systems agent owns avionics, electrical architecture, environmental control, ice protection, and all wiring. It manages the bus voltage decision, ECS design for both v1.0 and the pressurized v1.1 upgrade path, and FADEC integration.">Systems</div>
+      <div class="agent-pill" data-desc="The Manufacturing agent evaluates every design decision against the garage-builder constraint. It enforces the two-car garage test: if a solo builder can't fabricate it with hand tools, a drill press, and a vacuum pump, the design fails.">Manufacturing</div>
+      <div class="agent-pill" data-desc="The Safety agent performs failure mode analysis across all subsystems, tracks crashworthiness, and validates that no single-point failure produces a catastrophic outcome. It owns the FMEA matrix and FAA EAB compliance.">Safety</div>
+    </div>
+    <p class="ai-board-desc">The Chairman agent orchestrates board sessions, assigns agenda items to specialist agents, collects conflicting recommendations, and produces a structured resolution record. All agent interactions are logged as part of the project's permanent design history.</p>
+  </div>
+</section>
+
+<!-- ══ MANUFACTURING ══ -->
+<section id="manufacturing">
+  <div class="mfg-intro">
+    <div>
+      <div class="section-header reveal" style="margin-bottom:0;">
+        <span class="tag-label">Manufacturing Philosophy</span>
+        <h2>Flat stock.<br><strong>Real tools.</strong><br>One builder.</h2>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p>The MAOS design philosophy treats manufacturing accessibility as a primary constraint — not an optimization. If a structural component cannot be produced by a competent amateur with tools available through normal commercial channels, the design has failed before the first part is cut.</p>
+      <p>Primary structure uses aluminum sheet and extrusions, foam-core fiberglass composite, and flat-cut plywood formers. Parts are designed to ship flat from online services, then assemble on-site with basic hand tools.</p>
+    </div>
+  </div>
+  <div class="mfg-tools">
+    <div class="tool-card reveal"><div class="tool-card-num">Cut</div><h4>Laser &amp; Waterjet</h4><p>Aluminum sheet, steel gussets, and plywood formers ordered as DXF files from SendCutSend or OSH Cut. Parts arrive flat, deburred, and ready to assemble. Unique part count minimized at the design stage.</p></div>
+    <div class="tool-card reveal reveal-delay-1"><div class="tool-card-num">Form</div><h4>Foam-Core Composites</h4><p>Hot-wire cut foam cores over shaped formers — the Rutan-proven path to efficient airfoil shapes without a CNC mill. Fiberglass or carbon cloth over shaped foam. No autoclave. Vacuum bagging where needed.</p></div>
+    <div class="tool-card reveal reveal-delay-2"><div class="tool-card-num">Print</div><h4>3D Printed Tooling</h4><p>FDM printing for non-structural components, drilling jigs, assembly fixtures, and fit-check parts. Resin printing for precision tooling and mold plugs. Printed parts are never primary structure.</p></div>
+    <div class="tool-card reveal reveal-delay-3"><div class="tool-card-num">Source</div><h4>COTS Hardware</h4><p>Structural hardware from McMaster-Carr and Aircraft Spruce. Certified fasteners where required by design. No single-source dependencies in primary structure.</p></div>
+  </div>
+  <div class="mfg-principle">
+    <div class="principle-grid">
+      <div class="principle-text reveal">
+        <div class="rule-orange"></div>
+        <h3>The 51% rule<br>is the <strong>design rule.</strong></h3>
+        <p>FAA Experimental Amateur-Built certification requires the builder to fabricate more than 51% of the aircraft by value. The MAOS is designed so that the 51% is the interesting, capable, and achievable part — not a compliance technicality.</p>
+      </div>
+      <div class="principle-list reveal reveal-delay-2">
+        <div class="principle-item"><div class="principle-dot"></div><p><strong>All files in open formats.</strong> STEP, STL, DXF, and SVG — no vendor lock-in. FreeCAD and OpenVSP as primary CAD tools.</p></div>
+        <div class="principle-item"><div class="principle-dot"></div><p><strong>Minimum unique part count.</strong> Every part that can be shared between assemblies is designed to be shared. Fewer jigs, fewer setups, fewer single-use operations.</p></div>
+        <div class="principle-item"><div class="principle-dot"></div><p><strong>Field-repairable.</strong> Any structural repair likely after a hard landing is achievable with materials stocked in the trailer and basic hand tools.</p></div>
+        <div class="principle-item"><div class="principle-dot"></div><p><strong>Weight is tracked from day one.</strong> Every component carries a weight budget. No component is added without justifying its mass against its function.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OPEN SOURCE ══ -->
+<section id="open">
+  <div class="open-grid">
+    <div class="open-text reveal">
+      <div class="rule-orange"></div>
+      <span class="tag-label" style="display:block;margin-bottom:16px;">The Commons</span>
+      <h2>Everything<br>we learn<br><strong>is yours.</strong></h2>
+      <p>AeroCommons publishes every design file, every analysis output, every agent session, every decision record, and every build document in the public repository. Not after the project is complete. From the first session.</p>
+      <p>The goal is not just to build one aircraft. It is to build the methodology, the toolchain, and the knowledge base that makes the next aircraft easier for the next builder.</p>
+      <div class="open-actions">
+        <a href="{{ .Site.Params.github }}" class="btn-navy" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View Repository
+        </a>
+        <a href="#contact" class="btn-primary">Get Involved</a>
+      </div>
+    </div>
+    <div class="open-card reveal reveal-delay-2">
+      <div class="open-card-tag">What's in the repo</div>
+      <h3>billmallard / aerocommons</h3>
+      <div class="repo-url">github.com/billmallard/aerocommons</div>
+      <ul class="open-card-list">
+        <li>Formal design drawings (DWG MAOS-GA-001, PM-002)</li>
+        <li>Trailer and ground support development plan (MAOS-TRL-DEV-001)</li>
+        <li>Environmental control system architecture (MAOS-ECS-DEV-001)</li>
+        <li>Agent SKILL.md files and board session transcripts</li>
+        <li>AVL stability analysis outputs and weight budgets</li>
+        <li>Open decision gate register with current recommendations</li>
+        <li>CAD files in open formats (STEP, DXF, STL)</li>
+        <li>Brand identity standards and assets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-inner">
+    <span class="tag-label">Get Involved</span>
+    <h2>This aircraft gets<br><strong>built by a community.</strong></h2>
+    <p>The MAOS is a serious engineering project. We're looking for builders, pilots, engineers, and makers who want to work on something real.</p>
+    <a href="mailto:{{ .Site.Params.email }}" class="contact-email">{{ .Site.Params.email }}</a>
+    <br>
+    <a href="{{ .Site.Params.github }}" class="btn-primary" target="_blank" rel="noopener" style="margin-top:8px;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      Star the repo on GitHub
+    </a>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ partial "scripts.html" . }}
+
+</body>
+</html>
