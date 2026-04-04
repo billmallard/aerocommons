@@ -1018,7 +1018,9 @@ footer {
 
 /* Project Subnav (for project-specific pages) */
 .project-subnav {
-  background: var(--navy-mid);
+  background: rgba(21, 34, 56, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 0 2rem;
   position: sticky;
