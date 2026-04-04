@@ -18,35 +18,47 @@
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow reveal">Open Source General Aviation</div>
-    <h1 class="hero-h1 reveal reveal-delay-1">
-      Where GA Builders<br>
-      <strong>Build Together</strong>
-    </h1>
-    <p class="hero-sub reveal reveal-delay-2">
-      AeroCommons is a non-profit community of experimental aircraft builders, engineers, and pilots advancing open-source general aviation — one published design at a time.
-    </p>
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="#projects" class="btn-primary">
-        Explore Projects
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-          <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <a href="{{ .Site.Params.github }}" class="btn-ghost" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-        View on GitHub
-      </a>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal">Open Source General Aviation</div>
+      <h1 class="hero-h1 reveal reveal-delay-1">
+        Where GA Builders<br>
+        <strong>Build Together</strong>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        AeroCommons is a non-profit community of experimental aircraft builders, engineers, and pilots advancing open-source general aviation — one published design at a time.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#projects" class="btn-primary">
+          Explore Projects
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="{{ .Site.Params.github }}" class="btn-ghost" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="hero-specs reveal reveal-delay-4">
-    <div class="spec-item"><div class="spec-value">2<span>Active</span></div><div class="spec-label">Projects</div></div>
-    <div class="spec-item"><div class="spec-value">100%<span></span></div><div class="spec-label">Open Source</div></div>
-    <div class="spec-item"><div class="spec-value">FAA<span>E-AB</span></div><div class="spec-label">Compliant</div></div>
-    <div class="spec-item"><div class="spec-value">0<span></span></div><div class="spec-label">Vendor Lock-In</div></div>
+
+    <div class="hero-right reveal reveal-delay-4">
+      <img
+        src="/images/hero-constellation.svg"
+        alt="AeroCommons open source aviation project network"
+        class="hero-constellation"
+        width="520"
+        height="480"
+      />
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-value">2<span>Active</span></div><div class="stat-label">Projects</div></div>
+        <div class="stat-item"><div class="stat-value">100%<span></span></div><div class="stat-label">Open Source</div></div>
+        <div class="stat-item"><div class="stat-value">FAA<span>E-AB</span></div><div class="stat-label">Compliant</div></div>
+        <div class="stat-item"><div class="stat-value">0<span></span></div><div class="stat-label">Vendor Lock-In</div></div>
+      </div>
+    </div>
   </div>
 </section>
 

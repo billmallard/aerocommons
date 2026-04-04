@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 480" width="100%" aria-label="AeroCommons open source aviation project network">
+  <defs>
+    <style>
+      .cn  { stroke: rgba(255,255,255,0.15); stroke-width: 0.75; fill: none; }
+      .cn2 { stroke: rgba(232,97,26,0.40);   stroke-width: 0.75; fill: none; }
+      .lbl {
+        font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+        fill: rgba(255,255,255,0.50);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+      }
+      .lbl-o {
+        font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+        fill: #E8611A;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+
+  <!-- ghost connectors -->
+  <line class="cn" x1="260" y1="220" x2="85"  y2="118"/>
+  <line class="cn" x1="260" y1="220" x2="420" y2="105"/>
+  <line class="cn" x1="260" y1="220" x2="52"  y2="308"/>
+  <line class="cn" x1="260" y1="220" x2="455" y2="325"/>
+  <line class="cn" x1="260" y1="220" x2="150" y2="390"/>
+  <line class="cn" x1="260" y1="220" x2="390" y2="398"/>
+  <line class="cn" x1="260" y1="220" x2="330" y2="88"/>
+  <line class="cn" x1="260" y1="220" x2="130" y2="198"/>
+  <line class="cn" x1="85"  y1="118" x2="52"  y2="308"/>
+  <line class="cn" x1="85"  y1="118" x2="150" y2="390"/>
+  <line class="cn" x1="420" y1="105" x2="455" y2="325"/>
+  <line class="cn" x1="420" y1="105" x2="330" y2="88"/>
+  <line class="cn" x1="52"  y1="308" x2="150" y2="390"/>
+  <line class="cn" x1="455" y1="325" x2="390" y2="398"/>
+  <line class="cn" x1="130" y1="198" x2="85"  y2="118"/>
+
+  <!-- orange accent connectors to active nodes -->
+  <line class="cn2" x1="260" y1="220" x2="85"  y2="118"/>
+  <line class="cn2" x1="260" y1="220" x2="420" y2="105"/>
+  <line class="cn2" x1="260" y1="220" x2="150" y2="390"/>
+  <line class="cn2" x1="260" y1="220" x2="390" y2="398"/>
+
+  <!-- ghost node: upper left -->
+  <circle cx="85"  cy="118" r="26" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+  <circle cx="85"  cy="118" r="3"  fill="rgba(255,255,255,0.45)"/>
+  <path d="M71,112 L85,100 L99,112 L95,112 L85,104 L75,112 Z" fill="rgba(255,255,255,0.20)"/>
+  <rect x="81" y="112" width="8" height="6" rx="1" fill="rgba(255,255,255,0.10)"/>
+  <text class="lbl" x="85" y="84" text-anchor="middle">Future project</text>
+
+  <!-- ghost node: upper right -->
+  <circle cx="420" cy="105" r="26" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+  <circle cx="420" cy="105" r="3"  fill="rgba(255,255,255,0.45)"/>
+  <path d="M406,99 L420,87 L434,99 L430,99 L420,91 L410,99 Z" fill="rgba(255,255,255,0.20)"/>
+  <rect x="416" y="99" width="8" height="6" rx="1" fill="rgba(255,255,255,0.10)"/>
+  <text class="lbl" x="420" y="71" text-anchor="middle">Future project</text>
+
+  <!-- ghost node: mid left -->
+  <circle cx="52"  cy="308" r="20" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <circle cx="52"  cy="308" r="2.5" fill="rgba(255,255,255,0.28)"/>
+
+  <!-- ghost node: mid right -->
+  <circle cx="455" cy="325" r="20" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <circle cx="455" cy="325" r="2.5" fill="rgba(255,255,255,0.28)"/>
+
+  <!-- micro nodes -->
+  <circle cx="130" cy="198" r="16" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+  <circle cx="130" cy="198" r="2"  fill="rgba(255,255,255,0.22)"/>
+  <circle cx="330" cy="88"  r="14" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+  <circle cx="330" cy="88"  r="2"  fill="rgba(255,255,255,0.22)"/>
+
+  <!-- active node: Beech 215 -->
+  <circle cx="150" cy="390" r="32" fill="rgba(232,97,26,0.09)" stroke="#E8611A" stroke-width="1.2"/>
+  <circle cx="150" cy="390" r="3.5" fill="rgba(255,255,255,0.70)"/>
+  <path d="M136,384 L150,372 L164,384 L160,384 L150,375 L140,384 Z" fill="rgba(232,97,26,0.65)"/>
+  <rect x="146" y="384" width="8" height="6" rx="1" fill="rgba(232,97,26,0.30)"/>
+  <text class="lbl-o" x="150" y="436" text-anchor="middle">Beech 215</text>
+
+  <!-- active node: future project placeholder -->
+  <circle cx="390" cy="398" r="32" fill="rgba(232,97,26,0.09)" stroke="#E8611A" stroke-width="1.2"/>
+  <circle cx="390" cy="398" r="3.5" fill="rgba(255,255,255,0.70)"/>
+  <path d="M376,392 L390,380 L404,392 L400,392 L390,383 L380,392 Z" fill="rgba(232,97,26,0.65)"/>
+  <rect x="386" y="392" width="8" height="6" rx="1" fill="rgba(232,97,26,0.30)"/>
+  <text class="lbl-o" x="390" y="444" text-anchor="middle">Your project?</text>
+
+  <!-- center node: MAOS -->
+  <circle cx="260" cy="220" r="54" fill="rgba(232,97,26,0.06)" stroke="rgba(232,97,26,0.25)" stroke-width="1"/>
+  <circle cx="260" cy="220" r="40" fill="rgba(232,97,26,0.11)" stroke="#E8611A" stroke-width="1.5"/>
+  <circle cx="260" cy="220" r="6"  fill="#E8611A"/>
+  <path d="M240,213 L260,197 L280,213 L274,213 L260,200 L246,213 Z" fill="#E8611A"/>
+  <rect x="255" y="213" width="10" height="8" rx="1" fill="rgba(232,97,26,0.55)"/>
+
+  <!-- center label -->
+  <line x1="210" y1="173" x2="230" y2="178" stroke="#E8611A" stroke-width="0.75" stroke-dasharray="3 3" fill="none"/>
+  <line x1="310" y1="173" x2="290" y2="178" stroke="#E8611A" stroke-width="0.75" stroke-dasharray="3 3" fill="none"/>
+  <text class="lbl-o" x="260" y="168" text-anchor="middle">MAOS — Project 001</text>
+
+  <!-- bottom tagline -->
+  <text x="260" y="468" text-anchor="middle"
+        font-family="'Barlow Condensed','Barlow',sans-serif"
+        font-size="10" font-weight="600"
+        letter-spacing="0.15em" text-transform="uppercase"
+        fill="rgba(255,255,255,0.18)">Open Source General Aviation</text>
+
+</svg>
