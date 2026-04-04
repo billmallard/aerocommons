@@ -5,6 +5,8 @@ description: "MAOS wing attachment decision: cantilever wins over braced struts 
 tags: ["board-meeting", "design-decisions", "structures", "aerodynamics", "weight-budget"]
 author: "AeroCommons Design Board"
 session: "BOARD-002-PREP"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

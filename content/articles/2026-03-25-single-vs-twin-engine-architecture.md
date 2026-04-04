@@ -4,6 +4,8 @@ date: 2026-03-25T12:45:00Z
 description: "Deep dive into the single vs twin engine debate for MAOS hybrid-electric aircraft: weight analysis, safety philosophy, battery sizing, and what kind of redundancy you trust."
 tags: ["design-decisions", "propulsion", "safety", "build-in-public", "hybrid-electric"]
 author: "Bill Mallard / MAOS Design Team"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

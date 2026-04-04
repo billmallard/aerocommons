@@ -5,6 +5,8 @@ description: "A pilot's turbulence experience in a Bonanza A-35 reveals why high
 tags: ["aerodynamics", "structures", "safety", "design-analysis", "wing-loading", "turbulence"]
 author: "MAOS Design Board"
 session: "RESEARCH-2026-04-01"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

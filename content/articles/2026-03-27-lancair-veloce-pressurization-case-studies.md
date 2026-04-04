@@ -4,6 +4,8 @@ date: 2026-03-27
 author: "Bill Mallard"
 description: "Historical analysis of two successful pressurized homebuilt aircraft — what worked, what failed, and practical lessons for modern experimental builders considering pressurization."
 tags: ["pressurization", "Lancair", "Veloce", "case study", "experimental", "homebuilt", "composite", "pressure vessel", "MAOS"]
+project: "maos"
+article_type: "analysis"
 ---
 
 Building a pressurized homebuilt aircraft is arguably the pinnacle of experimental aviation achievement. Two aircraft stand out as successful examples: the **Lancair IV‑P** (and its Evolution variant) and the **Veloce 600**. Both proved that a determined builder could create a pressurized, high‑performance composite aircraft in a home workshop.

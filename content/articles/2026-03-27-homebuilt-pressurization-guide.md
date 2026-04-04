@@ -4,6 +4,8 @@ date: 2026-03-27
 author: "Bill Mallard"
 description: "A comprehensive technical analysis of pressure vessel design, ECS systems, safety requirements, and fabrication methods for experimental amateur-built pressurized aircraft."
 tags: ["pressurization", "experimental", "homebuilt", "safety", "composite", "ECS"]
+project: "maos"
+article_type: "methodology"
 ---
 
 Building a pressurized aircraft in your garage sounds like madness. It's not—but it requires understanding what you're actually building: a flying pressure vessel that must protect occupants at altitude while remaining light enough to fly and simple enough to build without aerospace manufacturing infrastructure.

@@ -5,20 +5,30 @@
 
 {{ partial "nav.html" . }}
 
+<!-- ══ ANNOUNCEMENT BANNER ══ -->
+{{ if .Site.Params.show_announcement }}
+<div class="announcement-banner">
+  <p>
+    AeroCommons is evolving into an open-source GA hub. 
+    <a href="/articles/">Read the latest updates →</a>
+  </p>
+</div>
+{{ end }}
+
 <!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow reveal">FAA Experimental Amateur-Built · Open Source</div>
+    <div class="hero-eyebrow reveal">Open Source General Aviation</div>
     <h1 class="hero-h1 reveal reveal-delay-1">
-      The aircraft you<br>
-      <strong>build yourself.</strong>
+      Where GA Builders<br>
+      <strong>Build Together</strong>
     </h1>
     <p class="hero-sub reveal reveal-delay-2">
-      The MAOS is a four-seat, series-hybrid, IFR-capable experimental aircraft engineered for the EAA homebuilder community. Designed in the open by Agentic AI guided by humans. Built from flat stock. Flown at altitude.
+      AeroCommons is a non-profit community of experimental aircraft builders, engineers, and pilots advancing open-source general aviation — one published design at a time.
     </p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="#aircraft" class="btn-primary">
-        Explore the Design
+      <a href="#projects" class="btn-primary">
+        Explore Projects
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
           <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -27,16 +37,74 @@
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
         </svg>
-        github.com/billmallard/aerocommons
+        View on GitHub
       </a>
     </div>
   </div>
   <div class="hero-specs reveal reveal-delay-4">
-    <div class="spec-item"><div class="spec-value">4<span>seat</span></div><div class="spec-label">Configuration</div></div>
-    <div class="spec-item"><div class="spec-value">20,000<span>ft</span></div><div class="spec-label">Target ceiling</div></div>
-    <div class="spec-item"><div class="spec-value">Series<span>hybrid</span></div><div class="spec-label">Propulsion</div></div>
-    <div class="spec-item"><div class="spec-value">IFR<span>equipped</span></div><div class="spec-label">Avionics</div></div>
-    <div class="spec-item"><div class="spec-value">FAA<span>E-AB</span></div><div class="spec-label">Regulatory basis</div></div>
+    <div class="spec-item"><div class="spec-value">2<span>Active</span></div><div class="spec-label">Projects</div></div>
+    <div class="spec-item"><div class="spec-value">100%<span></span></div><div class="spec-label">Open Source</div></div>
+    <div class="spec-item"><div class="spec-value">FAA<span>E-AB</span></div><div class="spec-label">Compliant</div></div>
+    <div class="spec-item"><div class="spec-value">0<span></span></div><div class="spec-label">Vendor Lock-In</div></div>
+  </div>
+</section>
+
+<!-- ══ MISSION BAND ══ -->
+<div class="mission-band">
+  <div class="mission-band-inner">
+    <p>
+      <strong>Our mission:</strong> Make aviation engineering knowledge freely accessible. 
+      Every design file, every simulation, every lesson learned — published and 
+      open for the community to build on.
+    </p>
+  </div>
+</div>
+
+<!-- ══ PROJECTS ══ -->
+<section class="projects-section" id="projects">
+  <div class="section-inner">
+    <div class="section-label">Open Projects</div>
+    <h2 class="section-title">What We're Building</h2>
+    <p class="section-subtitle">
+      Each project lives in its own GitHub repository with full documentation, 
+      design files, and build logs — free for the EAB community to use, fork, and improve.
+    </p>
+
+    <div class="projects-grid">
+      {{ range sort .Site.Data.projects.projects "weight" }}
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-status status-{{ .status }}">{{ .status_label }}</span>
+        </div>
+        <div class="project-body">
+          <div class="project-title">{{ .title }}</div>
+          <div class="project-subtitle">{{ .subtitle }}</div>
+          <p class="project-desc">{{ .description }}</p>
+          <div class="project-tags">
+            {{ range .tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-meta">
+            <span>{{ .phase }}</span>
+          </div>
+          <a href="{{ .repo }}" target="_blank" class="project-link">
+            View on GitHub ↗
+          </a>
+        </div>
+      </div>
+      {{ end }}
+
+      <!-- Submit card — always last -->
+      <a href="/submit/" class="project-card-submit">
+        <div class="submit-title">Submit Your Project</div>
+        <p class="submit-desc">
+          Have an open-source GA project? Stand-alone GitHub repo required.
+        </p>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -247,6 +315,114 @@
         <li>CAD files in open formats (STEP, DXF, STL)</li>
         <li>Brand identity standards and assets</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GET INVOLVED ══ -->
+<section class="involved-section" id="involved">
+  <div class="section-inner">
+    <div class="section-label" style="color: var(--orange);">Community</div>
+    <h2 class="section-title" style="color: #ffffff;">Get Involved</h2>
+    <p class="section-subtitle">
+      Open projects need real hands. We're looking for builders, testers, 
+      subject-matter experts, and engineers who want to work on something real.
+    </p>
+    <div class="involved-grid">
+
+      <div class="involved-card">
+        <div class="involved-title">Build a Prototype</div>
+        <p class="involved-desc">
+          MAOS subsystems are designed to be built and tested independently — 
+          ECS controllers, FBW servos, motor thermal rigs. Pick a system.
+        </p>
+        <a href="https://github.com/billmallard/aerocommons/issues" 
+           class="involved-link" target="_blank">See open tasks →</a>
+      </div>
+
+      <div class="involved-card">
+        <div class="involved-title">Run Analysis</div>
+        <p class="involved-desc">
+          OpenFOAM, AVL, VSPAero — all containerized and documented. 
+          Help close open decision gates with real simulation data.
+        </p>
+        <a href="https://github.com/billmallard/aerocommons" 
+           class="involved-link" target="_blank">View decision gates →</a>
+      </div>
+
+      <div class="involved-card">
+        <div class="involved-title">Expert Review</div>
+        <p class="involved-desc">
+          Retired military, airline, or experimental aviation background? 
+          Board meeting notes and design proposals are public and open for critique.
+        </p>
+        <a href="/articles/" class="involved-link">Read the board notes →</a>
+      </div>
+
+      <div class="involved-card">
+        <div class="involved-title">Submit Your Project</div>
+        <p class="involved-desc">
+          Have an open-source GA project that deserves a home? 
+          Stand-alone GitHub repo required. Let's talk.
+        </p>
+        <a href="mailto:contact@aerocommons.org" class="involved-link">
+          contact@aerocommons.org →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ NON-PROFIT / SUPPORT ══ -->
+<section class="nonprofit-section" id="support">
+  <div class="section-inner nonprofit-inner">
+    <div class="nonprofit-text">
+      <div class="section-label">Non-Profit Formation</div>
+      <h2 class="section-title">This Work Needs a Durable Home</h2>
+      <p>
+        AeroCommons is forming as a 501(c)(3) non-profit to ensure this work 
+        stays open, independent, and community-governed — permanently. 
+        No corporate interests. No paywalls. No IP lock-in.
+      </p>
+      <p>
+        Early supporters help fund hosting, tooling, and the overhead of 
+        formal non-profit status. Everything else stays volunteer-driven.
+      </p>
+      <a href="mailto:contact@aerocommons.org" class="btn-primary" 
+         style="margin-top: 1.5rem; display: inline-flex;">
+        Support the Mission
+      </a>
+    </div>
+    <div class="nonprofit-tiers">
+      <div class="tier-card">
+        <div class="tier-amount">$5/mo</div>
+        <div>
+          <div class="tier-title">Contributor</div>
+          <div class="tier-desc">Keep the lights on. Listed in contributors.</div>
+        </div>
+      </div>
+      <div class="tier-card tier-featured">
+        <div class="tier-amount">$25/mo</div>
+        <div>
+          <div class="tier-title">Builder Sponsor</div>
+          <div class="tier-desc">Prototype task board access. Discord invite.</div>
+        </div>
+        <span class="tier-badge">Popular</span>
+      </div>
+      <div class="tier-card">
+        <div class="tier-amount">$100/mo</div>
+        <div>
+          <div class="tier-title">Partner Sponsor</div>
+          <div class="tier-desc">Logo placement, early design board access.</div>
+        </div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-amount">One-time</div>
+        <div>
+          <div class="tier-title">Single Donation</div>
+          <div class="tier-desc">Any amount. Tax-deductible once 501(c)(3) approved.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

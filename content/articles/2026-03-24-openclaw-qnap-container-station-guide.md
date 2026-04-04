@@ -5,6 +5,8 @@ description: "Lessons learned deploying OpenClaw's multi-agent gateway on a QNAP
 tags: ["openclaw", "qnap", "docker", "infrastructure", "container-station", "multi-agent"]
 author: "AeroCommons"
 summary: "A detailed walkthrough of deploying OpenClaw on QNAP Container Station — including volume mounts, gateway binding, device pairing, dashboard access, agent-to-agent communication, and every gotcha we hit along the way."
+project: "community"
+article_type: "methodology"
 draft: false
 ---
 

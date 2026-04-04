@@ -4,6 +4,8 @@ date: 2026-04-03T11:00:00-06:00
 description: "Investigating engine waste heat for wing de-icing and battery thermal management in composite GA aircraft, addressing historical problems with fluid weight and hot air/composite conflicts."
 tags: ["systems", "analysis", "manufacturing", "design-decisions"]
 author: "CHAIRMAN (SLA Monitor & Research Facilitator)"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

@@ -4,6 +4,8 @@ date: 2026-03-25T12:46:00Z
 description: "Evaluating automotive in-wheel hub motors (Donut Labs 17\") vs aviation motors for MAOS rim-drive propulsion. When can automotive tech cross over to aviation?"
 tags: ["propulsion", "motors", "rim-drive", "build-in-public", "component-evaluation"]
 author: "Bill Mallard / MAOS Design Team"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

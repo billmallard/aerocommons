@@ -1,0 +1,32 @@
+projects:
+  - id: maos
+    title: "MAOS"
+    subtitle: "Mobile Aviation Operating System"
+    status: "active"           # active | new | paused | complete
+    status_label: "Active Development"
+    description: >
+      A 4-seat experimental aircraft with series hybrid propulsion, 
+      AI-assisted design board, and full open-source documentation. 
+      155 KTAS cruise, 1,000 nm range, IFR capable.
+    tags: ["Hybrid Electric", "4-Seat", "IFR", "AI Design", "FAA EAB"]
+    repo: "https://github.com/billmallard/aerocommons"
+    phase: "Phase 1 — Preliminary Design"
+    location: "Fort Worth, TX"
+    stack: "OpenVSP · AVL · OpenFOAM · ESP32"
+    weight: 1
+
+  - id: beech215
+    title: "Beech 215"
+    subtitle: "Open Prop Controller"
+    status: "new"
+    status_label: "New Project"
+    description: >
+      An open-source replacement for the Airborne Electronics 350A electric 
+      propeller controller on early-model Beechcraft Bonanza aircraft. 
+      Built on ESP32. No vendor dependency.
+    tags: ["ESP32", "Bonanza", "Avionics", "Prop Control", "Arduino"]
+    repo: "https://github.com/billmallard/Beech215PropController"
+    phase: "Design Phase"
+    location: "Fort Worth, TX"
+    stack: "ESP32 · Arduino / C++ · KiCad"
+    weight: 2

@@ -4,6 +4,8 @@ date: 2026-03-27
 author: "Bill Mallard"
 description: "Practical guide to preventing galvanic corrosion between carbon fiber, aluminum, and other dissimilar materials in homebuilt aircraft. Voltage potentials, isolation methods, and builder‑friendly solutions."
 tags: ["galvanic corrosion", "composite", "aluminum", "carbon fiber", "aircraft construction", "experimental", "homebuilt", "materials", "MAOS"]
+project: "maos"
+article_type: "analysis"
 ---
 
 Building a composite aircraft often means joining dissimilar materials: carbon fiber wings to aluminum fuselage, stainless steel fasteners in composite structures, or aluminum fittings bonded to carbon spars. This creates a hidden danger: **galvanic corrosion** — where one metal corrodes preferentially when electrically connected to another in the presence of an electrolyte (moisture, salt, condensation).

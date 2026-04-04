@@ -4,6 +4,8 @@ date: 2026-04-03T10:00:00-06:00
 description: "Proven composite construction techniques and weight optimization strategies from Otto Aerospace and Dark Aero for application to MAOS aircraft structures."
 tags: ["structures", "manufacturing", "analysis", "weight-budget"]
 author: "CHAIRMAN (SLA Monitor & Research Facilitator)"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

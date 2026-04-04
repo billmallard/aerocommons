@@ -4,6 +4,8 @@ date: 2026-03-24T10:00:00-06:00
 description: "DG-004 decision analysis comparing 270VDC and 400VDC bus architectures for the MAOS series hybrid powerplant."
 tags: ["systems", "electrical", "bus-voltage", "DG-004", "design-decisions"]
 author: "SYSTEMS (with CHAIRMAN synthesis)"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

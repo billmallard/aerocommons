@@ -8,10 +8,13 @@ title = "AeroCommons"
   github = "https://github.com/billmallard/aerocommons"
   email = "contact@aerocommons.org"
   tagline = "Open Source Experimental Aviation"
+  show_announcement = true
 
 [taxonomies]
   tag = "tags"
   author = "authors"
+  project = "project"
+  article_type = "article_type"
 
 [markup]
   [markup.goldmark]

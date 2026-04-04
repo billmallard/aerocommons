@@ -4,6 +4,8 @@ date: 2026-03-24T14:36:00-06:00
 description: "Plain-language guide to voltage choices in electric aviation, why aircraft aren't grounded like cars, and what IGBT vs SiC means for homebuilders."
 tags: ["electric-aviation", "systems", "education", "voltage", "build-in-public"]
 author: "Bill Mallard / MAOS Design Team"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

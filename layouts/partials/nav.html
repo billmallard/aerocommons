@@ -14,14 +14,16 @@
   </a>
 
   <div class="nav-links" id="nav-links">
+    <a href="/#projects"      class="nav-link">Projects</a>
     <a href="/#aircraft"      class="nav-link">The Aircraft</a>
     <a href="/#ground"        class="nav-link">Ground Ops</a>
     <a href="/#ai"            class="nav-link">AI Development</a>
     <a href="/#manufacturing" class="nav-link">Manufacturing</a>
     <a href="/articles/"      class="nav-link{{ if (eq .Section "articles") }} active{{ end }}">Articles</a>
+    <a href="/submit/"        class="nav-link nav-cta-mobile">Submit a Project</a>
   </div>
 
-  <a href="{{ .Site.Params.github }}" class="nav-cta" target="_blank" rel="noopener">View on GitHub</a>
+  <a href="/submit/" class="nav-cta">Submit a Project</a>
 
   <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>

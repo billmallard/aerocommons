@@ -5,6 +5,8 @@ description: "Board review of FBW control architecture for MAOS: why distributed
 tags: ["design-decisions", "systems", "safety", "aerodynamics", "board-meeting"]
 author: "AeroCommons Design Board"
 session: "BOARD-FBW-REVIEW-001"
+project: "maos"
+article_type: "design"
 draft: false
 ---
 

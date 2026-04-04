@@ -5,6 +5,8 @@ description: "First closed decision for MAOS: 400VDC bus voltage validated by fl
 tags: ["design-decisions", "systems", "propulsion", "voltage", "electric-aviation"]
 author: "MAOS Design Board"
 session: "D-001"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

@@ -5,6 +5,8 @@ description: "Component list and cost summary for the MAOS Vision System (MVS) â
 tags: ["systems", "analysis", "design-decisions"]
 author: "CHAIRMAN, MAOS Design Board"
 session: "MVS-001"
+project: "maos"
+article_type: "build-log"
 draft: false
 ---
 

@@ -4,6 +4,8 @@ date: 2026-03-27
 author: "Bill Mallard"
 description: "How to design a removable one‑piece wing attachment for pressurized aircraft without penetrating the pressure vessel. Over‑engineered safety factors and external saddle concepts for MAOS pod‑and‑boom architecture."
 tags: ["wing attachment", "removable wing", "pressure vessel", "structural design", "experimental", "homebuilt", "glider", "MAOS", "pressurization"]
+project: "maos"
+article_type: "methodology"
 ---
 
 Designing a removable wing for a **pressurized** homebuilt aircraft introduces three critical constraints:

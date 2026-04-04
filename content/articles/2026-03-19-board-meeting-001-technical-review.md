@@ -5,6 +5,8 @@ description: "Critical engine selection conflict: PROPULSION demands Kawasaki en
 tags: ["board-meeting", "propulsion", "structures", "design-decisions", "weight-budget", "systems"]
 author: "AeroCommons Design Board"
 session: "BOARD-001"
+project: "maos"
+article_type: "design"
 draft: false
 ---
 

@@ -1,10 +1,38 @@
 <footer>
-  <div class="footer-left">
-    &copy; {{ now.Year }} AeroCommons &middot; Open Source &middot; FAA Experimental Amateur-Built
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Projects</h4>
+      <ul>
+        {{ range sort .Site.Data.projects.projects "weight" }}
+        <li><a href="{{ .repo }}" target="_blank">{{ .title }}</a></li>
+        {{ end }}
+        <li><a href="/submit/">Submit a Project</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Organization</h4>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/#support">Support Us</a></li>
+        <li><a href="/submit/">Submit a Project</a></li>
+        <li><a href="mailto:{{ .Site.Params.email }}">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="{{ .Site.Params.github }}" target="_blank">GitHub</a></li>
+        <li><a href="/articles/">Articles</a></li>
+        <li><a href="/#involved">Get Involved</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="{{ .Site.Params.github }}" class="footer-link" target="_blank" rel="noopener">GitHub</a>
-    <a href="/articles/"                class="footer-link">Articles</a>
-    <a href="mailto:{{ .Site.Params.email }}" class="footer-link">Contact</a>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} AeroCommons &middot; 
+       <a href="/about/">Non-Profit (501(c)(3) pending)</a> &middot; 
+       Open Source &middot; FAA Experimental Amateur-Built</p>
   </div>
 </footer>

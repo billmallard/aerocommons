@@ -4,6 +4,8 @@ date: 2026-04-03T09:00:00-06:00
 description: "Extracting key aerodynamic methodologies, trade spirals, and design insights from Otto Aerospace and Dark Aero for application to MAOS pod‑and‑boom high‑wing configuration."
 tags: ["aerodynamics", "analysis", "design-decisions", "structures", "systems"]
 author: "AERO (Aerodynamics & Flight Mechanics Lead)"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 

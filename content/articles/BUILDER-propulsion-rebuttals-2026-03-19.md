@@ -4,6 +4,8 @@ date: 2026-03-19T09:00:00-06:00
 description: "Builder challenges PROPULSION's power requirements and engine selection criteria, arguing certification standards don't apply to experimental aircraft."
 tags: ["propulsion", "builder", "engine-selection", "rebuttals"]
 author: "Bill (Builder)"
+project: "maos"
+article_type: "design"
 draft: false
 ---
 

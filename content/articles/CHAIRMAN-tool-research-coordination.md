@@ -4,6 +4,8 @@ date: 2026-03-17T12:00:00-06:00
 description: "CHAIRMAN coordinates research assignments across all six domain agents to identify Claude-compatible design tools."
 tags: ["chairman", "tools", "research", "coordination"]
 author: "CHAIRMAN"
+project: "community"
+article_type: "methodology"
 draft: false
 ---
 

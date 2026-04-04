@@ -4,6 +4,8 @@ date: 2026-03-26T00:08:00-06:00
 description: "Permanent magnet demagnetization is silent, invisible, and permanent — and it's completely preventable if you design the cooling system correctly."
 tags: ["propulsion", "systems", "design-decisions", "analysis"]
 author: "AeroCommons Design Board"
+project: "maos"
+article_type: "analysis"
 draft: false
 ---
 
