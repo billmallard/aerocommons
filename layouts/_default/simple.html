@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{{ partial "head.html" . }}{{ partial "ga.html" . }}</head>
+<body>
+
+{{ partial "nav.html" . }}
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1 class="reveal">{{ .Title }}</h1>
+    {{ with .Description }}<p class="reveal reveal-delay-1">{{ . }}</p>{{ end }}
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="article-layout">
+    <article class="article-content">
+      <div class="article-prose">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "scripts.html" . }}
+
+</body>
+</html>
