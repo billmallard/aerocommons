@@ -27,7 +27,7 @@ projects:
       Built on ESP32. No vendor dependency.
     tags: ["ESP32", "Bonanza", "Avionics", "Prop Control", "Arduino"]
     repo: "https://github.com/billmallard/Beech215PropController"
-    project_url: "/projects/beech215/"
+    project_url: "/articles/2026-04-04-beech215-digital-prop-governor/"
     phase: "Design Phase"
     location: "Fort Worth, TX"
     stack: "ESP32 · Arduino / C++ · KiCad"
