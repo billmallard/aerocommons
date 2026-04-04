@@ -13,6 +13,19 @@
   </div>
 </div>
 
+<!-- ══ ARTICLE FILTERS ══ -->
+<div class="article-filters-wrapper">
+  <div class="article-filters">
+    <a href="/articles/" class="filter-btn {{ if not .Params.project }}active{{ end }}">
+      All
+    </a>
+    {{ range sort .Site.Data.projects.projects "weight" }}
+    <a href="/project/{{ .id }}/" class="filter-btn">{{ .title }}</a>
+    {{ end }}
+    <a href="/project/community/" class="filter-btn">Community</a>
+  </div>
+</div>
+
 <div class="articles-section">
 
   {{ if .Pages }}
@@ -24,6 +37,9 @@
     <a href="{{ .Permalink }}" class="{{ $cardClass }}">
 
       <div class="article-card-meta">
+        {{ with .Params.project }}
+        <span class="article-project-badge badge-{{ . }}">{{ . | upper }}</span>
+        {{ end }}
         <span class="article-date">{{ .Date.Format "Jan 02, 2006" }}</span>
         {{ with .Params.tags }}
         {{ range first 2 . }}
