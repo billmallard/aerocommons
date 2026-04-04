@@ -39,14 +39,14 @@ draft: false
 - Mechanically crack ice off when inflated
 - **Pros:** Simple, low power draw, widely certified
 - **Cons:** Added weight, maintenance (rubber degradation), less effective in heavy icing
-- **GA Suitability:** High (common on Cirrus, Bonanza, etc.)
+- **GA Suitability:** High (common on light piston twins, turboprops like King Air)
 
 **Weeping Wing (TKS Fluid):**
 - Glycol-based fluid pumped through porous wing surface
 - Prevents ice formation or shears it off
 - **Pros:** Preventive, works on multiple surfaces (wings, props, windshields)
 - **Cons:** Fluid weight (5-15 gallons), limited duration, maintenance (clogged pores)
-- **GA Suitability:** High (common on high-performance singles)
+- **GA Suitability:** High (common on Cirrus, Bonanza, high-performance singles)
 
 **Electro-thermal (e.g., Thermawing):**
 - Thin graphite foil or resistive heating elements in wing skins
