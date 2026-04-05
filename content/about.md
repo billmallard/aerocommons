@@ -6,12 +6,10 @@ layout: "simple"
 
 ## About AeroCommons
 
-AeroCommons is a non-profit community advancing open-source general aviation 
-engineering. We host independent open-source projects, publish technical articles, 
-and provide a home for builders who want to share their work with the EAB community.
+AeroCommons is a nonprofit organization dedicated to advancing open-source experimental aviation through education, open publication, and accessible design tooling. AeroCommons provides communications infrastructure, publishing services, and shared technical resources — including AI-assisted design tools — to independent builders and designers working in their private capacity. All design information published through AeroCommons is offered for educational purposes. Individual builders retain full responsibility for their own projects and aircraft.
 
 **Status:** Non-profit formation in progress (501(c)(3) pending).  
-**Founded:** 2024, Fort Worth, Texas.  
+**Founded:** 2026, Keller, Texas.  
 **Contact:** [contact@aerocommons.org](mailto:contact@aerocommons.org)
 
 ### What we believe
