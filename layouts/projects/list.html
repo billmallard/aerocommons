@@ -78,19 +78,19 @@
 <section id="aircraft">
   <div class="section-header reveal">
     <span class="tag-label">The Platform</span>
-    <h2>Designed for the <strong>mission that matters.</strong></h2>
-    <p>The MAOS targets the capability gap between a well-equipped LSA and a certified piston twin — a capable, IFR-equipped four-seat platform that a single builder can complete, transport, and deploy from a standard general aviation airport.</p>
+    <h2>An IFR <strong>family traveling machine.</strong></h2>
+    <p>The MAOS targets the capability gap between a well-equipped LSA and a certified piston twin — a capable, IFR-equipped four-seat platform that a single builder can complete, transport, and deploy from most general aviation airports without a hangar bill.</p>
   </div>
   <div class="aircraft-grid">
     <div class="aircraft-card reveal">
       <div class="aircraft-card-tag">Airframe</div>
       <h3>Pod-and-Boom Fuselage</h3>
-      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted below a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew accommodation. No pneumatic systems cross the wing-to-pod boundary.</p>
+      <p>A cylindrical pressure pod (~52"W × 58"H × 156"L) mounted below a tail boom provides a clean structural interface for wing attachment, pressurization provisions, and crew accommodation. Only electrical systems cross the wing-to-pod boundary.</p>
     </div>
     <div class="aircraft-card reveal reveal-delay-1">
       <div class="aircraft-card-tag">Wing</div>
       <h3>High Wing, Removable Single-Piece</h3>
-      <p>V-strut braced high wing with twin Honda 400cc motorcycle-derived ICE generators mounted at mid-span. The wing is a single removable piece — removal and stow is accomplished by a two-person crew using the integrated trailer crane system.</p>
+      <p>High wing with either twin or single ICE generators mounted at mid-span. The wing is a single removable piece — removal and stow is accomplished by a two-person crew using the integrated trailer crane system.</p>
     </div>
     <div class="aircraft-card reveal reveal-delay-2">
       <div class="aircraft-card-tag">Environmental Control</div>
@@ -101,16 +101,16 @@
       <div>
         <div class="aircraft-card-tag">Target Specifications</div>
         <h3>Platform Parameters</h3>
-        <p style="font-size:13px;color:var(--gray-500);line-height:1.75;margin-top:8px;">All values are design targets under active development. Performance figures subject to revision as analysis matures.</p>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.75;margin-top:8px;">All values are design targets under active development. Performance figures subject to radical revision as analysis matures.</p>
       </div>
       <table class="spec-table">
         <tr><td>Crew + Passengers</td><td>1 + 3 (four total)</td></tr>
         <tr><td>Target Ceiling</td><td>17,500 – 20,000 ft MSL</td></tr>
-        <tr><td>Propulsion</td><td>Series hybrid — dual ICE generators + contra-rotating rim-drive electric motors</td></tr>
+        <tr><td>Propulsion</td><td>Series hybrid — dual (or single) ICE generators + contra-rotating electric motors</td></tr>
         <tr><td>Ice Protection</td><td>Expected, To be determined...</td></tr>
         <tr><td>Landing Gear</td><td>Fixed faired tricycle</td></tr>
         <tr><td>Tail Configuration</td><td>Conventional aft-tail</td></tr>
-        <tr><td>Regulatory Basis</td><td>FAA Experimental Amateur-Built (51% rule)</td></tr>
+        <tr><td>Regulatory Basis</td><td>FAA Experimental Amateur-Built</td></tr>
         <tr><td>Transport</td><td>Road-legal enclosed gooseneck trailer with integrated crane</td></tr>
         <tr><td>Avionics</td><td>IFR-equipped, EFIS-based glass panel</td></tr>
       </table>
@@ -126,7 +126,7 @@
     <p>The series hybrid approach decouples the engines from the drivetrain entirely. ICE generators run at their efficiency peak regardless of flight phase. Electric motors provide instant torque and clean power management. The architecture provides meaningful redundancy at every stage.</p>
   </div>
   <div class="prop-flow">
-    <div class="prop-step reveal"><div class="prop-step-num">01</div><h4>Dual ICE Generators</h4><p>Two Honda 400cc motorcycle-derived engines, each ~50 hp, mounted at mid-span in the wing. They run as pure generators — no mechanical coupling to the propulsor. Either engine can sustain cruise independently.</p></div>
+    <div class="prop-step reveal"><div class="prop-step-num">01</div><h4>Dual ICE Generators</h4><p>Various engine options under consideration, each ~50-100 hp, mounted at mid-span on top of the wing. They run as pure generators — no mechanical coupling to the propulsor. Either engine can sustain cruise independently.</p></div>
     <div class="prop-step reveal reveal-delay-1"><div class="prop-step-num">02</div><h4>High-Voltage Bus</h4><p>Generator output feeds a common HV DC bus alongside the flight battery pack. The bus arbitrates power between generation, storage, and consumption continuously, managed by the custom ESP32-S3 FADEC.</p></div>
     <div class="prop-step reveal reveal-delay-2"><div class="prop-step-num">03</div><h4>Rim-Drive Electric Motors</h4><p>Contra-rotating axial-flux or rim-drive motors on the tail boom eliminate the gearbox entirely. Motor candidates include the Donut Motor rimless rim-drive and Beyond Motors AXM2 axial flux units.</p></div>
     <div class="prop-step reveal reveal-delay-3"><div class="prop-step-num">04</div><h4>Custom FADEC</h4><p>ESP32-S3 based controller with dedicated sensing and power driver boards — builder-fabricated from published schematics, PCB fabrication outsourced. All firmware open-source.</p></div>
