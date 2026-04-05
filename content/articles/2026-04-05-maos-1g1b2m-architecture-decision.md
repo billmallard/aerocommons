@@ -91,7 +91,7 @@ Because the battery is a parallel tap, not a series component, failure of any si
 | **Battery failure / isolation** | Generator-direct | Cruise power, stable voltage, no peaks, no emergency reserve | Land soon — precautionary |
 | **ICE / Generator failure** | Battery-only | 30 min at 60 kW emergency power | Declare emergency, nearest suitable runway |
 | **Single motor failure** | One motor | ~60% thrust, degraded climb, reduced cruise speed | Emergency — land with power at nearest suitable airport |
-| **Battery fail + single motor** | Generator → one motor | Reduced thrust, no reserve | Land as soon as practical |
+| **Battery fail + single motor** | Generator → one motor | Reduced thrust, no reserve | Emergency — land with power at nearest suitable airport |
 | **ICE fail + single motor** | Battery → one motor | 30 min, reduced thrust | Emergency — 30 min is still 30 min |
 | **Both motors fail** | None | Glide | Emergency descent |
 | **ICE fail + both motors fail** | None | Glide | Emergency descent |
