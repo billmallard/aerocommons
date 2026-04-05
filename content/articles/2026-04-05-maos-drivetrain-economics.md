@@ -181,6 +181,54 @@ This isn't a free lunch. The budget approach carries real tradeoffs and risks.
 
 ---
 
+## A Reference Design Without a Battery: Samson Sky Skybrid
+
+The Samson Sky Switchblade — the most directly comparable production-intent series hybrid aircraft under development — describes their Skybrid system this way:
+
+> *"The motors are supplied with electricity from this generator according to the engine's ability to speed up and slow down. The lag of the gas engine is the most difficult part to predict for the hybrid system and is the reason for making the test stand in the first place."*
+
+This is not a series hybrid with a battery buffer. It is an **electric transmission**: ICE → generator → 800V bus → motor controllers → motors, with no energy storage in the middle. Motor power is a direct function of real-time ICE output. When demand exceeds what the engine can supply in that instant, there is a lag.
+
+Samson Sky is characterizing and programming around that lag at a university test facility in Dayton. This is real engineering work required specifically because there is no battery to absorb the mismatch.
+
+### Why MAOS Needs the Battery
+
+In a true series hybrid with a battery buffer, the engine lag problem largely disappears:
+
+- The battery supplies instant power for rapid demand changes — throttle response, turbulence, go-around
+- The ICE runs at **constant RPM and constant load**, charging the battery at a steady rate
+- The motor controllers draw from the battery, not directly from the generator
+- There is no lag in the propulsion response because the battery is the responsive element
+
+The battery in MAOS is not only the 30-minute emergency reserve. It is the component that makes the control problem tractable in the first place. Removing it to save cost would inherit exactly the test program Samson Sky is conducting — except without their resources to solve it.
+
+### The Skybrid Redundancy Problem
+
+The absence of a battery has a second consequence that matters more than control complexity: **it changes the failure mode of a generator loss.**
+
+In the Skybrid architecture, if the generator fails — whether from ICE failure, electrical fault, or mechanical failure — the motors lose power immediately. There is no buffer. Propulsion stops.
+
+In a storm, in IMC, at altitude, "propulsion stops" is a very different situation than "propulsion degrades gracefully over 30 minutes."
+
+The Switchblade is a roadable aircraft designed for point-to-point travel, presumably in conditions where an emergency landing in a field is more recoverable than for a high-altitude IFR aircraft. The consequences of sudden power loss may be more acceptable in that operational context.
+
+For MAOS — designed for IFR flight, high service ceiling, mountain crossing, operation from remote strips — sudden total propulsion loss on generator failure is not an acceptable failure mode. The battery is what separates "generator failure requires immediate emergency landing" from "generator failure is a managed abnormal procedure with 30 minutes to find a runway."
+
+### Summary of Architectural Difference
+
+| Feature | Samson Sky Skybrid | MAOS (proposed) |
+|---|---|---|
+| Architecture | Electric transmission | True series hybrid |
+| Battery buffer | None | Yes — 40 kWh |
+| Generator failure effect | Immediate propulsion loss | 30-min battery reserve |
+| Engine throttle response | Must manage lag in controller | Irrelevant — battery absorbs demand |
+| Control complexity | High (lag characterization required) | Lower (battery decouples ICE from demand) |
+| Suitable for IMC / IFR | Marginal | Yes |
+
+The Skybrid is a useful reference for motor selection, voltage architecture, and generator integration. Its redundancy model is not one MAOS should replicate.
+
+---
+
 ## Summary
 
 The series hybrid is not an economical choice against a single-engine conventional aircraft. It was never going to be. The right comparison is against a twin-engine conventional, and against that baseline the budget hybrid path is within a defensible range.
