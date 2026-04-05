@@ -253,6 +253,7 @@ Add 10–15% for depth-of-discharge margin (don't cycle to 0% — kills cells qu
 | **NMC 622/811** | 200–270 Wh/kg | 160–210 Wh/kg | High | 800–2,000 cycles | −30°C to +55°C | Moderate | Mainstream EV chemistry. Best energy/weight balance. |
 | **NCA** | 250–300 Wh/kg | 190–230 Wh/kg | High | 1,000–2,000 cycles | −30°C to +55°C | Moderate | Tesla's original chemistry. High energy density. Less common outside Tesla ecosystem. |
 | **NMC w/ Silicon Anode** | 300–400 Wh/kg | 230–280 Wh/kg | High | 500–1,500 cycles | −20°C to +55°C | Moderate | Amprius, Enovix. Highest specific energy available. Short cycle life. Not widely available. |
+| **Donut Lab (Solid-State)** | **400 Wh/kg (claimed)** | Unknown — no pack data published | Claimed very high (5-min charge) | 100,000 cycles (claimed) | −30°C to 100°C (claimed, 99% retention) | None claimed — all solid-state | See note below. Verified in Verge motorcycles. No voltage, capacity, dimensions, or pricing published. Specs are controversial. |
 | **Li-S** (Lithium-Sulfur) | 400–600 Wh/kg (theoretical) | Not yet practical | Low | <500 cycles | Research phase | Low | Too early for this application. Watch for 2028+ products. |
 
 ### Weight for 40 kWh Pack
@@ -264,8 +265,12 @@ Add 10–15% for depth-of-discharge margin (don't cycle to 0% — kills cells qu
 | NMC 811 | 200 Wh/kg | **200 kg** | **441 lbs** |
 | NCA | 215 Wh/kg | **186 kg** | **410 lbs** |
 | Silicon-anode NMC | 250 Wh/kg | **160 kg** | **353 lbs** |
+| Donut Lab (if 400 Wh/kg is pack-level) | 400 Wh/kg | **100 kg** | **220 lbs** |
+| Donut Lab (if 400 Wh/kg is cell-level, ~80% pack efficiency) | 320 Wh/kg | **125 kg** | **275 lbs** |
 
-These numbers are significant. LFP at 706 lbs is likely incompatible with the MAOS weight budget. NMC 811 at 441 lbs is challenging but potentially viable if it displaces other weight — the battery IS the structural buffer, the emergency system, and part of the energy storage. Silicon-anode at 353 lbs is the most viable from a weight standpoint but the least mature.
+The Donut Lab figures — if the specific energy claim holds at pack level — would reduce the 40 kWh emergency reserve to **220 lbs**, which is a fundamentally different weight conversation. Even the conservative cell-level interpretation lands at **275 lbs**, better than any conventional chemistry above. The catch: no pack-level specifications have been published, and no production availability, pricing, or independently verified test data exists at this time.
+
+These numbers are significant. LFP at 706 lbs is likely incompatible with the MAOS weight budget. NMC 811 at 441 lbs is challenging but potentially viable if it displaces other weight — the battery IS the structural buffer, the emergency system, and part of the energy storage. Silicon-anode at 353 lbs is the most viable from a weight standpoint but the least mature of the commercially available options.
 
 **This is the fundamental weight tension in MAOS propulsion design:** The 30-minute emergency reserve requirement, at the power level needed for an IFR approach, implies a battery in the 350–450 lb range regardless of chemistry — unless the power level assumption changes.
 
@@ -289,7 +294,10 @@ At 25 kW (basically powered glide with minimal maneuvering), the battery weight 
 | **Tesla 4680** | 46800 cylinder | NMC (tabless) | ~270 Wh/kg cell (claimed) | Limited aftermarket | High specific energy, tab-less design. Scarce outside Tesla ecosystem. |
 | **Panasonic NCR21700A** | 21700 cylinder | NCA | ~260 Wh/kg cell | Available new | Used in Tesla Model 3. Proven at scale. |
 | **Amprius 450 Wh/kg cells** | Pouch | Si-anode NMC | ~400–450 Wh/kg cell | Limited, aerospace customers | NASA evaluated. Best-in-class specific energy. Very expensive. Short cycle life currently. |
+| **Donut Lab solid-state** | Custom ("clay-like") | All solid-state | 400 Wh/kg (claimed) | No production availability — pending | Verified in Verge motorcycles. No voltage, capacity, dimensions, or pricing published. See note. |
 | **Lithionics 12V/24V/48V modules** | Module (LFP) | LFP | ~130 Wh/kg module | Direct (aviation market) | Aviation-focused supplier. Pre-built modules with BMS. Expensive but plug-and-play. |
+
+> **Note on Donut Lab battery claims:** Donut Lab publishes 400 Wh/kg specific energy, 100,000-cycle life, 5-minute charge time, and −30°C to 100°C operating range with 99% capacity retention across that range — all in an all-solid-state cell with no thermal runaway risk. The Verge motorcycle application is real production use, which gives these claims more credibility than a press release alone. The controversy centers on the simultaneous combination of maximum energy density, maximum power (5-minute charge implies ~48C rate), and maximum cycle life — no conventional chemistry achieves all three at once. The 5-minute charge claim is the most physically difficult to reconcile; it can be set aside for the MAOS application since charge rate is irrelevant to the mission. The energy density and safety claims — if they hold — would be genuinely significant for MAOS. No pack-level specifications, pricing, lead time, or production availability have been published. **Design around NMC 811 as the planning baseline; treat Donut Lab as a potential upgrade that improves the weight budget if and when production availability is confirmed.**
 
 ### Format Considerations for Aviation
 
