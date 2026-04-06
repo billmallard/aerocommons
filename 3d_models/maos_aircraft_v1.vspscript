@@ -14,7 +14,7 @@ void main()
     double POD_L  = 13.0;    double POD_W  = 4.3333;  double POD_H  = 4.8333;
     double BOOM_X = 10.0;    double BOOM_Z = 2.0;     double BOOM_L = 15.0;
     double BOOM_D = 1.0;
-    double WING_X = 4.5;     double WING_Z = 2.417;
+    double WING_X = 5.975;   double WING_Z = 2.417;
     double WING_HS = 15.0;   double WING_RC = 5.1;    double WING_TC = 3.0;
     double HT_X   = 23.5;    double HT_Z   = 2.0;
     double HT_HS  = 5.0;     double HT_RC  = 2.2;     double HT_TC  = 1.4;
@@ -26,19 +26,65 @@ void main()
     SetGeomName( pod, "Pod" );
     SetParmVal( pod, "Length", "Design", POD_L );
     string pxss = GetXSecSurf( pod, 0 );
-    SetParmVal( pod, "XLocPercent",    "XSec_0",      0.000 );
-    SetParmVal( pod, "XLocPercent",    "XSec_1",      0.06  );
+
+    // Default fuselage has 5 sections (XSec_0–4).
+    // Insert 3 more into the aft body to curve the taper upward toward the boom.
+    // After inserts: XSec_0–7 (nose tip, shoulder, cabin, + 4 aft taper steps, tail tip).
+    InsertXSec( pod, 3, XS_ELLIPSE );
+    InsertXSec( pod, 4, XS_ELLIPSE );
+    InsertXSec( pod, 5, XS_ELLIPSE );
+
+    // XSec_0: nose tip (XS_POINT). Slight downward shift per user's adjustment.
+    SetParmVal( pod, "XLocPercent", "XSec_0", 0.000 );
+    SetParmVal( pod, "ZLocPercent", "XSec_0", -0.053 );
+
+    // XSec_1: windscreen shoulder — full section break at 29% (Citation-style rapid widening)
+    SetParmVal( pod, "XLocPercent",    "XSec_1",      0.293 );
     SetParmVal( pod, "Ellipse_Width",  "XSecCurve_1", POD_W );
     SetParmVal( pod, "Ellipse_Height", "XSecCurve_1", POD_H );
-    SetParmVal( pod, "XLocPercent",    "XSec_2",      0.50  );
+    SetParmVal( pod, "ZLocPercent",    "XSec_1",      0.0   );
+
+    // XSec_2: max cabin cross-section
+    SetParmVal( pod, "XLocPercent",    "XSec_2",      0.500 );
     SetParmVal( pod, "Ellipse_Width",  "XSecCurve_2", POD_W );
     SetParmVal( pod, "Ellipse_Height", "XSecCurve_2", POD_H );
-    SetParmVal( pod, "XLocPercent",    "XSec_3",      0.94  );
-    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_3", POD_W );
-    SetParmVal( pod, "Ellipse_Height", "XSecCurve_3", POD_H );
-    SetParmVal( pod, "XLocPercent",    "XSec_4",      1.000 );
-    SetXSecTanAngles( GetXSec( pxss, 0 ), XSEC_BOTH_SIDES,  90 );
-    SetXSecTanAngles( GetXSec( pxss, 4 ), XSEC_BOTH_SIDES, -90 );
+    SetParmVal( pod, "ZLocPercent",    "XSec_2",      0.0   );
+
+    // XSec_3–6: aft taper — symmetric, all centered at Z=0.
+    // Shifting ZLocPercent (spine-bending) creates visible kinks; avoid it here.
+    // The asymmetric "flat top, curved bottom" look requires GENERAL_FUSE sections
+    // set interactively in the OpenVSP GUI — not achievable via symmetric ellipse script.
+
+    // XSec_3: 64% — start aft taper
+    SetParmVal( pod, "XLocPercent",    "XSec_3",      0.64  );
+    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_3", 3.8   );
+    SetParmVal( pod, "Ellipse_Height", "XSecCurve_3", 4.3   );
+    SetParmVal( pod, "ZLocPercent",    "XSec_3",      0.0   );
+
+    // XSec_4: 74%
+    SetParmVal( pod, "XLocPercent",    "XSec_4",      0.74  );
+    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_4", 2.8   );
+    SetParmVal( pod, "Ellipse_Height", "XSecCurve_4", 3.2   );
+    SetParmVal( pod, "ZLocPercent",    "XSec_4",      0.0   );
+
+    // XSec_5: 83%
+    SetParmVal( pod, "XLocPercent",    "XSec_5",      0.83  );
+    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_5", 1.8   );
+    SetParmVal( pod, "Ellipse_Height", "XSecCurve_5", 2.2   );
+    SetParmVal( pod, "ZLocPercent",    "XSec_5",      0.0   );
+
+    // XSec_6: 92% — near boom diameter
+    SetParmVal( pod, "XLocPercent",    "XSec_6",      0.92  );
+    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_6", 1.0   );
+    SetParmVal( pod, "Ellipse_Height", "XSecCurve_6", 1.2   );
+    SetParmVal( pod, "ZLocPercent",    "XSec_6",      0.0   );
+
+    // XSec_7: tail tip (XS_POINT)
+    SetParmVal( pod, "XLocPercent",    "XSec_7",      1.000 );
+    SetParmVal( pod, "ZLocPercent",    "XSec_7",      0.0   );
+
+    SetXSecTanAngles( GetXSec( pxss, 0 ), XSEC_BOTH_SIDES,  70 );
+    SetXSecTanAngles( GetXSec( pxss, 7 ), XSEC_BOTH_SIDES, -90 );
 
     // ── Tail boom ─────────────────────────────────────────────────────────────
     string boom = AddGeom( "FUSELAGE", "" );
