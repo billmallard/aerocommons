@@ -1,0 +1,83 @@
+// MAOS Pressure Pod — OpenVSP Parametric Geometry v1.1
+// Pod fuselage: 52"W x 58"H x 156"L interior
+// Units: feet (OpenVSP default)
+//
+// Default fuselage XSecs are already XS_ELLIPSE. Do NOT call ChangeXSecShape —
+// it corrupts the "XSecCurve_N" group naming used by SetParmVal.
+//
+// XSec layout (5 default sections, repositioned):
+//   0:  0%  — nose tip    (stub, 0.08 ft)
+//   1:  6%  — fwd shoulder (full 4.333 x 4.833 ft)
+//   2: 50%  — mid-body    (full)
+//   3: 94%  — aft shoulder (full)
+//   4:100%  — tail tip    (stub, 0.08 ft)
+
+void main()
+{
+    Print("=== MAOS Pod Geometry Generator v1.1 ===");
+
+    // Pod dimensions in feet
+    double pod_L = 13.0;       // 156"
+    double pod_W = 4.3333;     // 52"
+    double pod_H = 4.8333;     // 58"
+
+    // ── Fuselage ──────────────────────────────────────────────────────────────
+    string fid = AddGeom( "FUSELAGE", "" );
+    SetGeomName( fid, "MAOS_Pod" );
+
+    SetParmVal( fid, "Length", "Design", pod_L );
+
+    string xss  = GetXSecSurf( fid, 0 );
+    int nsec = GetNumXSec( xss );
+    Print( "Sections: " + nsec );   // expect 5
+
+    // ── Section 0: nose tip ───────────────────────────────────────────────────
+    SetParmVal( fid, "XLocPercent",    "XSec_0", 0.000 );
+    SetParmVal( fid, "Ellipse_Width",  "XSecCurve_0", 0.08 );
+    SetParmVal( fid, "Ellipse_Height", "XSecCurve_0", 0.08 );
+
+    // ── Section 1: forward shoulder ───────────────────────────────────────────
+    SetParmVal( fid, "XLocPercent",    "XSec_1", 0.06 );
+    SetParmVal( fid, "Ellipse_Width",  "XSecCurve_1", pod_W );
+    SetParmVal( fid, "Ellipse_Height", "XSecCurve_1", pod_H );
+
+    // ── Section 2: mid-body ───────────────────────────────────────────────────
+    SetParmVal( fid, "XLocPercent",    "XSec_2", 0.50 );
+    SetParmVal( fid, "Ellipse_Width",  "XSecCurve_2", pod_W );
+    SetParmVal( fid, "Ellipse_Height", "XSecCurve_2", pod_H );
+
+    // ── Section 3: aft shoulder ───────────────────────────────────────────────
+    SetParmVal( fid, "XLocPercent",    "XSec_3", 0.94 );
+    SetParmVal( fid, "Ellipse_Width",  "XSecCurve_3", pod_W );
+    SetParmVal( fid, "Ellipse_Height", "XSecCurve_3", pod_H );
+
+    // ── Section 4: tail tip ───────────────────────────────────────────────────
+    SetParmVal( fid, "XLocPercent",    "XSec_4", 1.000 );
+    SetParmVal( fid, "Ellipse_Width",  "XSecCurve_4", 0.08 );
+    SetParmVal( fid, "Ellipse_Height", "XSecCurve_4", 0.08 );
+
+    // Nose and tail tangents — 90 deg for blunt pressure-vessel ends
+    SetXSecTanAngles( GetXSec( xss, 0 ), XSEC_BOTH_SIDES,  90 );
+    SetXSecTanAngles( GetXSec( xss, 4 ), XSEC_BOTH_SIDES, -90 );
+
+    Update();
+
+    // Verify dimensions
+    Print( "Final length: " + GetParmVal( fid, "Length", "Design" ) * 12 + " in" );
+    Print( "Mid width:    " + GetParmVal( fid, "Ellipse_Width",  "XSecCurve_2" ) * 12 + " in" );
+    Print( "Mid height:   " + GetParmVal( fid, "Ellipse_Height", "XSecCurve_2" ) * 12 + " in" );
+
+    // ── Exports ───────────────────────────────────────────────────────────────
+    string base = "/workspace/analysis/maos_pod";
+
+    WriteVSPFile( base + ".vsp3", SET_ALL );
+    Print( "Saved: " + base + ".vsp3" );
+
+    ExportFile( base + ".obj", SET_ALL, EXPORT_OBJ );
+    Print( "Saved: " + base + ".obj" );
+
+    ExportFile( base + ".stl", SET_ALL, EXPORT_STL );
+    Print( "Saved: " + base + ".stl" );
+
+    Print( "=== MAOS Pod v1.1 complete ===" );
+}
