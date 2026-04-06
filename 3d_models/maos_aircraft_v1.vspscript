@@ -12,13 +12,13 @@ void main()
 
     // ── Design parameters ─────────────────────────────────────────────────────
     double POD_L  = 13.0;    double POD_W  = 4.3333;  double POD_H  = 4.8333;
-    double BOOM_X = 10.0;    double BOOM_Z = -2.0;    double BOOM_L = 15.0;
+    double BOOM_X = 10.0;    double BOOM_Z = 2.0;     double BOOM_L = 15.0;
     double BOOM_D = 1.0;
     double WING_X = 4.5;     double WING_Z = 2.417;
     double WING_HS = 15.0;   double WING_RC = 5.1;    double WING_TC = 3.0;
-    double HT_X   = 23.5;    double HT_Z   = -2.0;
+    double HT_X   = 23.5;    double HT_Z   = 2.0;
     double HT_HS  = 5.0;     double HT_RC  = 2.2;     double HT_TC  = 1.4;
-    double VT_X   = 23.0;    double VT_Z   = -2.0;
+    double VT_X   = 23.0;    double VT_Z   = 2.0;
     double VT_HS  = 4.5;     double VT_RC  = 2.5;     double VT_TC  = 1.5;
 
     // ── Pod fuselage ──────────────────────────────────────────────────────────
