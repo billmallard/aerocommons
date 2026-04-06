@@ -5,3 +5,4 @@ resources/
 node_modules/
 docker/docker-compose.yml
 docker/docker-compose.qnap.yml
+.claude/settings.local.json
