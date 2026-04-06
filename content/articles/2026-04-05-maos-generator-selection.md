@@ -129,9 +129,28 @@ The AXF225 meets the power requirement but at 29 kg is near the weight limit, an
 
 ### YASA (UK / Mercedes-Benz)
 
-The YASA P400 is a well-regarded axial-flux machine — ~160 kW peak, excellent power density — but YASA was acquired by Mercedes-Benz in 2021 and is now embedded in the automotive supply chain. It is not practically available to independent builders or small OEMs. Listed here for reference only.
+YASA was acquired by Mercedes-Benz in 2021, which raised concerns about commercial availability to small builders. That concern appears to be overstated: YASA lists both the **P400-R** and **750R** as commercial off-the-shelf products on their website, with datasheets available on request.
 
-**Assessment:** Not accessible for MAOS. Monitor for future licensing or surplus availability.
+The design basis for YASA's machines is the **Yokeless And Segmented Armature** architecture — that's what the name stands for. The yoke (the steel backiron that connects adjacent stator teeth in a conventional axial-flux machine) is eliminated entirely. Each coil segment is magnetically isolated, which removes a significant source of iron losses and weight. Their latest offerings continue this approach and claim significantly enhanced power density relative to earlier axial-flux designs.
+
+Published specs for the **YASA 750R**:
+
+| Parameter | Value |
+|---|---|
+| Peak Torque | 700 Nm |
+| Peak Power | ~200 kW (268 hp) |
+| Speed Range | 0–3,250 RPM |
+| Axial Length | 98 mm |
+| Continuous Power | Not published — contact YASA |
+| Weight / Efficiency | Not published — contact YASA |
+
+The **P400-R** specs are not listed publicly; a datasheet requires direct contact with YASA.
+
+**The RPM problem:** The 750R maxes out at 3,250 RPM. The Rotax 915 iS runs at 5,800 RPM redline, ~5,000–5,500 RPM cruise. Direct drive is not feasible without a reduction. This is the same disqualifier that applies to the Magnax AXF225. It likely positions the 750R as a traction motor in ground vehicles (where high torque at low RPM is the requirement) rather than a generator coupled to a high-speed ICE.
+
+The P400-R may have a higher RPM ceiling that makes it more relevant — the legacy P400 was rated to around 8,000 RPM — but this needs to be confirmed from the datasheet.
+
+**Assessment:** More accessible than previously assessed. The yokeless architecture is the right approach for power density. The 750R is likely a non-starter for direct drive to a motorcycle ICE; the P400-R is worth a direct inquiry. If the P400-R confirms RPM compatibility and continuous power near 80 kW, it earns a place on the comparison matrix alongside the Emrax 268.
 
 ---
 
@@ -167,8 +186,10 @@ For completeness: certified aircraft generators (Prestolite, Plane Power, B&C) a
 | **Beyond Aviation AXM3** | ~100 kW (est.) | ~15 kg (est.) | ~6.7 kW/kg (est.) | Unknown | Unknown | Excellent (Samson Sky) | OEM only | Unknown |
 | **Emrax 228** | 50 kW | 12.3 kg | 4.1 kW/kg | 700V | To 6,000 RPM | Good (experimental) | Good | ~$8,000 |
 | **Magnax AXF225** | 75 kW | 29 kg | 2.6 kW/kg | Unknown | To 3,500 RPM | None | Limited | Unknown |
+| **YASA 750R** | TBD | TBD | TBD | Unknown | To 3,250 RPM | None (automotive) | COTS | Unknown |
+| **YASA P400-R** | TBD | TBD | TBD | Unknown | TBD (legacy ~8k RPM) | None (automotive) | COTS | Unknown |
 
-**Working conclusion:** Emrax 268 is the planning baseline — documented specs, known availability, aviation use cases, and meets MAOS requirements. AXM3 is the aspirational target pending direct engagement with Evolito.
+**Working conclusion:** Emrax 268 is the planning baseline — documented specs, known availability, aviation use cases, and meets MAOS requirements. AXM3 is the aspirational target pending direct engagement with Evolito. YASA P400-R is a new addition to the inquiry list: COTS availability confirmed, yokeless architecture is the right approach for power density, but RPM ceiling and continuous power rating need to be confirmed before it can be formally compared.
 
 ---
 
@@ -301,9 +322,10 @@ This is worth pursuing aggressively before finalizing the generator selection.
 ## Next Steps
 
 1. **Contact Evolito** — Request AXM3 datasheet, operating voltage, generator mode support, pricing, and lead time for experimental builders
-2. **Reopen voltage decision** — Hold pending Evolito response. If AXM3 is 800V-native, revisit D-001
-3. **Emrax 268 bench test planning** — If AXM3 is unavailable, plan a bench test coupling an Emrax 268 to a Rotax 912 or 915 at constant-speed operation to validate direct drive RPM compatibility
-4. **Controller selection** — Generator-mode controller selection is dependent on voltage decision. Identify candidates at both 400V and 800V now
+2. **Contact YASA** — Request P400-R datasheet. Specifically: continuous power rating, weight, max RPM, operating voltage, and pricing for low-volume or experimental customers. The yokeless architecture is compelling; if the P400-R RPM ceiling is compatible with Rotax direct drive it belongs on the short list.
+3. **Reopen voltage decision** — Hold pending Evolito response. If AXM3 is 800V-native, revisit D-001
+4. **Emrax 268 bench test planning** — If AXM3 is unavailable, plan a bench test coupling an Emrax 268 to a Rotax 912 or 915 at constant-speed operation to validate direct drive RPM compatibility
+5. **Controller selection** — Generator-mode controller selection is dependent on voltage decision. Identify candidates at both 400V and 800V now
 
 ---
 
