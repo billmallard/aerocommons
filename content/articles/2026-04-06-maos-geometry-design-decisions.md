@@ -59,7 +59,7 @@ A **short pylon above the pod** is worth evaluating seriously. The case for it:
 - **Structural separation.** Primary wing loads (bending, torsion) don't pass directly through the pod pressure vessel wall. The pylon becomes the load path, and the pod and wing can be designed more independently.
 - **Propulsion options.** A pylon creates a natural location for pusher or tractor propulsion above or ahead of the wing without proximity to the pod.
 
-The cost is pylon wetted area and weight. For a short pylon (~1 ft height), those penalties are modest. The Piaggio Avanti and several canard pushers use similar separation between fuselage and wing for these reasons.
+The cost is pylon wetted area and weight. For a short pylon (~1 ft height), those penalties are modest.
 
 **Open question:** Does a pylon change the structural box argument for the boom? If the wing no longer attaches directly to the pod crown, the case for a top-mounted boom weakens. These two decisions may be coupled.
 
