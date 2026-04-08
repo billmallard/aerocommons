@@ -11,8 +11,8 @@ void main()
     string vsp_file = "/workspace/analysis/maos_aircraft_v1.vsp3";
 
     // ── Design parameters ─────────────────────────────────────────────────────
-    double POD_L  = 13.0;    double POD_W  = 4.3333;  double POD_H  = 4.8333;
-    double BOOM_X = 10.0;    double BOOM_Z = 2.0;     double BOOM_L = 15.0;
+    double POD_L  = 14.0;    double POD_W  = 5.0;     double POD_H  = 4.8333;  // POD_W widened to 60" for walk-through aisle + shoulder room at seat height
+    double BOOM_X = 10.0;    double BOOM_Z = 1.836;   double BOOM_L = 15.0;
     double BOOM_D = 1.0;
     double WING_X = 5.975;   double WING_Z = 2.417;
     double WING_HS = 15.0;   double WING_RC = 5.1;    double WING_TC = 3.0;
@@ -27,64 +27,53 @@ void main()
     SetParmVal( pod, "Length", "Design", POD_L );
     string pxss = GetXSecSurf( pod, 0 );
 
-    // Default fuselage has 5 sections (XSec_0–4).
-    // Insert 3 more into the aft body to curve the taper upward toward the boom.
-    // After inserts: XSec_0–7 (nose tip, shoulder, cabin, + 4 aft taper steps, tail tip).
-    InsertXSec( pod, 3, XS_ELLIPSE );
-    InsertXSec( pod, 4, XS_ELLIPSE );
-    InsertXSec( pod, 5, XS_ELLIPSE );
+    // Default fuselage has 5 sections (XSec_0–4). No inserts needed.
+    //
+    // NOTE — CROSS-SECTION SHAPE (GUI WORK REQUIRED):
+    //   This script uses XS_ELLIPSE for all sections. The .vsp3 uses EditCurve (Type 11)
+    //   for sections 2–4 (aft taper). The following should also be addressed in the GUI:
+    //
+    //   SECTIONS 1–2 (cabin): Replace ellipse with a "squircle" EditCurve —
+    //     maximum width should run from ~8" above floor to ~40" above floor
+    //     (the occupant shoulder zone), then taper to the skin at top and bottom.
+    //     Think: pressurized tube cross-section, not an upright egg.
+    //     Goal: ~54" interior width at shoulder height (Z ≈ +13" above pod CL)
+    //     rather than ~46" that a pure 60"W ellipse gives at that height.
+    //
+    //   SECTIONS 2–4 (aft taper): EditCurve already in .vsp3; maintain flat top /
+    //     curved bottom rising toward boom.
+    //
+    //   For the authoritative geometry, load maos_aircraft_v1.vsp3.
 
-    // XSec_0: nose tip (XS_POINT). Slight downward shift per user's adjustment.
+    // XSec_0: nose tip (XS_POINT). Slight downward shift per GUI adjustment.
     SetParmVal( pod, "XLocPercent", "XSec_0", 0.000 );
     SetParmVal( pod, "ZLocPercent", "XSec_0", -0.053 );
 
-    // XSec_1: windscreen shoulder — full section break at 29% (Citation-style rapid widening)
-    SetParmVal( pod, "XLocPercent",    "XSec_1",      0.293 );
+    // XSec_1: windscreen shoulder at 30%
+    SetParmVal( pod, "XLocPercent",    "XSec_1",      0.300 );
     SetParmVal( pod, "Ellipse_Width",  "XSecCurve_1", POD_W );
     SetParmVal( pod, "Ellipse_Height", "XSecCurve_1", POD_H );
     SetParmVal( pod, "ZLocPercent",    "XSec_1",      0.0   );
 
-    // XSec_2: max cabin cross-section
-    SetParmVal( pod, "XLocPercent",    "XSec_2",      0.500 );
+    // XSec_2: max cabin at 67% (EditCurve in .vsp3; ellipse approximation here)
+    SetParmVal( pod, "XLocPercent",    "XSec_2",      0.670 );
     SetParmVal( pod, "Ellipse_Width",  "XSecCurve_2", POD_W );
     SetParmVal( pod, "Ellipse_Height", "XSecCurve_2", POD_H );
     SetParmVal( pod, "ZLocPercent",    "XSec_2",      0.0   );
 
-    // XSec_3–6: aft taper — symmetric, all centered at Z=0.
-    // Shifting ZLocPercent (spine-bending) creates visible kinks; avoid it here.
-    // The asymmetric "flat top, curved bottom" look requires GENERAL_FUSE sections
-    // set interactively in the OpenVSP GUI — not achievable via symmetric ellipse script.
+    // XSec_3: aft taper at 77% — narrowing height, slight Z lift (EditCurve in .vsp3)
+    SetParmVal( pod, "XLocPercent",    "XSec_3",      0.769 );
+    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_3", POD_W  );
+    SetParmVal( pod, "Ellipse_Height", "XSecCurve_3", 4.500 );
+    SetParmVal( pod, "ZLocPercent",    "XSec_3",      0.008 );
 
-    // XSec_3: 64% — start aft taper
-    SetParmVal( pod, "XLocPercent",    "XSec_3",      0.64  );
-    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_3", 3.8   );
-    SetParmVal( pod, "Ellipse_Height", "XSecCurve_3", 4.3   );
-    SetParmVal( pod, "ZLocPercent",    "XSec_3",      0.0   );
-
-    // XSec_4: 74%
-    SetParmVal( pod, "XLocPercent",    "XSec_4",      0.74  );
-    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_4", 2.8   );
-    SetParmVal( pod, "Ellipse_Height", "XSecCurve_4", 3.2   );
-    SetParmVal( pod, "ZLocPercent",    "XSec_4",      0.0   );
-
-    // XSec_5: 83%
-    SetParmVal( pod, "XLocPercent",    "XSec_5",      0.83  );
-    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_5", 1.8   );
-    SetParmVal( pod, "Ellipse_Height", "XSecCurve_5", 2.2   );
-    SetParmVal( pod, "ZLocPercent",    "XSec_5",      0.0   );
-
-    // XSec_6: 92% — near boom diameter
-    SetParmVal( pod, "XLocPercent",    "XSec_6",      0.92  );
-    SetParmVal( pod, "Ellipse_Width",  "XSecCurve_6", 1.0   );
-    SetParmVal( pod, "Ellipse_Height", "XSecCurve_6", 1.2   );
-    SetParmVal( pod, "ZLocPercent",    "XSec_6",      0.0   );
-
-    // XSec_7: tail tip (XS_POINT)
-    SetParmVal( pod, "XLocPercent",    "XSec_7",      1.000 );
-    SetParmVal( pod, "ZLocPercent",    "XSec_7",      0.0   );
+    // XSec_4: tail closure at 100% — degenerate point lifted to Z≈+1.29 ft above centerline
+    // (EditCurve in .vsp3; this approximates the upswept tail closure toward boom)
+    SetParmVal( pod, "XLocPercent",    "XSec_4",      1.000 );
+    SetParmVal( pod, "ZLocPercent",    "XSec_4",      0.0918 );
 
     SetXSecTanAngles( GetXSec( pxss, 0 ), XSEC_BOTH_SIDES,  70 );
-    SetXSecTanAngles( GetXSec( pxss, 7 ), XSEC_BOTH_SIDES, -90 );
+    SetXSecTanAngles( GetXSec( pxss, 4 ), XSEC_BOTH_SIDES, -90 );
 
     // ── Tail boom ─────────────────────────────────────────────────────────────
     string boom = AddGeom( "FUSELAGE", "" );
@@ -227,7 +216,7 @@ void main()
     // Skin friction + form factor method
     // Wetted area from CompGeom above; Cf ~ 0.003 for turbulent, FF ~ 1.3 body form
     // CD_body = Cf * FF * Swet / Sref
-    double Cf_pod  = 0.0030;   double FF_pod  = 1.4;   double Swet_pod  = 180.0; // est ft²
+    double Cf_pod  = 0.0030;   double FF_pod  = 1.4;   double Swet_pod  = 180.0; // TODO: re-run CompGeom after pod widened to 60" — Swet_pod will increase ~10%
     double Cf_boom = 0.0027;   double FF_boom = 1.15;  double Swet_boom = 47.0;  // est ft²
     double Sref = 121.5;
     double CD_pod  = Cf_pod  * FF_pod  * Swet_pod  / Sref;  // ~0.0063
