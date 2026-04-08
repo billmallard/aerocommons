@@ -132,7 +132,7 @@ For MAOS, the pod-wing junction is a natural candidate for detailed attention on
 
 The Mach number at which the Whitcomb area rule matters is not the Mach number at which the underlying logic matters. Every aircraft flying in air is pushing volume through a medium that resists abrupt changes. The smoother the combined cross-sectional area distribution of the entire aircraft — fuselage plus wing plus tail plus nacelles — the less the flow is forced to negotiate sudden pressure gradients, and the less energy is deposited in the wake.
 
-Put the bulk of the fuselage forward (or aft depending on your aircraft design) of the wing. Let the fuselage be contracting as the wing begins to add its area. Smooth the junction with a fillet that extends a full chord length in each direction. These three steps do not require a redesign — they require awareness of what the flow sees, and deliberate choices about where things go.
+Put the bulk of the fuselage forward of the wing. Let the fuselage be contracting as the wing begins to add its area. Smooth the junction with a fillet that extends a full chord length in each direction. These three steps do not require a redesign — they require awareness of what the flow sees, and deliberate choices about where things go.
 
 For MAOS, those choices are still being made. That is the right time to make them.
 
