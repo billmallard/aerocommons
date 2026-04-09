@@ -89,6 +89,31 @@ The working idea is a **single-axis pivot gear** — the leg rotates on one hing
 
 ---
 
+## Battery Placement — Working Notes
+
+*Not ready for publication. Capturing for design continuity.*
+
+**Requirement established:** Series hybrid buffer/reserve battery. Sized for 30 minutes of low-power flight (descent or modest-airspeed level flight) following ICE loss, plus takeoff/climb boost. Expected ~35 kWh installed capacity accounting for usable SOC margin (75% of nominal).
+
+**Weight estimate:** 200–345 lbs depending on cell chemistry:
+- LiFePO4 pack (~100 Wh/kg): ~345 lbs — safest thermally, heaviest
+- NMC Li-Ion good cells (~150 Wh/kg): ~230 lbs
+- 400 Wh/kg cell-level (Amprius silicon-anode, CATL condensed, emerging solid-state) with structural integration (~320 Wh/kg effective): ~120–140 lbs
+
+400 Wh/kg at cell level is commercially credible in 2026. Pack-level efficiency depends heavily on integration approach. Note: higher energy density = more energetic thermal runaway event — fire containment design must scale accordingly.
+
+**Structural battery floor concept:** Battery pack IS the pod floor panel — carbon fiber face sheets sandwich prismatic cells, floor structure weight eliminated, effective pack density improves. Directly precedented by Tesla Model Y floor pack. Buildable as EAB project with cells purchased from Amprius, CATL, BYD, or similar. Maintenance access via belly panels. Fire products vent downward away from occupants. Good location.
+
+**Under-rear-seat concept:** Battery modules sit below the rear seat pan, accessible by lifting seat cushion/pan. Easy swap between flights — significant asset during P1 flight test envelope expansion. Occupants directly above pack (fire concern), managed with containment structure and proper BMS. Slightly aft of CG (~1") — absorbed by wing position adjustment. Fixed rear seat location required; acceptable for P1 prototype where seat flexibility is not a priority.
+
+**Recommendation — P1:** Under rear seats. Swap-friendly for flight test, simpler installation, cells testable and replaceable without major disassembly. Design rear seat structure with thermal containment barrier between pack and cabin floor.
+
+**Recommendation — P2:** Structural battery floor panel. Design belly hard points and wiring provisions during P1 build so P2 battery location is a drop-in replacement, not a redesign.
+
+**Cable runs:** Maximum ~10 ft from rear seat pack to motor controller (likely located near pod/wing station). Trivial resistance penalty at any sensible cable gauge. Connector quality and routing protection are the relevant design constraints, not length.
+
+---
+
 ## Current Geometry Status
 
 The OpenVSP model (`maos_aircraft_v1.vsp3`) is the working reference. The pod aft body taper is under active refinement in the GUI — the scripted approach using symmetric ellipse sections cannot produce the desired asymmetric fairing (flat top, bottom curving up toward the boom). That requires `Edit Curve` cross-sections set interactively in OpenVSP. Once the pod aft fairing is finalized, the geometry parameters will be synced back into the parametric script.
