@@ -108,7 +108,7 @@ In MAOS generator duty:
 | Max altitude (rated power) | FL150 |
 | Estimated MAOS cruise (retractable gear) | ~200 KTAS SL / ~230 KTAS TAS at FL150 |
 
-The retractable gear performance projection deserves emphasis. MAOS with fixed gear is a 155 KTAS aircraft on this engine. With retractable gear, removing the dominant drag item — landing gear represents approximately 31% of total cruise drag in the fixed-gear baseline — the same Rotax pushes the same airframe to approximately 200 KTAS at sea level. The closest prior comparison in 4-seat composite Rotax aircraft is the Pipistrel Panthera, which reached ~165 KTAS on a Rotax 914 (115 hp) before being discontinued. No production 4-seat Rotax aircraft has approached 200 KTAS.
+The retractable gear performance projection deserves emphasis. MAOS with fixed gear is a 155 KTAS aircraft on this engine. With retractable gear, removing the dominant drag item — landing gear represents approximately 31% of total cruise drag in the fixed-gear baseline — the same Rotax pushes the same airframe to approximately 200 KTAS at sea level. For reference, the Pipistrel Panthera — a 4-seat retractable composite aircraft and the most directly comparable configuration — achieves ~199 KTAS, but does so on a Lycoming IO-540 producing approximately 235 hp. MAOS approaches the same cruise speed at 141 hp on a Rotax 915, a 40% reduction in horsepower. No production 4-seat aircraft powered by a Rotax has reached this speed class.
 
 The Rotax path is the MAOS P1 design basis. It produces a capable, efficient aircraft at a weight and cost that a single builder can design, build, and operate. Five hours of fuel is 35 gallons — 210 lbs. The mission radius is genuine IFR cross-country territory.
 
