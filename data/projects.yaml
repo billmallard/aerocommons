@@ -32,3 +32,21 @@ projects:
     location: "Fort Worth, TX"
     stack: "ESP32 · Arduino / C++ · KiCad"
     weight: 2
+
+  - id: beech215-bearing
+    title: "Beech B200-202"
+    subtitle: "Pitch Control Bearing"
+    status: "new"
+    status_label: "New Project"
+    description: >
+      Reverse-engineering the Beech P/N B200-202 pitch control bearing for the
+      Beech 215 Series electric controllable-pitch propeller (35 through G35, 35R Bonanza).
+      Unavailable for decades. Full engineering documentation for owner production
+      under 14 CFR 21.9(a)(5).
+    tags: ["Owner-Produced Parts", "Bonanza", "Bearing", "14 CFR 21.9(a)(5)", "Legacy Aircraft"]
+    repo: "https://github.com/billmallard/Beech215PropBearing"
+    project_url: "https://github.com/billmallard/Beech215PropBearing"
+    phase: "Reverse Engineering"
+    location: "Fort Worth, TX"
+    stack: "CAD · GD&T · Material Spec"
+    weight: 3
