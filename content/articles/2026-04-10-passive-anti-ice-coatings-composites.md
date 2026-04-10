@@ -11,7 +11,7 @@ draft: false
 
 Ice protection in general aviation has traditionally meant one of two things: a pneumatic boot that cracks ice off the leading edge, or a thermal system that prevents it from forming in the first place. Both work. Both add weight, complexity, and power demand. For a composite aircraft in the experimental category, the absence of a certification burden opens a third path worth taking seriously: passive coatings that change how ice interacts with the surface itself.
 
-This article isn't about eliminating an active ice protection system. It's about understanding what passive coatings can contribute — either as a standalone layer for light icing environments, or as an efficiency multiplier that reduces the energy demand of an active system. For MAOS, which already carries a waste-heat-fed thermal system as its primary strategy, a passive coating on composite leading edges could meaningfully reduce the threshold at which that system needs to engage.
+This article isn't about eliminating an active ice protection system. It's about understanding what passive coatings can contribute — either as a standalone layer for light icing environments, or as an efficiency multiplier that reduces the energy demand of an active system. For MAOS a passive coating on composite leading edges could meaningfully reduce the threshold at which anti-ice systems needs to engage.
 
 Two distinct coating philosophies have emerged from the research. They operate by opposite mechanisms, and understanding why reveals a lot about what each can and cannot do.
 
