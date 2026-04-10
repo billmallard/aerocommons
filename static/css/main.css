@@ -194,7 +194,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 7vw 80px;
+  padding: 0px 7vw 80px;
   position: relative;
   overflow: hidden;
 }
