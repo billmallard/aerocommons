@@ -27,8 +27,10 @@ AeroCommons is a nonprofit organization dedicated to advancing open-source exper
 
 ### Projects
 
-See the [Projects](#projects) section on the homepage for current active projects.
+See the [Projects](/#projects) section on the homepage for current active projects.
 
 ### Articles
 
 All technical articles are published at [/articles/](/articles/).
+
+If you're new to GitHub and wondering how to follow along or submit a project, the [GitHub for Pilots and Builders](/articles/2026-04-11-github-for-pilots-and-builders/) guide covers everything from account creation to your first repository — no software installation required.

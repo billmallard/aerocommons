@@ -9,8 +9,13 @@ layout: "simple"
 AeroCommons hosts open-source general aviation projects. If you have a project 
 that belongs here, we'd like to hear about it.
 
+We know not everyone involved in GA project work spends time on GitHub. If this 
+is new territory, see our guide: [GitHub for Pilots and Builders](/articles/2026-04-11-github-for-pilots-and-builders/) — 
+it covers everything from creating a free account to uploading your first file, 
+using only a web browser.
+
 **Requirements:**
-- Active public GitHub repository
+- Active public GitHub repository *(New to GitHub? [Start here](/articles/2026-04-11-github-for-pilots-and-builders/))*
 - FAA Experimental Amateur-Built scope, or directly supporting EAB builders
 - Documentation published alongside design files
 - Willing to maintain the repo and respond to community questions
