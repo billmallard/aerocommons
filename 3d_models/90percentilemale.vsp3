@@ -1,0 +1,2190 @@
+<?xml version="1.0"?>
+<Vsp_Geometry>
+  <Version>4</Version>
+  <Vehicle>
+    <ParmContainer>
+      <ID>ZKLIEZRWQN</ID>
+      <Name>Vehicle</Name>
+      <BBox>
+        <X_Len Value="0.000000000000000000e+00" ID="YHRBVYOIKXM"/>
+        <X_Min Value="0.000000000000000000e+00" ID="OVWHJDKPZGG"/>
+        <Y_Len Value="0.000000000000000000e+00" ID="MZLSXAHRJIA"/>
+        <Y_Min Value="0.000000000000000000e+00" ID="ZADXUHCBYKP"/>
+        <Z_Len Value="0.000000000000000000e+00" ID="XGUOVSOUFPL"/>
+        <Z_Min Value="0.000000000000000000e+00" ID="JQQLLFDNMSP"/>
+      </BBox>
+      <ExportFlag>
+        <CompGeom_CSV_Export Value="1.000000000000000000e+00" ID="EBQBWJWBOZV"/>
+        <DegenGeom_CSV_Export Value="1.000000000000000000e+00" ID="YSCZWMFTGJR"/>
+        <DegenGeom_M_Export Value="1.000000000000000000e+00" ID="RPHOGATTMCR"/>
+        <DragBuild_TSV_Export Value="1.000000000000000000e+00" ID="DXRWIXRSKWU"/>
+      </ExportFlag>
+      <FitModel>
+        <Select_Box_Flag Value="0.000000000000000000e+00" ID="DTUGISYWNEO"/>
+        <Select_One_Flag Value="0.000000000000000000e+00" ID="HCTCSWNUZLK"/>
+        <U_TargetPt Value="0.000000000000000000e+00" ID="LOJSGYMDYVL"/>
+        <U_Type Value="1.000000000000000000e+00" ID="FPZCPOZVQXP"/>
+        <W_TargetPt Value="0.000000000000000000e+00" ID="BSHLHWPRCHI"/>
+        <W_Type Value="1.000000000000000000e+00" ID="MQWJXUMCBLE"/>
+      </FitModel>
+      <STEPSettings>
+        <MergePoints Value="1.000000000000000000e+00" ID="VYSTGTBMRTL"/>
+        <SplitSurfs Value="0.000000000000000000e+00" ID="YCTEVYKRPGU"/>
+        <ToCubic Value="0.000000000000000000e+00" ID="OLZCYTFMEIE"/>
+        <Tolerance Value="9.999999999999999547e-07" ID="ZNADYCNWCOA"/>
+      </STEPSettings>
+      <STLSettings>
+        <MultiSolid Value="0.000000000000000000e+00" ID="BHLEMVOCAAK"/>
+      </STLSettings>
+    </ParmContainer>
+    <Lights>
+      <Num_of_Lights>8</Num_of_Lights>
+      <Light0>
+        <ParmContainer>
+          <ID>VVBFNYIIGL</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="1.000000000000000000e+00" ID="WMZKLJZCPIG"/>
+            <Ambient Value="5.000000000000000000e-01" ID="KXVIKVZNBYM"/>
+            <Diffuse Value="3.499999999999999778e-01" ID="TSSHWFZHKPM"/>
+            <Specular Value="1.000000000000000000e+00" ID="AYKKXVKUKRM"/>
+            <X Value="1.000000000000000000e+01" ID="NQOINQZJQQA"/>
+            <Y Value="-5.000000000000000000e+01" ID="XRUEWKKXWCZ"/>
+            <Z Value="2.000000000000000000e+01" ID="MIZTEUCUJUR"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light0>
+      <Light1>
+        <ParmContainer>
+          <ID>WQBQXCXWKR</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="1.000000000000000000e+00" ID="BYIUIUQZJVH"/>
+            <Ambient Value="5.000000000000000000e-01" ID="NJRQTSZIPML"/>
+            <Diffuse Value="5.000000000000000000e-01" ID="ZFJLDHBVWBR"/>
+            <Specular Value="1.000000000000000000e+00" ID="SCUGJWWZTGT"/>
+            <X Value="1.000000000000000000e+01" ID="CHQNARYSLSF"/>
+            <Y Value="1.500000000000000000e+01" ID="PUCUKUEOBTF"/>
+            <Z Value="3.000000000000000000e+01" ID="SNYUZMHOYZV"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light1>
+      <Light2>
+        <ParmContainer>
+          <ID>GNVXIIMKIW</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="1.000000000000000000e+00" ID="UXBCHXXFWQO"/>
+            <Ambient Value="0.000000000000000000e+00" ID="DTYFUEGVUKX"/>
+            <Diffuse Value="5.000000000000000000e-01" ID="GGRWLANRXOE"/>
+            <Specular Value="5.000000000000000000e-01" ID="IBXYJAUTVYP"/>
+            <X Value="-5.000000000000000000e+01" ID="JWADYPNLTXQ"/>
+            <Y Value="3.000000000000000000e+01" ID="BUYWKVQNWCF"/>
+            <Z Value="1.000000000000000000e+01" ID="KAJMFXTRZJI"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light2>
+      <Light3>
+        <ParmContainer>
+          <ID>ZBVSMSOZDG</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="0.000000000000000000e+00" ID="ZMQOXTGDJZF"/>
+            <Ambient Value="0.000000000000000000e+00" ID="KVPQBVUNAPM"/>
+            <Diffuse Value="0.000000000000000000e+00" ID="NWFPVZQXHVI"/>
+            <Specular Value="0.000000000000000000e+00" ID="WHXTWVSOAVD"/>
+            <X Value="0.000000000000000000e+00" ID="JZQVUTZNMSO"/>
+            <Y Value="0.000000000000000000e+00" ID="BAOVQOPTCFP"/>
+            <Z Value="0.000000000000000000e+00" ID="UBCRWVYHJVC"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light3>
+      <Light4>
+        <ParmContainer>
+          <ID>VRMBPDJJCY</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="0.000000000000000000e+00" ID="HMXRJJMQBGW"/>
+            <Ambient Value="0.000000000000000000e+00" ID="MELIHEPWWBC"/>
+            <Diffuse Value="0.000000000000000000e+00" ID="XYXWBIVEAQX"/>
+            <Specular Value="0.000000000000000000e+00" ID="PLAXGIAEHJZ"/>
+            <X Value="0.000000000000000000e+00" ID="VYRGXBQRTOU"/>
+            <Y Value="0.000000000000000000e+00" ID="OFVTLBMLKCA"/>
+            <Z Value="0.000000000000000000e+00" ID="HNABEOPMBHG"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light4>
+      <Light5>
+        <ParmContainer>
+          <ID>PLQNMJNQQX</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="0.000000000000000000e+00" ID="TUWNJGARLSQ"/>
+            <Ambient Value="0.000000000000000000e+00" ID="INUWQPRBEWY"/>
+            <Diffuse Value="0.000000000000000000e+00" ID="VPKEONCKKEU"/>
+            <Specular Value="0.000000000000000000e+00" ID="ZXOHNQZFDIK"/>
+            <X Value="0.000000000000000000e+00" ID="IIPWIMIHTST"/>
+            <Y Value="0.000000000000000000e+00" ID="XHJUKUTFFMQ"/>
+            <Z Value="0.000000000000000000e+00" ID="TMEQSYQNWFC"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light5>
+      <Light6>
+        <ParmContainer>
+          <ID>DADOZXNKSP</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="0.000000000000000000e+00" ID="LZEZERJPMCV"/>
+            <Ambient Value="0.000000000000000000e+00" ID="IANZNRYPGNW"/>
+            <Diffuse Value="0.000000000000000000e+00" ID="SXNXHSWGETR"/>
+            <Specular Value="0.000000000000000000e+00" ID="UCPAACZXWYI"/>
+            <X Value="0.000000000000000000e+00" ID="YTXBBOWCXWA"/>
+            <Y Value="0.000000000000000000e+00" ID="JDWZEKHYFOL"/>
+            <Z Value="0.000000000000000000e+00" ID="LAZXNDUJBEW"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light6>
+      <Light7>
+        <ParmContainer>
+          <ID>GHOBHWETSY</ID>
+          <Name>Default</Name>
+          <Light_Parm>
+            <ActiveFlag Value="0.000000000000000000e+00" ID="MSAHYEURZGP"/>
+            <Ambient Value="0.000000000000000000e+00" ID="DAZVXWAQTXA"/>
+            <Diffuse Value="0.000000000000000000e+00" ID="WOXMYQGJPWN"/>
+            <Specular Value="0.000000000000000000e+00" ID="LOTIZCQBVKU"/>
+            <X Value="0.000000000000000000e+00" ID="FDMFZFBHRSU"/>
+            <Y Value="0.000000000000000000e+00" ID="HHDREBNOFIJ"/>
+            <Z Value="0.000000000000000000e+00" ID="OYJREDWWJBF"/>
+          </Light_Parm>
+        </ParmContainer>
+      </Light7>
+    </Lights>
+    <Labels>
+      <Num_of_Labels>0</Num_of_Labels>
+    </Labels>
+    <Geom>
+      <CustomGeom>
+        <Height Value="6.000000000000000000e+00" ID="FSSEBGJCWFU"/>
+        <Head_XAng Value="0.000000000000000000e+00" ID="SVCZTYLZGSJ"/>
+        <Head_YAng Value="0.000000000000000000e+00" ID="HRAINXFKGSM"/>
+        <Head_ZAng Value="0.000000000000000000e+00" ID="WWBIRHZMCJK"/>
+        <UL_Leg_YAng Value="0.000000000000000000e+00" ID="KDCNQWXTOLD"/>
+        <UR_Leg_YAng Value="0.000000000000000000e+00" ID="ROEKORNSPYR"/>
+        <UL_Leg_ZAng Value="0.000000000000000000e+00" ID="RWDKVWDEGNT"/>
+        <UR_Leg_ZAng Value="0.000000000000000000e+00" ID="WIDPIBMSABO"/>
+        <LL_Leg_YAng Value="0.000000000000000000e+00" ID="HBBHVDPXDWS"/>
+        <LR_Leg_YAng Value="0.000000000000000000e+00" ID="WOHTERZMORO"/>
+        <L_Foot_XAng Value="0.000000000000000000e+00" ID="HCRICANUUCX"/>
+        <R_Foot_XAng Value="0.000000000000000000e+00" ID="RSJIMNYYAQT"/>
+        <L_Foot_YAng Value="0.000000000000000000e+00" ID="XCJIPLJKUWA"/>
+        <R_Foot_YAng Value="0.000000000000000000e+00" ID="QOMSBNCEQYT"/>
+        <L_Foot_ZAng Value="0.000000000000000000e+00" ID="WNDGAMFTXDS"/>
+        <R_Foot_ZAng Value="0.000000000000000000e+00" ID="OEIDZUSOWWY"/>
+        <UL_Arm_YAng Value="0.000000000000000000e+00" ID="UOMRRLAOAXD"/>
+        <UR_Arm_YAng Value="0.000000000000000000e+00" ID="OACFJCWIEXW"/>
+        <UL_Arm_ZAng Value="0.000000000000000000e+00" ID="DZPUZXIABKH"/>
+        <UR_Arm_ZAng Value="0.000000000000000000e+00" ID="CRODHPPUGUZ"/>
+        <LL_Arm_XAng Value="0.000000000000000000e+00" ID="KJWHDGOHPES"/>
+        <LR_Arm_XAng Value="0.000000000000000000e+00" ID="EXDFPDEBAOD"/>
+        <LL_Arm_YAng Value="0.000000000000000000e+00" ID="UQMUZPJZMJK"/>
+        <LR_Arm_YAng Value="0.000000000000000000e+00" ID="RZKSJCCMJSI"/>
+        <L_Hand_ZAng Value="0.000000000000000000e+00" ID="BUWMSTZZYJK"/>
+        <R_Hand_ZAng Value="0.000000000000000000e+00" ID="MBGMEPTPRKC"/>
+        <UnitMult Value="3.937010000000001203e-02" ID="TPQJUBRDPUX"/>
+        <Units Value="0.000000000000000000e+00" ID="JERJGZQOWVM"/>
+        <Trigger Value="0.000000000000000000e+00" ID="LDFXEDEDLEU"/>
+        <ScriptFileModule>Male90Pct</ScriptFileModule>
+        <ScriptFileContents>//== 90th Percentile Male Model for OpenVSP v3 ==//&#xD;
+//== Created under SBIR contract for AFRL by Empirical Systems Aerospace, Inc. ==//&#xD;
+//== Michael Waddington ==//&#xD;
+//== December 2014 ==//&#xD;
+&#xD;
+//==== Init Is Called Once During Each Custom Geom Construction  ============================//&#xD;
+//==== Avoid Global Variables Unless You Want Shared With All Custom Geoms of This Type =====//&#xD;
+void Init()&#xD;
+{&#xD;
+	//==== Add Parm Types  =====//&#xD;
+	string Height = AddParm( PARM_DOUBLE_TYPE, "Height", "Design" );&#xD;
+	SetParmValLimits( Height, 6, 0.001, 1.0e12);&#xD;
+&#xD;
+	//== Angles ==//&#xD;
+	string Head_XAng = AddParm( PARM_DOUBLE_TYPE, "Head_XAng", "Angles" );&#xD;
+	SetParmValLimits( Head_XAng, 0, -45, 45 );&#xD;
+	&#xD;
+	string Head_YAng = AddParm( PARM_DOUBLE_TYPE, "Head_YAng", "Angles" );&#xD;
+	SetParmValLimits( Head_YAng, 0, -30, 30 );&#xD;
+	&#xD;
+	string Head_ZAng = AddParm( PARM_DOUBLE_TYPE, "Head_ZAng", "Angles" );&#xD;
+	SetParmValLimits( Head_ZAng, 0, -30, 30 );&#xD;
+	&#xD;
+	string UL_Leg_YAng = AddParm( PARM_DOUBLE_TYPE, "UL_Leg_YAng", "Angles" );&#xD;
+	SetParmValLimits( UL_Leg_YAng, 0, -90, 120 );&#xD;
+	&#xD;
+	string UR_Leg_YAng = AddParm( PARM_DOUBLE_TYPE, "UR_Leg_YAng", "Angles" );&#xD;
+	SetParmValLimits( UR_Leg_YAng, 0, -90, 120 );&#xD;
+	&#xD;
+	string UL_Leg_ZAng = AddParm( PARM_DOUBLE_TYPE, "UL_Leg_ZAng", "Angles" );&#xD;
+	SetParmValLimits( UL_Leg_ZAng, 0, -90, 90 );&#xD;
+	&#xD;
+	string UR_Leg_ZAng = AddParm( PARM_DOUBLE_TYPE, "UR_Leg_ZAng", "Angles" );&#xD;
+	SetParmValLimits( UR_Leg_ZAng, 0, -90, 90 );&#xD;
+&#xD;
+	string LL_Leg_YAng = AddParm( PARM_DOUBLE_TYPE, "LL_Leg_YAng", "Angles" );&#xD;
+	SetParmValLimits( LL_Leg_YAng, 0, -150, 0 );&#xD;
+	&#xD;
+	string LR_Leg_YAng = AddParm( PARM_DOUBLE_TYPE, "LR_Leg_YAng", "Angles" );&#xD;
+	SetParmValLimits( LR_Leg_YAng, 0, -150, 0 );&#xD;
+&#xD;
+	string L_Foot_XAng = AddParm( PARM_DOUBLE_TYPE, "L_Foot_XAng", "Angles" );&#xD;
+	SetParmValLimits( L_Foot_XAng, 0, -45, 45 );&#xD;
+	&#xD;
+	string R_Foot_XAng = AddParm( PARM_DOUBLE_TYPE, "R_Foot_XAng", "Angles" );&#xD;
+	SetParmValLimits( R_Foot_XAng, 0, -45, 45 );&#xD;
+	&#xD;
+	string L_Foot_YAng = AddParm( PARM_DOUBLE_TYPE, "L_Foot_YAng", "Angles" );&#xD;
+	SetParmValLimits( L_Foot_YAng, 0, -90, 30 );&#xD;
+	&#xD;
+	string R_Foot_YAng = AddParm( PARM_DOUBLE_TYPE, "R_Foot_YAng", "Angles" );&#xD;
+	SetParmValLimits( R_Foot_YAng, 0, -90, 30 );&#xD;
+	&#xD;
+	string L_Foot_ZAng = AddParm( PARM_DOUBLE_TYPE, "L_Foot_ZAng", "Angles" );&#xD;
+	SetParmValLimits( L_Foot_ZAng, 0, -30, 30 );&#xD;
+	&#xD;
+	string R_Foot_ZAng = AddParm( PARM_DOUBLE_TYPE, "R_Foot_ZAng", "Angles" );&#xD;
+	SetParmValLimits( R_Foot_ZAng, 0, -30, 30 );&#xD;
+&#xD;
+	string UL_Arm_YAng = AddParm( PARM_DOUBLE_TYPE, "UL_Arm_YAng", "Angles" );&#xD;
+	SetParmValLimits( UL_Arm_YAng, 0, -180, 180 );&#xD;
+	&#xD;
+	string UR_Arm_YAng = AddParm( PARM_DOUBLE_TYPE, "UR_Arm_YAng", "Angles" );&#xD;
+	SetParmValLimits( UR_Arm_YAng, 0, -180, 180 );&#xD;
+	&#xD;
+	string UL_Arm_ZAng = AddParm( PARM_DOUBLE_TYPE, "UL_Arm_ZAng", "Angles" );&#xD;
+	SetParmValLimits( UL_Arm_ZAng, 0, -180, 180 );&#xD;
+	&#xD;
+	string UR_Arm_ZAng = AddParm( PARM_DOUBLE_TYPE, "UR_Arm_ZAng", "Angles" );&#xD;
+	SetParmValLimits( UR_Arm_ZAng, 0, -180, 180 );&#xD;
+&#xD;
+	string LL_Arm_XAng = AddParm( PARM_DOUBLE_TYPE, "LL_Arm_XAng", "Angles" );&#xD;
+	SetParmValLimits( LL_Arm_XAng, 0, -90, 90 );&#xD;
+	&#xD;
+	string LR_Arm_XAng = AddParm( PARM_DOUBLE_TYPE, "LR_Arm_XAng", "Angles" );&#xD;
+	SetParmValLimits( LR_Arm_XAng, 0, -90, 90 );&#xD;
+	&#xD;
+	string LL_Arm_YAng = AddParm( PARM_DOUBLE_TYPE, "LL_Arm_YAng", "Angles" );&#xD;
+	SetParmValLimits( LL_Arm_YAng, 0, 0, 150 );&#xD;
+	&#xD;
+	string LR_Arm_YAng = AddParm( PARM_DOUBLE_TYPE, "LR_Arm_YAng", "Angles" );&#xD;
+	SetParmValLimits( LR_Arm_YAng, 0, 0, 150 );&#xD;
+	&#xD;
+	string L_Hand_ZAng = AddParm( PARM_DOUBLE_TYPE, "L_Hand_ZAng", "Angles" );&#xD;
+	SetParmValLimits( L_Hand_ZAng, 0, -90, 45 );&#xD;
+	&#xD;
+	string R_Hand_ZAng = AddParm( PARM_DOUBLE_TYPE, "R_Hand_ZAng", "Angles" );&#xD;
+	SetParmValLimits( R_Hand_ZAng, 0, -90, 45 );&#xD;
+	&#xD;
+	//==== Choices ====//&#xD;
+	string umult = AddParm( PARM_DOUBLE_TYPE, "UnitMult", "Design" );&#xD;
+	SetParmValLimits( umult, 1, 0.001, 1e12 );&#xD;
+	&#xD;
+	string units = AddParm( PARM_INT_TYPE, "Units", "Design" );&#xD;
+	SetParmValLimits( units, 0, 0, 100 );&#xD;
+&#xD;
+	string trigger = AddParm( PARM_BOOL_TYPE, "Trigger", "Design" );&#xD;
+	SetParmVal( trigger, 1 );&#xD;
+&#xD;
+	//==== Add Cross Sections ====//&#xD;
+	&#xD;
+	// Head&#xD;
+	string head_surf = AddXSecSurf();&#xD;
+	AppendXSec( head_surf, XS_POINT );&#xD;
+	AppendXSec( head_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( head_surf, XS_POINT );&#xD;
+	&#xD;
+	// Neck&#xD;
+	string neck_surf = AddXSecSurf();&#xD;
+	AppendXSec( neck_surf, XS_POINT );&#xD;
+	AppendXSec( neck_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( neck_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( neck_surf, XS_POINT );&#xD;
+	&#xD;
+	// Torso&#xD;
+	string torso_surf = AddXSecSurf();&#xD;
+	AppendXSec( torso_surf, XS_POINT );&#xD;
+	AppendXSec( torso_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( torso_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( torso_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( torso_surf, XS_POINT );&#xD;
+	&#xD;
+	// Pelvis&#xD;
+	string pelvis_surf = AddXSecSurf();&#xD;
+	AppendXSec( pelvis_surf, XS_POINT );&#xD;
+	AppendXSec( pelvis_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( pelvis_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( pelvis_surf, XS_POINT );&#xD;
+	&#xD;
+	// Upper Left Leg&#xD;
+	string UL_leg_surf = AddXSecSurf();&#xD;
+	AppendXSec( UL_leg_surf, XS_POINT );&#xD;
+	AppendXSec( UL_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UL_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UL_leg_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Knee&#xD;
+	string L_knee_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_knee_surf, XS_POINT );&#xD;
+	AppendXSec( L_knee_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_knee_surf, XS_POINT );&#xD;
+	&#xD;
+	// Lower Left Leg&#xD;
+	string LL_leg_surf = AddXSecSurf();&#xD;
+	AppendXSec( LL_leg_surf, XS_POINT );&#xD;
+	AppendXSec( LL_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LL_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LL_leg_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Ankle&#xD;
+	string L_ankle_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_ankle_surf, XS_POINT );&#xD;
+	AppendXSec( L_ankle_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_ankle_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Foot&#xD;
+	string L_foot_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_foot_surf, XS_POINT );&#xD;
+	AppendXSec( L_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_foot_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Shoulder&#xD;
+	string L_shoulder_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_shoulder_surf, XS_POINT );&#xD;
+	AppendXSec( L_shoulder_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_shoulder_surf, XS_POINT );&#xD;
+	&#xD;
+	// Upper Left Arm&#xD;
+	string UL_arm_surf = AddXSecSurf();&#xD;
+	AppendXSec( UL_arm_surf, XS_POINT );&#xD;
+	AppendXSec( UL_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UL_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UL_arm_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Elbow&#xD;
+	string L_elbow_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_elbow_surf, XS_POINT );&#xD;
+	AppendXSec( L_elbow_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_elbow_surf, XS_POINT );&#xD;
+	&#xD;
+	// Lower Left Arm&#xD;
+	string LL_arm_surf = AddXSecSurf();&#xD;
+	AppendXSec( LL_arm_surf, XS_POINT );&#xD;
+	AppendXSec( LL_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LL_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LL_arm_surf, XS_POINT );&#xD;
+	&#xD;
+	// Left Wrist&#xD;
+	string L_wrist_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_wrist_surf, XS_POINT );&#xD;
+	AppendXSec( L_wrist_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_wrist_surf, XS_POINT );&#xD;
+&#xD;
+	// Left Hand&#xD;
+	string L_hand_surf = AddXSecSurf();&#xD;
+	AppendXSec( L_hand_surf, XS_POINT );&#xD;
+	AppendXSec( L_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( L_hand_surf, XS_POINT );&#xD;
+	&#xD;
+	// Upper Right Leg&#xD;
+	string UR_leg_surf = AddXSecSurf();&#xD;
+	AppendXSec( UR_leg_surf, XS_POINT );&#xD;
+	AppendXSec( UR_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UR_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UR_leg_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Knee&#xD;
+	string R_knee_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_knee_surf, XS_POINT );&#xD;
+	AppendXSec( R_knee_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_knee_surf, XS_POINT );&#xD;
+	&#xD;
+	// Lower Right Leg&#xD;
+	string LR_leg_surf = AddXSecSurf();&#xD;
+	AppendXSec( LR_leg_surf, XS_POINT );&#xD;
+	AppendXSec( LR_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LR_leg_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LR_leg_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Ankle&#xD;
+	string R_ankle_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_ankle_surf, XS_POINT );&#xD;
+	AppendXSec( R_ankle_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_ankle_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Foot&#xD;
+	string R_foot_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_foot_surf, XS_POINT );&#xD;
+	AppendXSec( R_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_foot_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_foot_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Shoulder&#xD;
+	string R_shoulder_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_shoulder_surf, XS_POINT );&#xD;
+	AppendXSec( R_shoulder_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_shoulder_surf, XS_POINT );&#xD;
+	&#xD;
+	// Upper Right Arm&#xD;
+	string UR_arm_surf = AddXSecSurf();&#xD;
+	AppendXSec( UR_arm_surf, XS_POINT );&#xD;
+	AppendXSec( UR_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UR_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( UR_arm_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Elbow&#xD;
+	string R_elbow_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_elbow_surf, XS_POINT );&#xD;
+	AppendXSec( R_elbow_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_elbow_surf, XS_POINT );&#xD;
+	&#xD;
+	// Lower Right Arm&#xD;
+	string LR_arm_surf = AddXSecSurf();&#xD;
+	AppendXSec( LR_arm_surf, XS_POINT );&#xD;
+	AppendXSec( LR_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LR_arm_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( LR_arm_surf, XS_POINT );&#xD;
+	&#xD;
+	// Right Wrist&#xD;
+	string R_wrist_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_wrist_surf, XS_POINT );&#xD;
+	AppendXSec( R_wrist_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_wrist_surf, XS_POINT );&#xD;
+&#xD;
+	// Right Hand&#xD;
+	string R_hand_surf = AddXSecSurf();&#xD;
+	AppendXSec( R_hand_surf, XS_POINT );&#xD;
+	AppendXSec( R_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_hand_surf, XS_SUPER_ELLIPSE );&#xD;
+	AppendXSec( R_hand_surf, XS_POINT );&#xD;
+	&#xD;
+	//==== Adjust Tessellation ====//&#xD;
+	string geom_id = GetCurrCustomGeom();&#xD;
+	SetParmVal( GetParm( geom_id, "Tess_U",  "Shape" ), 13 );&#xD;
+	SetParmVal( GetParm( geom_id, "Tess_W",  "Shape" ), 17 );&#xD;
+}&#xD;
+&#xD;
+//==== Global Gui IDs - These Are Consistent For All Created Boxes And Used In UpdateGUI====// &#xD;
+&#xD;
+//==== InitGui Is Called Once During Each Custom Geom Construction ====//&#xD;
+void InitGui()&#xD;
+{&#xD;
+	AddGui( GDEV_TAB, "Design"  );&#xD;
+	AddGui( GDEV_YGAP, ""  );&#xD;
+	AddGui( GDEV_DIVIDER_BOX, "Design" );&#xD;
+	AddGui( GDEV_CHOICE, "Units:", "Units", "Design" );&#xD;
+	AddGui( GDEV_ADD_CHOICE_ITEM, "in" );&#xD;
+	AddGui( GDEV_ADD_CHOICE_ITEM, "ft" );&#xD;
+	AddGui( GDEV_ADD_CHOICE_ITEM, "cm" );&#xD;
+	AddGui( GDEV_ADD_CHOICE_ITEM, "m" );&#xD;
+	AddGui( GDEV_TRIGGER_BUTTON, "Go", "Trigger", "Design" );&#xD;
+	&#xD;
+	AddGui( GDEV_TAB, "Angles" );&#xD;
+	AddGui( GDEV_DIVIDER_BOX, "X Rotations" );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Head", "Head_XAng", "Angles", 45 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Forearm", "LL_Arm_XAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Forearm", "LR_Arm_XAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Foot", "L_Foot_XAng", "Angles", 45 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Foot", "R_Foot_XAng", "Angles", 45 );&#xD;
+	AddGui( GDEV_YGAP );&#xD;
+	AddGui( GDEV_DIVIDER_BOX, "Y Rotations" );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Head", "Head_YAng", "Angles", 30 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper L Arm", "UL_Arm_YAng", "Angles", 180 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper R Arm", "UR_Arm_YAng", "Angles", 180 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Forearm", "LL_Arm_YAng", "Angles", 150 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Forearm", "LR_Arm_YAng", "Angles", 150 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper L Leg", "UL_Leg_YAng", "Angles", 120 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper R Leg", "UR_Leg_YAng", "Angles", 120 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Lower L Leg", "LL_Leg_YAng", "Angles", 150 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Lower R Leg", "LR_Leg_YAng", "Angles", 150 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Foot", "L_Foot_YAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Foot", "R_Foot_YAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_YGAP );&#xD;
+	AddGui( GDEV_DIVIDER_BOX, "Z Rotations" );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Head", "Head_ZAng", "Angles", 30 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper L Arm", "UL_Arm_ZAng", "Angles", 180 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper R Arm", "UR_Arm_ZAng", "Angles", 180 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Hand", "L_Hand_ZAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Hand", "R_Hand_ZAng", "Angles", 90 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper L Leg", "UL_Leg_ZAng", "Angles", 120 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "Upper R Leg", "UR_Leg_ZAng", "Angles", 120 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "L Foot", "L_Foot_ZAng", "Angles", 30 );&#xD;
+	AddGui( GDEV_SLIDER_ADJ_RANGE_INPUT, "R Foot", "R_Foot_ZAng", "Angles", 30 );&#xD;
+	&#xD;
+	AddGui( GDEV_YGAP, ""  );&#xD;
+} &#xD;
+&#xD;
+//==== UpdateGui Is Called Every Time The Gui is Updated ====//&#xD;
+void UpdateGui()&#xD;
+{&#xD;
+}&#xD;
+&#xD;
+//==== UpdateSurf Is Called Every Time The Geom is Updated ====//&#xD;
+void UpdateSurf()&#xD;
+{&#xD;
+	string geom_id = GetCurrCustomGeom();&#xD;
+	&#xD;
+	//==== Check for Trigger Before Getting Current Values ====//&#xD;
+	string trigger_parm = GetParm( geom_id, "Trigger", "Design" );&#xD;
+	if ( GetBoolParmVal( trigger_parm ) )&#xD;
+	{&#xD;
+		int unit_choice = GetIntParmVal( GetParm( geom_id, "Units", "Design" ) );&#xD;
+&#xD;
+		//==== Check Units and Set Values ====//&#xD;
+		if ( unit_choice == 0 ) // inches&#xD;
+		{&#xD;
+			SetParmVal( GetParm( geom_id, "UnitMult", "Design" ), 0.0393701 );&#xD;
+		}&#xD;
+		else if ( unit_choice == 1 ) // feet&#xD;
+		{&#xD;
+			SetParmVal( GetParm( geom_id, "UnitMult", "Design" ), 0.00328083989 );&#xD;
+		}&#xD;
+		else if ( unit_choice == 2 ) // centimeters&#xD;
+		{&#xD;
+			SetParmVal( GetParm( geom_id, "UnitMult", "Design" ), 0.1 );&#xD;
+		}&#xD;
+		else if ( unit_choice == 3 ) // meters&#xD;
+		{&#xD;
+			SetParmVal( GetParm( geom_id, "UnitMult", "Design" ), 0.001 );&#xD;
+		}&#xD;
+&#xD;
+		//==== Reset Trigger ====//&#xD;
+		SetParmVal( trigger_parm, 0 );&#xD;
+	}&#xD;
+&#xD;
+	string xsec0;&#xD;
+	string xsec1;&#xD;
+	string xsec2;&#xD;
+	string xsec3;&#xD;
+	string xsec4;&#xD;
+	string xsec5;&#xD;
+&#xD;
+	//==== Helpful Values ====//&#xD;
+	// Units Factor&#xD;
+	double ufac = GetParmVal( GetParm( geom_id, "UnitMult", "Design" ) );&#xD;
+	vec3d pos( 0, 0, 0 );&#xD;
+	&#xD;
+	&#xD;
+	//==== Head (0) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double Head_XAng = GetParmVal( GetParm( geom_id, "Head_XAng", "Angles" ) );&#xD;
+	double Head_YAng = GetParmVal( GetParm( geom_id, "Head_YAng", "Angles" ) );&#xD;
+	double Head_ZAng = GetParmVal( GetParm( geom_id, "Head_ZAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth (90%)&#xD;
+	double head_depth = 206 * ufac;&#xD;
+	// Berth (90%)&#xD;
+	double head_berth = 159 * ufac;&#xD;
+	// Height (90%)&#xD;
+	double head_height = 194 * ufac;&#xD;
+	&#xD;
+	//== Center of Rotation Locations WRT Global Origin&#xD;
+	double headXcr = 165 * ufac; // B-K+0.5*R&#xD;
+	double headZcr = -70 * ufac; // N&#xD;
+&#xD;
+	//== Set XSecs ( 0 is top, 2 is neck )&#xD;
+	string head_surf = GetXSecSurf( geom_id, 0 );&#xD;
+	xsec0 = GetXSec( head_surf, 0 );&#xD;
+	xsec1 = GetXSec( head_surf, 1 );&#xD;
+	xsec2 = GetXSec( head_surf, 2 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, 1.5 * head_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), head_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), head_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, head_depth * 0.5 );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, head_depth );&#xD;
+&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.6 * head_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( head_height, 0, 0.25 * head_depth ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d head_mat;&#xD;
+	vec3d head_cr( headXcr, 0, headZcr );&#xD;
+	vec3d head_rot( Head_XAng, Head_YAng, Head_ZAng );&#xD;
+	head_mat.buildXForm( pos, head_rot, head_cr );&#xD;
+	SetXSecSurfGlobalXForm( head_surf, head_mat );&#xD;
+&#xD;
+	&#xD;
+	//==== Neck (1) ====//&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth (90%)&#xD;
+	double neck_depth = 138 * ufac;&#xD;
+	// Berth (90%)&#xD;
+	double neck_berth = 138 * ufac;&#xD;
+	// Height (90%)&#xD;
+	double neck_height = 48 * ufac;&#xD;
+&#xD;
+	//== Part Locations WRT Global Origin&#xD;
+	double neckX = head_height;&#xD;
+	double neckZ = -25 * ufac;&#xD;
+	&#xD;
+	//== Set XSecs ( 0-1 are head, 2-3 are shoulders )&#xD;
+	string neck_surf = GetXSecSurf( geom_id, 1 );&#xD;
+	xsec0 = GetXSec( neck_surf, 0 );&#xD;
+	xsec1 = GetXSec( neck_surf, 1 );&#xD;
+	xsec2 = GetXSec( neck_surf, 2 );&#xD;
+	xsec3 = GetXSec( neck_surf, 3 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, 0.5 * neck_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), 0.6 * neck_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), 0.6 * neck_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, neck_height * 0.5 );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), neck_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), neck_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, neck_height * 0.5 );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, 0.5 * neck_depth );&#xD;
+&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( -2 * neck_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( -1.9 * neck_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * neck_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( neck_height, 0, 0 ) );&#xD;
+	&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d neck_mat;&#xD;
+	neck_mat.translatef( neckX, 0, neckZ );&#xD;
+	SetXSecSurfGlobalXForm( neck_surf, neck_mat );&#xD;
+	&#xD;
+&#xD;
+	//==== TORSO (2) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Chest (90%)&#xD;
+	double torso_depth_chest = 271 * ufac;&#xD;
+	// Depth at Omphalion (90%)&#xD;
+	double torso_depth_opmhalion = 261 * ufac;&#xD;
+	// Berth at Shoulders (90%)&#xD;
+	double torso_berth_shoulder = 526 * ufac;&#xD;
+	// Berth at Chest (90%)&#xD;
+	double torso_berth_chest = 355 * ufac;&#xD;
+	// Berth at Omphalion (90%)&#xD;
+	double torso_berth_omphalion = 348 * ufac;&#xD;
+	// Torso Height (90%) - (Cervicale Height - Omphalion Height)&#xD;
+	double torso_height = 476 * ufac;&#xD;
+&#xD;
+	//== Part Locations WRT Neck Origin&#xD;
+	double torsoX = neck_height;&#xD;
+	double torsoZ = -neckZ; // Global Z=0&#xD;
+	&#xD;
+	//== Center of Rotation Locations WRT Global Origin&#xD;
+	double O_torsoXcr = 718 * ufac; // Stature - Omphalion Height&#xD;
+	double O_torsoZcr = -70 * ufac;&#xD;
+	&#xD;
+	//== Set XSecs (0-1 are shoulders, 2-3 are hips)&#xD;
+	string torso_surf = GetXSecSurf( geom_id, 2 );&#xD;
+	xsec0 = GetXSec( torso_surf, 0 );&#xD;
+	xsec1 = GetXSec( torso_surf, 1 );&#xD;
+	xsec2 = GetXSec( torso_surf, 2 );&#xD;
+	xsec3 = GetXSec( torso_surf, 3 );&#xD;
+	xsec4 = GetXSec( torso_surf, 4 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, torso_depth_chest * 0.8 );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), torso_depth_chest * 0.8 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), torso_berth_shoulder );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, torso_depth_chest * 0.5 );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), torso_depth_chest );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), torso_berth_chest );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, 1.5*torso_depth_chest );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Height" ), torso_depth_opmhalion );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Width" ), torso_berth_omphalion );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, torso_depth_opmhalion * 0.5 );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec4, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec4, XSEC_BOTH_SIDES, torso_depth_opmhalion );&#xD;
+&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, neckZ ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.05 * torso_height, 0, neckZ ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.53 * torso_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( 0.95 * torso_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec4, vec3d( torso_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d torso_mat = neck_mat;&#xD;
+	torso_mat.translatef( torsoX, 0, torsoZ );&#xD;
+	SetXSecSurfGlobalXForm( torso_surf, torso_mat );&#xD;
+&#xD;
+	&#xD;
+	//==== PELVIS (3) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double pelvis_depth = 278 * ufac;&#xD;
+	// Berth&#xD;
+	double pelvis_berth = 368 * ufac;&#xD;
+	// Height&#xD;
+	double pelvis_height = 227 * ufac;&#xD;
+	&#xD;
+	//== Part Locations WRT Torso Origin&#xD;
+	double pelvisX = torso_height;&#xD;
+	double pelvisZ = -8.5 * ufac; // Global Z=-8.5*ufac&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string pelvis_surf = GetXSecSurf( geom_id, 3 );&#xD;
+	xsec0 = GetXSec( pelvis_surf, 0 );&#xD;
+	xsec1 = GetXSec( pelvis_surf, 1 );&#xD;
+	xsec2 = GetXSec( pelvis_surf, 2 );&#xD;
+	xsec3 = GetXSec( pelvis_surf, 3 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, 0.5 * pelvis_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), pelvis_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), pelvis_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.4 * pelvis_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), pelvis_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), pelvis_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, 0.4 * pelvis_depth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, 0.5 * pelvis_depth );&#xD;
+	&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.15 * pelvis_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.7 * pelvis_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( pelvis_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d pelvis_mat = torso_mat;&#xD;
+	pelvis_mat.translatef( pelvisX, 0, pelvisZ );&#xD;
+	SetXSecSurfGlobalXForm( pelvis_surf, pelvis_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== UPPER LEFT LEG (4) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double UL_Leg_YAng = GetParmVal( GetParm( geom_id, "UL_Leg_YAng", "Angles" ) );&#xD;
+	double UL_Leg_ZAng = GetParmVal( GetParm( geom_id, "UL_Leg_ZAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Hip&#xD;
+	double leg_depth_hip = 243.3 * ufac;&#xD;
+	// Depth at Knee&#xD;
+	double leg_depth_knee = 150 * ufac;&#xD;
+	// Berth at Hip&#xD;
+	double leg_berth_hip = 174 * ufac;&#xD;
+	// Berth at Knee&#xD;
+	double leg_berth_knee = 112.8 * ufac;&#xD;
+	// Length&#xD;
+	double upper_leg_height = 451 * ufac; // Trochanterion Height - Mid-Patella Height&#xD;
+	&#xD;
+	//== Part Locations WRT Pelvis Origin&#xD;
+	double ulegX = pelvis_height -94 * ufac;&#xD;
+	double ulegY = 0.5 * ( pelvis_berth - leg_berth_hip );&#xD;
+	double ulegZ = -pelvisZ; // Global Z=0&#xD;
+&#xD;
+	//== Center of Rotation Locations WRT Global Origin&#xD;
+	double ulegXcr = 851 * ufac;&#xD;
+	double ulegYcr = ulegY;&#xD;
+	double ulegZcr = -30 * ufac;&#xD;
+	&#xD;
+	//== Set XSecs ( 0-1 are hip, 2-3 are knee )&#xD;
+	string UL_leg_surf = GetXSecSurf( geom_id, 4 );&#xD;
+	xsec0 = GetXSec( UL_leg_surf, 0 );&#xD;
+	xsec1 = GetXSec( UL_leg_surf, 1 );&#xD;
+	xsec2 = GetXSec( UL_leg_surf, 2 );&#xD;
+	xsec3 = GetXSec( UL_leg_surf, 3 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_depth_hip );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_hip );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), leg_berth_hip );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, leg_berth_hip );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), leg_depth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), leg_berth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, leg_berth_knee * 0.5 );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+	&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.3 * upper_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * upper_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( upper_leg_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d UL_leg_mat = pelvis_mat;&#xD;
+	UL_leg_mat.translatef( ulegX, ulegY, ulegZ );&#xD;
+	vec3d UL_leg_cr( ulegXcr, ulegYcr, ulegZcr );&#xD;
+	vec3d UL_leg_rot( 0, -UL_Leg_YAng, UL_Leg_ZAng );&#xD;
+	UL_leg_mat.buildXForm( pos, UL_leg_rot, UL_leg_cr );&#xD;
+	SetXSecSurfGlobalXForm( UL_leg_surf, UL_leg_mat );&#xD;
+	&#xD;
+	&#xD;
+	//====  LEFT KNEE (5) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth (90%M)&#xD;
+	double knee_depth = leg_depth_knee;&#xD;
+	// Berth (90%M)&#xD;
+	double knee_berth = leg_berth_knee;&#xD;
+	&#xD;
+	//== Part Location WRT Upper Left Leg Origin&#xD;
+	double kneeX = upper_leg_height - 0.4 * knee_depth;&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string L_knee_surf = GetXSecSurf( geom_id, 5 );&#xD;
+	xsec0 = GetXSec( L_knee_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_knee_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_knee_surf, 2 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, knee_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), knee_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), knee_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.4 * knee_depth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, knee_depth );&#xD;
+	&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.4 * knee_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.8 * knee_depth, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d L_knee_mat = UL_leg_mat;&#xD;
+	L_knee_mat.translatef( kneeX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( L_knee_surf, L_knee_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LOWER LEFT LEG (6) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double LL_Leg_YAng = GetParmVal( GetParm( geom_id, "LL_Leg_YAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Ankle&#xD;
+	double leg_depth_ankle = 76 * ufac;&#xD;
+	// Berth at Ankle&#xD;
+	double leg_berth_ankle = 76 * ufac;&#xD;
+ 	// Height&#xD;
+	double lower_leg_height = 461 * ufac;&#xD;
+	&#xD;
+	//== Part Location WRT Upper Left Leg&#xD;
+	double llegX = upper_leg_height;&#xD;
+	&#xD;
+	//== Center of Rotation Location WRT Global Origin&#xD;
+	double llegXcr = ulegXcr + lower_leg_height;&#xD;
+	double llegYcr = ulegY;&#xD;
+	double llegZcr = 30 * ufac;&#xD;
+	&#xD;
+	//== Set XSecs ( 0-1 are knee, 2-3 are ankle )&#xD;
+	string LL_leg_surf = GetXSecSurf( geom_id, 6 );&#xD;
+	xsec0 = GetXSec( LL_leg_surf, 0 );&#xD;
+	xsec1 = GetXSec( LL_leg_surf, 1 );&#xD;
+	xsec2 = GetXSec( LL_leg_surf, 2 );&#xD;
+	xsec3 = GetXSec( LL_leg_surf, 3 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ),  leg_berth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, leg_berth_knee	* 0.5 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), leg_depth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), leg_berth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, leg_berth_ankle * 0.5 );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, llegZcr ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.1 * lower_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * lower_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( lower_leg_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d LL_leg_mat = UL_leg_mat;&#xD;
+	LL_leg_mat.translatef( llegX, 0, 0 );&#xD;
+	LL_leg_mat.rotateY( -LL_Leg_YAng );&#xD;
+	SetXSecSurfGlobalXForm( LL_leg_surf, LL_leg_mat );&#xD;
+&#xD;
+&#xD;
+	//==== LEFT ANKLE (7) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double ankle_depth = leg_depth_ankle;&#xD;
+	// Berth&#xD;
+	double ankle_berth = leg_berth_ankle;&#xD;
+	// Height&#xD;
+	double ankle_height = 76 * ufac;&#xD;
+	&#xD;
+	//== Part Location WRT Lower Left Leg Origin&#xD;
+	double ankleX = lower_leg_height - 0.5 * ankle_height;&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string L_ankle_surf = GetXSecSurf( geom_id, 7 );&#xD;
+	xsec0 = GetXSec( L_ankle_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_ankle_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_ankle_surf, 2 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, ankle_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), ankle_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), ankle_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * ankle_depth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, ankle_depth );&#xD;
+	&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * ankle_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( ankle_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d L_ankle_mat = LL_leg_mat;&#xD;
+	L_ankle_mat.translatef( ankleX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( L_ankle_surf, L_ankle_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT FOOT (8) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double L_Foot_XAng = GetParmVal( GetParm( geom_id, "L_Foot_XAng", "Angles" ) );&#xD;
+	double L_Foot_YAng = GetParmVal( GetParm( geom_id, "L_Foot_YAng", "Angles" ) );&#xD;
+	double L_Foot_ZAng = GetParmVal( GetParm( geom_id, "L_Foot_ZAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double foot_depth = 287 * ufac;&#xD;
+	// Berth (90%M)&#xD;
+	double foot_berth = 107 * ufac;&#xD;
+	// Height&#xD;
+	double foot_height = 80 * ufac;&#xD;
+&#xD;
+	// Part Location WRT Lower Leg Origin&#xD;
+	double footX = lower_leg_height;&#xD;
+	&#xD;
+	// Set XSecs (0-1 are ankle, 2 is shoe top, 3-4 are bottom )&#xD;
+	string L_foot_surf = GetXSecSurf( geom_id, 8 );&#xD;
+	xsec0 = GetXSec( L_foot_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_foot_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_foot_surf, 2 );&#xD;
+	xsec3 = GetXSec( L_foot_surf, 3 );&#xD;
+	xsec4 = GetXSec( L_foot_surf, 4 );&#xD;
+&#xD;
+	// Set Sizes and Curvatures&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_berth_ankle );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), leg_berth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), foot_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), foot_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, foot_berth * 0.5 );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Height" ), foot_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Width" ), foot_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_N" ), 2 );&#xD;
+&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.8 * foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	SetCustomXSecLoc( xsec4, vec3d( foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d L_foot_mat = LL_leg_mat;&#xD;
+	L_foot_mat.translatef( footX, 0, 0 );&#xD;
+	L_foot_mat.rotateX( L_Foot_XAng );&#xD;
+	L_foot_mat.rotateY( -L_Foot_YAng );&#xD;
+	L_foot_mat.rotateZ( L_Foot_ZAng );&#xD;
+	SetXSecSurfGlobalXForm( L_foot_surf, L_foot_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT SHOULDER (9) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double shoulder_depth = 85 * ufac;&#xD;
+	// Berth&#xD;
+	double shoulder_berth = 85 * ufac;&#xD;
+	&#xD;
+	//== Part Locations WRT Torso Origin&#xD;
+	double shoulderX = 0;&#xD;
+	double shoulderY = 0.5 * ( torso_berth_shoulder - shoulder_berth );&#xD;
+	double shoulderZ = neckZ;&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string L_shoulder_surf = GetXSecSurf( geom_id, 9 );&#xD;
+	xsec0 = GetXSec( L_shoulder_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_shoulder_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_shoulder_surf, 2 );&#xD;
+	&#xD;
+	//== Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, shoulder_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), shoulder_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), shoulder_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * shoulder_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, shoulder_berth );&#xD;
+	&#xD;
+	//== Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * shoulder_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( shoulder_depth, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part&#xD;
+	Matrix4d L_shoulder_mat = torso_mat;&#xD;
+	L_shoulder_mat.translatef( shoulderX, shoulderY, shoulderZ );&#xD;
+	SetXSecSurfGlobalXForm( L_shoulder_surf, L_shoulder_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT UPPER ARM (10) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double UL_Arm_YAng = GetParmVal( GetParm( geom_id, "UL_Arm_YAng", "Angles" ) );&#xD;
+	double UL_Arm_ZAng = GetParmVal( GetParm( geom_id, "UL_Arm_ZAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Biceps&#xD;
+	double arm_depth_biceps = 132 * ufac;&#xD;
+	// Depth at Elbow&#xD;
+	double arm_depth_elbow = 94 * ufac;&#xD;
+	// Berth at Biceps&#xD;
+	double arm_berth_biceps = 104 * ufac;&#xD;
+	// Berth at Elbow&#xD;
+	double arm_berth_elbow = 94 * ufac;&#xD;
+	// Upper Arm Height (90%M)&#xD;
+	double upper_arm_height = 392 * ufac;&#xD;
+&#xD;
+	// Center of Rotation Location WRT Global Origin&#xD;
+	double uarmXcr = 242 * ufac + 0.5 * shoulder_depth; // Stature - Cervicale + Half of Shoulder&#xD;
+	double uarmYcr = shoulderY;&#xD;
+	double uarmZcr = shoulderZ;&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string UL_arm_surf = GetXSecSurf( geom_id, 10 );&#xD;
+	xsec0 = GetXSec( UL_arm_surf, 0 );&#xD;
+	xsec1 = GetXSec( UL_arm_surf, 1 );&#xD;
+	xsec2 = GetXSec( UL_arm_surf, 2 );&#xD;
+	xsec3 = GetXSec( UL_arm_surf, 3 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, arm_depth_biceps );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), arm_depth_biceps );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), arm_berth_biceps );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * arm_berth_biceps );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), arm_depth_elbow );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), arm_berth_elbow );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, arm_berth_elbow * 0.5 );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, arm_berth_elbow );&#xD;
+	&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * upper_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * upper_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( upper_arm_height, 0, 0 ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d UL_arm_mat = L_shoulder_mat;&#xD;
+	vec3d UL_arm_cr( uarmXcr, uarmYcr, uarmZcr );&#xD;
+	vec3d UL_arm_rot( 0, -UL_Arm_YAng, UL_Arm_ZAng );&#xD;
+	UL_arm_mat.buildXForm( pos, UL_arm_rot, UL_arm_cr );&#xD;
+	SetXSecSurfGlobalXForm( UL_arm_surf, UL_arm_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT ELBOW (11) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double elbow_depth = arm_depth_elbow;&#xD;
+	// Berth&#xD;
+	double elbow_berth = arm_berth_elbow;&#xD;
+	&#xD;
+	// Part Location WRT Upper Left Arm&#xD;
+	double elbowX = upper_arm_height - 0.5 * elbow_depth;&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string L_elbow_surf = GetXSecSurf( geom_id, 11 );&#xD;
+	xsec0 = GetXSec( L_elbow_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_elbow_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_elbow_surf, 2 );&#xD;
+	&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, elbow_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), elbow_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), elbow_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * elbow_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, elbow_berth );&#xD;
+	&#xD;
+	// Build Part Length WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * elbow_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 1 * elbow_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d L_elbow_mat = UL_arm_mat;&#xD;
+	L_elbow_mat.translatef( elbowX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( L_elbow_surf, L_elbow_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT LOWER ARM (12) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double LL_Arm_XAng = GetParmVal( GetParm( geom_id, "LL_Arm_XAng", "Angles" ) );&#xD;
+	double LL_Arm_YAng = GetParmVal( GetParm( geom_id, "LL_Arm_YAng", "Angles" ) );&#xD;
+&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Forearm (90%M)&#xD;
+	double arm_depth_forearm = 104 * ufac;&#xD;
+	// Depth at Wrist (90%M)&#xD;
+	double arm_depth_wrist = 66 * ufac;&#xD;
+	// Berth at Forearm (90%M)&#xD;
+	double arm_berth_forearm = 104 * ufac;&#xD;
+	// Berth at Wrist (90%M)&#xD;
+	double arm_berth_wrist = 51 * ufac;&#xD;
+	// Height (90%M)&#xD;
+	double lower_arm_height = 290 * ufac; // Radiale Height - Stylion Height&#xD;
+&#xD;
+	// Part Location WRT Upper Left Arm&#xD;
+	double larmX = upper_arm_height;&#xD;
+	&#xD;
+	// Center of Rotation Location WRT Global Origin&#xD;
+	double larmZcr = -20 * ufac;&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string LL_arm_surf = GetXSecSurf( geom_id, 12 );&#xD;
+	xsec0 = GetXSec( LL_arm_surf, 0 );&#xD;
+	xsec1 = GetXSec( LL_arm_surf, 1 );&#xD;
+	xsec2 = GetXSec( LL_arm_surf, 2 );&#xD;
+	xsec3 = GetXSec( LL_arm_surf, 3 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, arm_berth_forearm );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), arm_depth_forearm );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), arm_berth_forearm );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, arm_berth_forearm );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), arm_depth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), arm_berth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, 0.5 * arm_berth_wrist );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, arm_berth_wrist );&#xD;
+	&#xD;
+	// Build Part Length from Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, larmZcr ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.3 * lower_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * lower_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( lower_arm_height, 0, 0 ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d LL_arm_mat = UL_arm_mat;&#xD;
+	LL_arm_mat.translatef( larmX, 0, 0 );&#xD;
+	LL_arm_mat.rotateX( LL_Arm_XAng );&#xD;
+	LL_arm_mat.rotateY( -LL_Arm_YAng );&#xD;
+	SetXSecSurfGlobalXForm( LL_arm_surf, LL_arm_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT WRIST (13) ====//&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth&#xD;
+	double wrist_depth = arm_depth_wrist;&#xD;
+	// Berth&#xD;
+	double wrist_berth = arm_berth_wrist;&#xD;
+	&#xD;
+	// Part Location WRT Lower Left Arm&#xD;
+	double wristX = lower_arm_height - 0.5 * wrist_depth;&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string L_wrist_surf = GetXSecSurf( geom_id, 13 );&#xD;
+	xsec0 = GetXSec( L_wrist_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_wrist_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_wrist_surf, 2 );&#xD;
+	&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, wrist_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), wrist_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), wrist_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * wrist_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, wrist_berth );&#xD;
+	&#xD;
+	// Build Part Length WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * wrist_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 1 * wrist_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d L_wrist_mat = LL_arm_mat;&#xD;
+	L_wrist_mat.translatef( wristX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( L_wrist_surf, L_wrist_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT HAND (14) ====//&#xD;
+	&#xD;
+	//== Get Parms&#xD;
+	double L_Hand_ZAng = GetParmVal( GetParm( geom_id, "L_Hand_ZAng", "Angles" ) );&#xD;
+	&#xD;
+	//== Part Dimensions&#xD;
+	// Depth at Wrist&#xD;
+	double hand_depth_wrist = arm_depth_wrist;&#xD;
+	// Depth at Metacarpal&#xD;
+	double hand_depth_metacarpal = 96 * ufac;&#xD;
+	// Berth at Wrist&#xD;
+	double hand_berth_wrist = arm_berth_wrist;&#xD;
+	// Berth at Metacarpal&#xD;
+	double hand_berth_metacarpal = 44 * ufac;&#xD;
+	// Height&#xD;
+	double hand_height = 207 * ufac;&#xD;
+&#xD;
+	//== Part Location WRT Lower Left Arm&#xD;
+	double handX = lower_arm_height;&#xD;
+	&#xD;
+	// Set XSecs ( 0-1 are wrist, 2 is middle hand, 3-4 are fingers )&#xD;
+	string L_hand_surf = GetXSecSurf( geom_id, 14 );&#xD;
+	xsec0 = GetXSec( L_hand_surf, 0 );&#xD;
+	xsec1 = GetXSec( L_hand_surf, 1 );&#xD;
+	xsec2 = GetXSec( L_hand_surf, 2 );&#xD;
+	xsec3 = GetXSec( L_hand_surf, 3 );&#xD;
+	xsec4 = GetXSec( L_hand_surf, 4 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, hand_berth_wrist );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), hand_depth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), hand_berth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), hand_depth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), hand_berth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, hand_berth_metacarpal );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Height" ), 0.8 * hand_depth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Width" ), 0.7 * hand_berth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, hand_berth_metacarpal );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec4, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec4, XSEC_BOTH_SIDES, 0.5 * hand_depth_metacarpal );&#xD;
+&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.1 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.5 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( 0.75 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec4, vec3d( hand_height, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d L_hand_mat = LL_arm_mat;&#xD;
+	L_hand_mat.translatef( handX, 0, 0 );&#xD;
+	L_hand_mat.rotateZ( L_Hand_ZAng );&#xD;
+	SetXSecSurfGlobalXForm( L_hand_surf, L_hand_mat );&#xD;
+&#xD;
+	//==== UPPER RIGHT LEG (15) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double UR_Leg_YAng = GetParmVal( GetParm( geom_id, "UR_Leg_YAng", "Angles" ) );&#xD;
+	double UR_Leg_ZAng = GetParmVal( GetParm( geom_id, "UR_Leg_ZAng", "Angles" ) );&#xD;
+	&#xD;
+	//== Set XSecs ( 0-1 are hip, 2-3 are knee )&#xD;
+	string UR_leg_surf = GetXSecSurf( geom_id, 15 );&#xD;
+	xsec0 = GetXSec( UR_leg_surf, 0 );&#xD;
+	xsec1 = GetXSec( UR_leg_surf, 1 );&#xD;
+	xsec2 = GetXSec( UR_leg_surf, 2 );&#xD;
+	xsec3 = GetXSec( UR_leg_surf, 3 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_depth_hip );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_hip );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), leg_berth_hip );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, leg_berth_hip );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), leg_depth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), leg_berth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, leg_berth_knee * 0.5 );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+	&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.3 * upper_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * upper_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( upper_leg_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d UR_leg_mat = pelvis_mat;&#xD;
+	UR_leg_mat.translatef( ulegX, -ulegY, ulegZ );&#xD;
+	vec3d UR_leg_cr( ulegXcr, -ulegYcr, ulegZcr );&#xD;
+	vec3d UR_leg_rot( 0, -UR_Leg_YAng, -UR_Leg_ZAng );&#xD;
+	UR_leg_mat.buildXForm( pos, UR_leg_rot, UR_leg_cr );&#xD;
+	SetXSecSurfGlobalXForm( UR_leg_surf, UR_leg_mat );&#xD;
+	&#xD;
+	&#xD;
+	//====  RIGHT KNEE (16) ====//&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string R_knee_surf = GetXSecSurf( geom_id, 16 );&#xD;
+	xsec0 = GetXSec( R_knee_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_knee_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_knee_surf, 2 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, knee_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), knee_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), knee_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.4 * knee_depth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, knee_depth );&#xD;
+	&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.4 * knee_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.8 * knee_depth, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d R_knee_mat = UR_leg_mat;&#xD;
+	R_knee_mat.translatef( kneeX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( R_knee_surf, R_knee_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LOWER RIGHT LEG (17) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double LR_Leg_YAng = GetParmVal( GetParm( geom_id, "LR_Leg_YAng", "Angles" ) );&#xD;
+	&#xD;
+	//== Set XSecs ( 0-1 are knee, 2-3 are ankle )&#xD;
+	string LR_leg_surf = GetXSecSurf( geom_id, 17 );&#xD;
+	xsec0 = GetXSec( LR_leg_surf, 0 );&#xD;
+	xsec1 = GetXSec( LR_leg_surf, 1 );&#xD;
+	xsec2 = GetXSec( LR_leg_surf, 2 );&#xD;
+	xsec3 = GetXSec( LR_leg_surf, 3 );&#xD;
+&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ),  leg_berth_knee );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, leg_berth_knee	* 0.5 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), leg_depth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), leg_berth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, leg_berth_ankle * 0.5 );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, leg_berth_knee );&#xD;
+&#xD;
+	//== Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, llegZcr ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.1 * lower_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * lower_leg_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( lower_leg_height, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part and Set Rotation&#xD;
+	Matrix4d LR_leg_mat = UR_leg_mat;&#xD;
+	LR_leg_mat.translatef( llegX, 0, 0 );&#xD;
+	LR_leg_mat.rotateY( -LR_Leg_YAng );&#xD;
+	SetXSecSurfGlobalXForm( LR_leg_surf, LR_leg_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT ANKLE (18) ====//&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string R_ankle_surf = GetXSecSurf( geom_id, 18 );&#xD;
+	xsec0 = GetXSec( R_ankle_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_ankle_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_ankle_surf, 2 );&#xD;
+	&#xD;
+	//== Set Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, ankle_depth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), ankle_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), ankle_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * ankle_depth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, ankle_depth );&#xD;
+	&#xD;
+	// Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * ankle_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( ankle_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d R_ankle_mat = LR_leg_mat;&#xD;
+	R_ankle_mat.translatef( ankleX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( R_ankle_surf, R_ankle_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT FOOT (19) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double R_Foot_XAng = GetParmVal( GetParm( geom_id, "R_Foot_XAng", "Angles" ) );&#xD;
+	double R_Foot_YAng = GetParmVal( GetParm( geom_id, "R_Foot_YAng", "Angles" ) );&#xD;
+	double R_Foot_ZAng = GetParmVal( GetParm( geom_id, "R_Foot_ZAng", "Angles" ) );&#xD;
+	&#xD;
+	// Set XSecs ( 0-1 are ankle, 2 is shoe top, 3-4 are bottom )&#xD;
+	string R_foot_surf = GetXSecSurf( geom_id, 19 );&#xD;
+	xsec0 = GetXSec( R_foot_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_foot_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_foot_surf, 2 );&#xD;
+	xsec3 = GetXSec( R_foot_surf, 3 );&#xD;
+	xsec4 = GetXSec( R_foot_surf, 4 );&#xD;
+&#xD;
+	// Set Sizes and Curvatures&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, leg_berth_ankle );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), leg_depth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), leg_berth_ankle );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), foot_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), foot_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, foot_berth * 0.5 );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Height" ), foot_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Width" ), foot_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_N" ), 2 );&#xD;
+&#xD;
+	// Build Part WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.8 * foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	SetCustomXSecLoc( xsec4, vec3d( foot_height, 0, 0.5 * foot_depth - 0.5 * leg_depth_ankle ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d R_foot_mat = LR_leg_mat;&#xD;
+	R_foot_mat.translatef( footX, 0, 0 );&#xD;
+	R_foot_mat.rotateX( -R_Foot_XAng );&#xD;
+	R_foot_mat.rotateY( -R_Foot_YAng );&#xD;
+	R_foot_mat.rotateZ( -R_Foot_ZAng );&#xD;
+	SetXSecSurfGlobalXForm( R_foot_surf, R_foot_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT SHOULDER (20) ====//&#xD;
+	&#xD;
+	//== Set XSecs&#xD;
+	string R_shoulder_surf = GetXSecSurf( geom_id, 20 );&#xD;
+	xsec0 = GetXSec( R_shoulder_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_shoulder_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_shoulder_surf, 2 );&#xD;
+	&#xD;
+	//== Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, shoulder_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), shoulder_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), shoulder_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * shoulder_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, shoulder_berth );&#xD;
+	&#xD;
+	//== Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * shoulder_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( shoulder_depth, 0, 0 ) );&#xD;
+&#xD;
+	//== Locate Part&#xD;
+	Matrix4d R_shoulder_mat = torso_mat;&#xD;
+	R_shoulder_mat.translatef( shoulderX, -shoulderY, shoulderZ );&#xD;
+	SetXSecSurfGlobalXForm( R_shoulder_surf, R_shoulder_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT UPPER ARM (21) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double UR_Arm_YAng = GetParmVal( GetParm( geom_id, "UR_Arm_YAng", "Angles" ) );&#xD;
+	double UR_Arm_ZAng = GetParmVal( GetParm( geom_id, "UR_Arm_ZAng", "Angles" ) );&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string UR_arm_surf = GetXSecSurf( geom_id, 21 );&#xD;
+	xsec0 = GetXSec( UR_arm_surf, 0 );&#xD;
+	xsec1 = GetXSec( UR_arm_surf, 1 );&#xD;
+	xsec2 = GetXSec( UR_arm_surf, 2 );&#xD;
+	xsec3 = GetXSec( UR_arm_surf, 3 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, arm_depth_biceps );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), arm_depth_biceps );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), arm_berth_biceps );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * arm_berth_biceps );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), arm_depth_elbow );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), arm_berth_elbow );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, arm_berth_elbow * 0.5 );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, arm_berth_elbow );&#xD;
+	&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * upper_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * upper_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( upper_arm_height, 0, 0 ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d UR_arm_mat = R_shoulder_mat;&#xD;
+	vec3d UR_arm_cr( uarmXcr, -uarmYcr, uarmZcr );&#xD;
+	vec3d UR_arm_rot( 0, -UR_Arm_YAng, -UR_Arm_ZAng );&#xD;
+	UR_arm_mat.buildXForm( pos, UR_arm_rot, UR_arm_cr );&#xD;
+	SetXSecSurfGlobalXForm( UR_arm_surf, UR_arm_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT ELBOW (22) ====//&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string R_elbow_surf = GetXSecSurf( geom_id, 22 );&#xD;
+	xsec0 = GetXSec( R_elbow_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_elbow_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_elbow_surf, 2 );&#xD;
+	&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, elbow_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), elbow_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), elbow_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * elbow_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, elbow_berth );&#xD;
+	&#xD;
+	// Build Part Length WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * elbow_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 1 * elbow_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d R_elbow_mat = UR_arm_mat;&#xD;
+	R_elbow_mat.translatef( elbowX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( R_elbow_surf, R_elbow_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT LOWER ARM (23) ====//&#xD;
+&#xD;
+	//== Get Parms&#xD;
+	double LR_Arm_XAng = GetParmVal( GetParm( geom_id, "LR_Arm_XAng", "Angles" ) );&#xD;
+	double LR_Arm_YAng = GetParmVal( GetParm( geom_id, "LR_Arm_YAng", "Angles" ) );&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string LR_arm_surf = GetXSecSurf( geom_id, 23 );&#xD;
+	xsec0 = GetXSec( LR_arm_surf, 0 );&#xD;
+	xsec1 = GetXSec( LR_arm_surf, 1 );&#xD;
+	xsec2 = GetXSec( LR_arm_surf, 2 );&#xD;
+	xsec3 = GetXSec( LR_arm_surf, 3 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, arm_berth_forearm );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), arm_depth_forearm );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), arm_berth_forearm );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, arm_berth_forearm );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), arm_depth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), arm_berth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 4 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, 0.5 * arm_berth_wrist );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, arm_berth_wrist );&#xD;
+	&#xD;
+	// Build Part Length from Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, larmZcr ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.3 * lower_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.9 * lower_arm_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( lower_arm_height, 0, 0 ) );&#xD;
+	&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d LR_arm_mat = UR_arm_mat;&#xD;
+	LR_arm_mat.translatef( larmX, 0, 0 );&#xD;
+	LR_arm_mat.rotateX( -LR_Arm_XAng );&#xD;
+	LR_arm_mat.rotateY( -LR_Arm_YAng );&#xD;
+	SetXSecSurfGlobalXForm( LR_arm_surf, LR_arm_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== LEFT WRIST (24) ====//&#xD;
+	&#xD;
+	// Set XSecs&#xD;
+	string R_wrist_surf = GetXSecSurf( geom_id, 24 );&#xD;
+	xsec0 = GetXSec( R_wrist_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_wrist_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_wrist_surf, 2 );&#xD;
+	&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, wrist_berth );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), wrist_depth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), wrist_berth );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec1, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec1, XSEC_BOTH_SIDES, 0.5 * wrist_berth );&#xD;
+&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, wrist_berth );&#xD;
+	&#xD;
+	// Build Part Length WRT Part Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.5 * wrist_depth, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 1 * wrist_depth, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d R_wrist_mat = LR_arm_mat;&#xD;
+	R_wrist_mat.translatef( wristX, 0, 0 );&#xD;
+	SetXSecSurfGlobalXForm( R_wrist_surf, R_wrist_mat );&#xD;
+	&#xD;
+	&#xD;
+	//==== RIGHT HAND (25) ====//&#xD;
+	&#xD;
+	//== Get Parms&#xD;
+	double R_Hand_ZAng = GetParmVal( GetParm( geom_id, "R_Hand_ZAng", "Angles" ) );&#xD;
+	&#xD;
+	// Set XSecs ( 0-1 are wrist, 2 is middle hand, 3-4 are fingers )&#xD;
+	string R_hand_surf = GetXSecSurf( geom_id, 25 );&#xD;
+	xsec0 = GetXSec( R_hand_surf, 0 );&#xD;
+	xsec1 = GetXSec( R_hand_surf, 1 );&#xD;
+	xsec2 = GetXSec( R_hand_surf, 2 );&#xD;
+	xsec3 = GetXSec( R_hand_surf, 3 );&#xD;
+	xsec4 = GetXSec( R_hand_surf, 4 );&#xD;
+&#xD;
+	// Set Shape Size and Curvature&#xD;
+	SetXSecTanAngles( xsec0, XSEC_BOTH_SIDES, 90 );&#xD;
+	SetXSecTanStrengths( xsec0, XSEC_BOTH_SIDES, hand_berth_wrist );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Height" ), hand_depth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_Width" ), hand_berth_wrist );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec1, "Super_N" ), 2 );&#xD;
+&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Height" ), hand_depth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_Width" ), hand_berth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec2, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec2, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec2, XSEC_BOTH_SIDES, hand_berth_metacarpal );&#xD;
+	&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Height" ), 0.8 * hand_depth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_Width" ), 0.7 * hand_berth_metacarpal );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_M" ), 2 );&#xD;
+	SetParmVal( GetXSecParm( xsec3, "Super_N" ), 2 );&#xD;
+	SetXSecTanAngles( xsec3, XSEC_BOTH_SIDES, 0 );&#xD;
+	SetXSecTanStrengths( xsec3, XSEC_BOTH_SIDES, hand_berth_metacarpal );&#xD;
+	&#xD;
+	SetXSecTanAngles( xsec4, XSEC_BOTH_SIDES, -90 );&#xD;
+	SetXSecTanStrengths( xsec4, XSEC_BOTH_SIDES, 0.5 * hand_depth_metacarpal );&#xD;
+&#xD;
+	// Build Part Length from Origin&#xD;
+	SetCustomXSecLoc( xsec0, vec3d( 0, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec1, vec3d( 0.1 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec2, vec3d( 0.5 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec3, vec3d( 0.75 * hand_height, 0, 0 ) );&#xD;
+	SetCustomXSecLoc( xsec4, vec3d( hand_height, 0, 0 ) );&#xD;
+&#xD;
+	// Locate Part and Set Rotation&#xD;
+	Matrix4d R_hand_mat = LR_arm_mat;&#xD;
+	R_hand_mat.translatef( handX, 0, 0 );&#xD;
+	R_hand_mat.rotateZ( -R_Hand_ZAng );&#xD;
+	SetXSecSurfGlobalXForm( R_hand_surf, R_hand_mat );&#xD;
+	&#xD;
+	&#xD;
+	SkinXSecSurf();&#xD;
+&#xD;
+	&#xD;
+	//==== Check For API Errors ====//&#xD;
+	while ( GetNumTotalErrors() GrRrRrRrT 0 ) &#xD;
+	{&#xD;
+		ErrorObj err = PopLastError();&#xD;
+		Print( err.GetErrorString() );&#xD;
+	}&#xD;
+}</ScriptFileContents>
+      </CustomGeom>
+      <ParmContainer>
+        <ID>TLSVMIZQJI</ID>
+        <Name>Male90Pct</Name>
+        <Angles>
+          <Head_XAng Value="0.000000000000000000e+00" ID="SVCZTYLZGSJ"/>
+          <Head_YAng Value="0.000000000000000000e+00" ID="HRAINXFKGSM"/>
+          <Head_ZAng Value="0.000000000000000000e+00" ID="WWBIRHZMCJK"/>
+          <LL_Arm_XAng Value="0.000000000000000000e+00" ID="KJWHDGOHPES"/>
+          <LL_Arm_YAng Value="0.000000000000000000e+00" ID="UQMUZPJZMJK"/>
+          <LL_Leg_YAng Value="0.000000000000000000e+00" ID="HBBHVDPXDWS"/>
+          <LR_Arm_XAng Value="0.000000000000000000e+00" ID="EXDFPDEBAOD"/>
+          <LR_Arm_YAng Value="0.000000000000000000e+00" ID="RZKSJCCMJSI"/>
+          <LR_Leg_YAng Value="0.000000000000000000e+00" ID="WOHTERZMORO"/>
+          <L_Foot_XAng Value="0.000000000000000000e+00" ID="HCRICANUUCX"/>
+          <L_Foot_YAng Value="0.000000000000000000e+00" ID="XCJIPLJKUWA"/>
+          <L_Foot_ZAng Value="0.000000000000000000e+00" ID="WNDGAMFTXDS"/>
+          <L_Hand_ZAng Value="0.000000000000000000e+00" ID="BUWMSTZZYJK"/>
+          <R_Foot_XAng Value="0.000000000000000000e+00" ID="RSJIMNYYAQT"/>
+          <R_Foot_YAng Value="0.000000000000000000e+00" ID="QOMSBNCEQYT"/>
+          <R_Foot_ZAng Value="0.000000000000000000e+00" ID="OEIDZUSOWWY"/>
+          <R_Hand_ZAng Value="0.000000000000000000e+00" ID="MBGMEPTPRKC"/>
+          <UL_Arm_YAng Value="0.000000000000000000e+00" ID="UOMRRLAOAXD"/>
+          <UL_Arm_ZAng Value="0.000000000000000000e+00" ID="DZPUZXIABKH"/>
+          <UL_Leg_YAng Value="0.000000000000000000e+00" ID="KDCNQWXTOLD"/>
+          <UL_Leg_ZAng Value="0.000000000000000000e+00" ID="RWDKVWDEGNT"/>
+          <UR_Arm_YAng Value="0.000000000000000000e+00" ID="OACFJCWIEXW"/>
+          <UR_Arm_ZAng Value="0.000000000000000000e+00" ID="CRODHPPUGUZ"/>
+          <UR_Leg_YAng Value="0.000000000000000000e+00" ID="ROEKORNSPYR"/>
+          <UR_Leg_ZAng Value="0.000000000000000000e+00" ID="WIDPIBMSABO"/>
+        </Angles>
+        <Attach>
+          <Abs_Rel_Flag Value="1.000000000000000000e+00" ID="KYJZLDIOCSE"/>
+          <Rots_Attach_Flag Value="0.000000000000000000e+00" ID="PNTGXBQDLLP"/>
+          <Trans_Attach_Flag Value="0.000000000000000000e+00" ID="FEPRBBZVMFH"/>
+          <U_Attach_Location Value="9.999999999999999547e-07" ID="JABWBCYIOQQ"/>
+          <V_Attach_Location Value="9.999999999999999547e-07" ID="MXSDNUJQRNO"/>
+        </Attach>
+        <BBox>
+          <X_Len Value="7.298232287500000837e+01" ID="GILTHEWXGJF"/>
+          <X_Min Value="0.000000000000000000e+00" ID="VQNAHTRSUSK"/>
+          <Y_Len Value="2.145670450000001139e+01" ID="FAVIZZTTPHZ"/>
+          <Y_Min Value="-1.072835225000000570e+01" ID="ZNKZRRMTPFZ"/>
+          <Z_Len Value="1.561024465000000561e+01" ID="GEDGATHMNWR"/>
+          <Z_Min Value="-5.807089750000002049e+00" ID="XZWRPYCEFJA"/>
+        </BBox>
+        <Design>
+          <Height Value="6.000000000000000000e+00" ID="FSSEBGJCWFU"/>
+          <Trigger Value="0.000000000000000000e+00" ID="LDFXEDEDLEU"/>
+          <UnitMult Value="3.937010000000001203e-02" ID="TPQJUBRDPUX"/>
+          <Units Value="0.000000000000000000e+00" ID="JERJGZQOWVM"/>
+        </Design>
+        <EndCap>
+          <CapUMaxOption Value="0.000000000000000000e+00" ID="HLELCEHDLKF"/>
+          <CapUMaxTess Value="3.000000000000000000e+00" ID="YPFLQGCIKXH"/>
+          <CapUMinOption Value="0.000000000000000000e+00" ID="BXKLBJEBMPR"/>
+          <CapUMinTess Value="3.000000000000000000e+00" ID="QAIGIHXXIIP"/>
+          <CapWMaxOption Value="0.000000000000000000e+00" ID="YQCXLKUCYDW"/>
+          <CapWMaxTess Value="3.000000000000000000e+00" ID="HZSKKYLUWCG"/>
+          <CapWMinOption Value="0.000000000000000000e+00" ID="GXFMICPKNMI"/>
+          <CapWMinTess Value="3.000000000000000000e+00" ID="QEJSHOFXEHG"/>
+        </EndCap>
+        <Mass_Props>
+          <Density Value="1.000000000000000000e+00" ID="ENDFZFZPZJC"/>
+          <Mass_Area Value="1.000000000000000000e+00" ID="WQEDTXIAMNU"/>
+          <Mass_Prior Value="0.000000000000000000e+00" ID="QXTPVBCRTVD"/>
+          <Shell_Flag Value="0.000000000000000000e+00" ID="IZRTZMVDDTB"/>
+        </Mass_Props>
+        <Shape>
+          <Tess_U Value="1.300000000000000000e+01" ID="IUOFSJDGCBL"/>
+          <Tess_W Value="1.700000000000000000e+01" ID="PNFNRWBSTGC"/>
+          <Wake Value="0.000000000000000000e+00" ID="NVAZDVVNHYJ"/>
+        </Shape>
+        <Sym>
+          <Sym_Ancestor Value="1.000000000000000000e+00" ID="CZGDKYMJYAW"/>
+          <Sym_Ancestor_Origin_Flag Value="1.000000000000000000e+00" ID="NENSZQEOJNS"/>
+          <Sym_Axial_Flag Value="0.000000000000000000e+00" ID="EAFSBHKUKER"/>
+          <Sym_Planar_Flag Value="0.000000000000000000e+00" ID="NYEOHXNDNCA"/>
+          <Sym_Rot_N Value="2.000000000000000000e+00" ID="MAFMABFLHNK"/>
+        </Sym>
+        <XForm>
+          <Abs_Or_Relitive_flag Value="1.000000000000000000e+00" ID="QYZACFQOKQS"/>
+          <Last_Scale Value="1.000000000000000000e+00" ID="UAXZIIEZMXN"/>
+          <Origin Value="0.000000000000000000e+00" ID="VHEWIZZFOSD"/>
+          <Scale Value="1.000000000000000000e+00" ID="UFQDRLXIRHC"/>
+          <X_Location Value="0.000000000000000000e+00" ID="QXFUUGRARWQ"/>
+          <X_Rel_Location Value="0.000000000000000000e+00" ID="CKTUHBFQVMZ"/>
+          <X_Rel_Rotation Value="0.000000000000000000e+00" ID="OUNYZUAFQVX"/>
+          <X_Rotation Value="0.000000000000000000e+00" ID="ALYMQRYZDTL"/>
+          <Y_Location Value="0.000000000000000000e+00" ID="CNJREEHEMFO"/>
+          <Y_Rel_Location Value="0.000000000000000000e+00" ID="DFLEOYTSFMO"/>
+          <Y_Rel_Rotation Value="0.000000000000000000e+00" ID="KKAVVFWQLMK"/>
+          <Y_Rotation Value="0.000000000000000000e+00" ID="SVEKVNHABSC"/>
+          <Z_Location Value="0.000000000000000000e+00" ID="CVERVCQWILN"/>
+          <Z_Rel_Location Value="0.000000000000000000e+00" ID="SNPZSRVVYOC"/>
+          <Z_Rel_Rotation Value="0.000000000000000000e+00" ID="NGQHYCLVYDW"/>
+          <Z_Rotation Value="0.000000000000000000e+00" ID="AXCCUDERCFO"/>
+        </XForm>
+      </ParmContainer>
+      <GeomBase>
+        <TypeName>Male90Pct</TypeName>
+        <TypeID>9</TypeID>
+        <TypeFixed>0</TypeFixed>
+        <ParentID>NONE</ParentID>
+        <Child_List/>
+      </GeomBase>
+      <Material>
+        <Name>Default</Name>
+      </Material>
+      <Wire_Color>
+        <ParmContainer>
+          <ID>JWKRWUUTEO</ID>
+          <Name>Default</Name>
+          <Color_Parm>
+            <Alpha Value="2.550000000000000000e+02" ID="QBKXYIEHPYY"/>
+            <Blue Value="2.550000000000000000e+02" ID="NMHZPJYBNOU"/>
+            <Green Value="0.000000000000000000e+00" ID="FRSKEIESLOY"/>
+            <Red Value="0.000000000000000000e+00" ID="MRZVVJFGOUF"/>
+          </Color_Parm>
+        </ParmContainer>
+      </Wire_Color>
+      <Textures>
+        <Num_of_Tex>0</Num_of_Tex>
+      </Textures>
+      <Geom>
+        <Set_List>1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, </Set_List>
+        <SubSurfaces/>
+      </Geom>
+    </Geom>
+  </Vehicle>
+  <Materials/>
+  <UserParmContainer>
+    <NumUserParms>16</NumUserParms>
+    <UserParm Value="0.000000000000000000e+00" ID="User_0" Name="User_0" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_1" Name="User_1" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_2" Name="User_2" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_3" Name="User_3" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_4" Name="User_4" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_5" Name="User_5" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_6" Name="User_6" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_7" Name="User_7" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_8" Name="User_8" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_9" Name="User_9" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_10" Name="User_10" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_11" Name="User_11" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_12" Name="User_12" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_13" Name="User_13" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_14" Name="User_14" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+    <UserParm Value="0.000000000000000000e+00" ID="User_15" Name="User_15" GroupName="User_Group" GroupDisplaySuffix="-1" Descript="Default Description" Type="0" UpperLimit="1.000000000000000000e+12" LowerLimit="-1.000000000000000000e+12"/>
+  </UserParmContainer>
+  <LinkMgr/>
+  <AdvLinkMgr/>
+  <VSPAEROSettings>
+    <ParmContainer>
+      <ID>DREAUIAOGV</ID>
+      <Name>Default</Name>
+      <VSPAERO>
+        <Alpha Value="5.000000000000000000e+00" ID="UZSZODBDKCI"/>
+        <Beta Value="0.000000000000000000e+00" ID="QCDNDTCDELD"/>
+        <GeomSet Value="0.000000000000000000e+00" ID="LSWJFSSLGAB"/>
+        <Mach Value="2.999999999999999889e-01" ID="TTJTRFJYXUD"/>
+        <MassSet Value="0.000000000000000000e+00" ID="POKBXVIXTEQ"/>
+        <NCPU Value="2.000000000000000000e+00" ID="BNNSFQVIVTG"/>
+        <NumMassSlice Value="1.000000000000000000e+01" ID="BSCUDEBDMBK"/>
+        <RefFlag Value="0.000000000000000000e+00" ID="CAIFMMPQZSV"/>
+        <Sref Value="1.000000000000000000e+02" ID="ONOFQVVQFOR"/>
+        <Xcg Value="0.000000000000000000e+00" ID="QMUXDIEGLQJ"/>
+        <Ycg Value="0.000000000000000000e+00" ID="QSNYHPBSLKV"/>
+        <Zcg Value="0.000000000000000000e+00" ID="RWLARRLLFEL"/>
+        <bref Value="1.000000000000000000e+00" ID="KRGGDGIMSKG"/>
+        <cref Value="1.000000000000000000e+00" ID="OQRYDJKLUXT"/>
+      </VSPAERO>
+    </ParmContainer>
+    <ReferenceGeomID></ReferenceGeomID>
+  </VSPAEROSettings>
+  <CfdSettings>
+    <ParmContainer>
+      <ID>ZPABVGOQQY</ID>
+      <Name>CFDMeshSettings</Name>
+      <DrawCFD>
+        <ColorTagsFlag Value="1.000000000000000000e+00" ID="FURKSWDMEUD"/>
+        <DrawBadMeshElements Value="1.000000000000000000e+00" ID="MUDZUCQUOWI"/>
+        <DrawFarField Value="1.000000000000000000e+00" ID="HDHUIKDTYOC"/>
+        <DrawFarFieldPreview Value="1.000000000000000000e+00" ID="VCKZJDRQQKD"/>
+        <DrawMesh Value="1.000000000000000000e+00" ID="TCMAEJUAXAU"/>
+        <DrawSourceWake Value="1.000000000000000000e+00" ID="HHRAZALGLNV"/>
+        <DrawSymmetryPlane Value="1.000000000000000000e+00" ID="GACHDTFRZVD"/>
+        <DrawWake Value="1.000000000000000000e+00" ID="YMMKZSCQKOJ"/>
+      </DrawCFD>
+      <ExportCFD>
+        <DAT_Export Value="1.000000000000000000e+00" ID="BCEPPVJUASD"/>
+        <GMSH_Export Value="1.000000000000000000e+00" ID="YXJBHMIHWCN"/>
+        <KEY_Export Value="1.000000000000000000e+00" ID="SLSAZUCNCHO"/>
+        <OBJ_Export Value="1.000000000000000000e+00" ID="THNOMBKFDBK"/>
+        <POLY_Export Value="1.000000000000000000e+00" ID="HLSPWWZAEHY"/>
+        <SRF_Export Value="1.000000000000000000e+00" ID="KLOJYOZFANS"/>
+        <STL_Export Value="1.000000000000000000e+00" ID="LSVBZNTQZPB"/>
+        <TKEY_Export Value="1.000000000000000000e+00" ID="LLXHMIAEWHJ"/>
+        <TRI_Export Value="1.000000000000000000e+00" ID="GVRNKMOWRCZ"/>
+      </ExportCFD>
+      <FarField>
+        <FarAbsSize Value="0.000000000000000000e+00" ID="XOHDMMLGOHX"/>
+        <FarComp Value="0.000000000000000000e+00" ID="JGNQZZERYLL"/>
+        <FarHeight Value="4.000000000000000000e+00" ID="RDSUPVEPHKX"/>
+        <FarLength Value="4.000000000000000000e+00" ID="PCSNVJIZBIG"/>
+        <FarManualLoc Value="0.000000000000000000e+00" ID="NPBKZDGNCDX"/>
+        <FarMesh Value="0.000000000000000000e+00" ID="XSGHRZWUTEU"/>
+        <FarWidth Value="4.000000000000000000e+00" ID="ILVWSWNVUYX"/>
+        <FarXLocation Value="0.000000000000000000e+00" ID="BQVGHQMOKRB"/>
+        <FarXScale Value="4.000000000000000000e+00" ID="WMTENGFYRHR"/>
+        <FarYLocation Value="0.000000000000000000e+00" ID="OISAVXIFYQK"/>
+        <FarYScale Value="4.000000000000000000e+00" ID="SLKBTRJDZWQ"/>
+        <FarZLocation Value="0.000000000000000000e+00" ID="QTRJKJIVQUZ"/>
+        <FarZScale Value="4.000000000000000000e+00" ID="LCRSUQNXFEH"/>
+        <HalfMesh Value="0.000000000000000000e+00" ID="WEIEALHUTMS"/>
+      </FarField>
+      <Global>
+        <IntersectSubSurfs Value="1.000000000000000000e+00" ID="OCKQOMIWBXC"/>
+        <Set Value="0.000000000000000000e+00" ID="KGTWZVDQZBH"/>
+      </Global>
+      <Wake>
+        <WakeAngle Value="0.000000000000000000e+00" ID="RELCOAHTLGO"/>
+        <WakeScale Value="2.000000000000000000e+00" ID="VGBPLMQZKDU"/>
+      </Wake>
+    </ParmContainer>
+    <FarFieldGeomID></FarFieldGeomID>
+  </CfdSettings>
+  <CFDGridDensity>
+    <ParmContainer>
+      <ID>CESFDUIQLL</ID>
+      <Name>CFDGridDensity</Name>
+      <CFDGridDensity>
+        <BaseLen Value="5.000000000000000000e-01" ID="SKBIGNQYSYA"/>
+        <FarNCircSeg Value="1.600000000000000000e+01" ID="XFIPLADXTBC"/>
+        <GrowRatio Value="1.300000000000000044e+00" ID="CZUTROTIJON"/>
+        <MaxFar Value="2.000000000000000000e+00" ID="DWERXWSKXAU"/>
+        <MaxFarGap Value="2.000000000000000042e-02" ID="POOODPZFRYH"/>
+        <MaxGap Value="5.000000000000000104e-03" ID="ZANVJWMVPOS"/>
+        <MinLen Value="1.000000000000000056e-01" ID="NXKVJNRELAC"/>
+        <NCircSeg Value="1.600000000000000000e+01" ID="KEOPOOUCLPY"/>
+        <RigorLimit Value="0.000000000000000000e+00" ID="VLHRGSIILYT"/>
+      </CFDGridDensity>
+    </ParmContainer>
+  </CFDGridDensity>
+  <FEAGridDensity>
+    <ParmContainer>
+      <ID>JGRHOCXQHS</ID>
+      <Name>FEAGridDensity</Name>
+      <FEAGridDensity>
+        <BaseLen Value="5.000000000000000000e-01" ID="XYBREXZMTGV"/>
+        <FarNCircSeg Value="1.600000000000000000e+01" ID="GTLWOCIBPUK"/>
+        <GrowRatio Value="1.300000000000000044e+00" ID="HHQSFRXAQZQ"/>
+        <MaxFar Value="2.000000000000000000e+00" ID="EMRBKQXKBTE"/>
+        <MaxFarGap Value="2.000000000000000042e-02" ID="ELHIMWGPMBR"/>
+        <MaxGap Value="5.000000000000000104e-03" ID="BKOAGWLRMDT"/>
+        <MinLen Value="1.000000000000000056e-01" ID="ZMQPQBCJTOH"/>
+        <NCircSeg Value="1.600000000000000000e+01" ID="GLZCWHKHHNQ"/>
+        <RigorLimit Value="0.000000000000000000e+00" ID="EZKQBQJKMOX"/>
+      </FEAGridDensity>
+    </ParmContainer>
+  </FEAGridDensity>
+  <ClippingMgr>
+    <ParmContainer>
+      <ID>CBJGYNWEMA</ID>
+      <Name>ClippingMgr</Name>
+      <Clipping>
+        <XGTClip Value="1.000000000000000000e+00" ID="XHSCTNCNQTF"/>
+        <XGTClipFlag Value="0.000000000000000000e+00" ID="NENRWJAHMEP"/>
+        <XLTClip Value="-1.000000000000000000e+00" ID="UJOPNQXAOYV"/>
+        <XLTClipFlag Value="0.000000000000000000e+00" ID="QVSVRGANIXP"/>
+        <YGTClip Value="1.000000000000000000e+00" ID="GFAVZOVLQUF"/>
+        <YGTClipFlag Value="0.000000000000000000e+00" ID="TDGXNQDSRRP"/>
+        <YLTClip Value="-1.000000000000000000e+00" ID="DPONFZBQQNO"/>
+        <YLTClipFlag Value="0.000000000000000000e+00" ID="UJDBKEBQKCL"/>
+        <ZGTClip Value="1.000000000000000000e+00" ID="DBIHDWCHHGH"/>
+        <ZGTClipFlag Value="0.000000000000000000e+00" ID="QHIXMLDZDAV"/>
+        <ZLTClip Value="-1.000000000000000000e+00" ID="DSXUJVVLRIE"/>
+        <ZLTClipFlag Value="0.000000000000000000e+00" ID="YCDADPWPXOR"/>
+      </Clipping>
+    </ParmContainer>
+  </ClippingMgr>
+  <SetNames>
+    <Set>All</Set>
+    <Set>Shown</Set>
+    <Set>Not_Shown</Set>
+    <Set>Set_0</Set>
+    <Set>Set_1</Set>
+    <Set>Set_2</Set>
+    <Set>Set_3</Set>
+    <Set>Set_4</Set>
+    <Set>Set_5</Set>
+    <Set>Set_6</Set>
+    <Set>Set_7</Set>
+    <Set>Set_8</Set>
+    <Set>Set_9</Set>
+  </SetNames>
+</Vsp_Geometry>
